@@ -1,0 +1,6 @@
+module Pods_BreakingNews {
+  umbrella header "Pods-BreakingNews-umbrella.h"
+
+  export *
+  module * { export * }
+}
