@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BreakingNews.iml" filepath="$PROJECT_DIR$/.idea/modules/BreakingNews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BreakingNews.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BreakingNews.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/491963196/BreakingNews.react-native-async-storage_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/491963196/BreakingNews.react-native-async-storage_async-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1870009080/BreakingNews.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/1870009080/BreakingNews.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-329475873/BreakingNews.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-329475873/BreakingNews.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1083553245/BreakingNews.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/1083553245/BreakingNews.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1852634504/BreakingNews.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/1852634504/BreakingNews.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1154228128/BreakingNews.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/1154228128/BreakingNews.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/309871447/BreakingNews.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/309871447/BreakingNews.react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>
