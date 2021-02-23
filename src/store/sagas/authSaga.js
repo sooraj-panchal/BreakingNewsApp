@@ -29,7 +29,6 @@ function* loginActionEffect(action) {
     try {
         const response = yield call(loginApi, action.payload);
         console.log("======>loginApi success ", response)
-        globals.toastMessage = response.message
         yield put(loginSuccess(response));
     } catch (e) {
         console.log("=====>loginApi Error", e)
@@ -48,7 +47,7 @@ function* verifyOtpActionEffect(action) {
     try {
         const response = yield call(verifyOtpApi, action.payload);
         console.log("======>verifyOtpApi success ", response)
-        globals.toastMessage = response.message
+        globals.toastMessage = response.msg
         yield put(verifyOtpSuccess(response));
     } catch (e) {
         console.log("=====>verifyOtpApi Error", e)

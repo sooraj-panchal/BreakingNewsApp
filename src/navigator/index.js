@@ -4,35 +4,49 @@ import AuthStackScreen from './auth';
 import { PrimaryColor } from '../assets/colors';
 import SplashScreen from '../container/AuthModule/SplashScreen';
 import * as globals from '../utils/globals';
-import { asyncBuyerDataWatcher } from '../store/actions';
-import { asyncBuyerDataLoading, asyncBuyerDataSelector } from '../store/selectors/whiteListSelector';
+import { asyncUserDataWatcher } from '../store/actions';
+import { asyncUserDataLoading, asyncUserDataSelector } from '../store/selectors/whiteListSelector';
 import AppStackScreen from './unAuth';
 import { connect } from 'react-redux'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const AppContainer = ({
-    asyncBuyerDataWatcher,
-    asyncBuyerDataResponse,
-    asyncBuyerDataLoading
+    asyncUserDataWatcher,
+    asyncUserDataResponse,
+    asyncUserDataLoading
 }) => {
     const [loading, setLoading] = useState(true)
 
     const StackScreen = createStackNavigator();
     const RootStack = createStackNavigator();
-
+    const [token, setToken] = useState(null)
     useEffect(() => {
         setLoading(true)
-        // asyncBuyerDataWatcher()
+        // asyncUserDataWatcher()
     }, [])
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
         }, 500);
-        if (asyncBuyerDataResponse) {
-            console.log(asyncBuyerDataResponse)
-            globals.buyer_id = asyncBuyerDataResponse?.buyer_id
-        }
-    }, [asyncBuyerDataResponse])
 
+        getUserData()
+        // if (asyncUserDataResponse) {
+        //     console.log("asyncUserDataResponse", asyncUserDataResponse)
+        //     globals.authToken = asyncUserDataResponse?.token
+        //     globals.user_id = asyncUserDataResponse?.user_data?.id
+        // }
+    }, [])
+
+    const getUserData = async () => {
+        const res = await AsyncStorage.getItem("userData")
+        const data = await JSON.parse(res)
+        if (data) {
+            setToken(data.token)
+            globals.authToken = data.token
+            globals.user_id = data.user_data.id
+            console.log("data", data)
+        }
+    }
     if (loading) {
         return (
             <StackScreen.Navigator
@@ -60,7 +74,7 @@ const AppContainer = ({
             </StackScreen.Navigator>
         )
     }
-    if (!asyncBuyerDataResponse?.buyer_id)
+    if (token)
         return (
             <RootStack.Navigator
                 headerMode="none"
@@ -99,12 +113,12 @@ const AppContainer = ({
 
 const mapStateToProps = store => {
     return {
-        asyncBuyerDataResponse: asyncBuyerDataSelector(store),
-        asyncBuyerDataLoading: asyncBuyerDataLoading(store)
+        asyncUserDataResponse: asyncUserDataSelector(store),
+        asyncUserDataLoading: asyncUserDataLoading(store)
     }
 }
 
 const mapDispatchToProps = {
-    asyncBuyerDataWatcher
+    asyncUserDataWatcher
 };
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

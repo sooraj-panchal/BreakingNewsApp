@@ -52,3 +52,28 @@ export const tokenError = (payload) => ({
     payload
 });
 // 
+export const chatDataWatcher = (payload) => ({
+    type: actionTypes.CHAT_DATA_WATCHER,
+    payload
+});
+export const chatDataSuccess = (payload) => ({
+    type: actionTypes.CHAT_DATA_SUCCESS,
+    payload
+});
+export const chatDataError = (payload) => ({
+    type: actionTypes.CHAT_DATA_ERRROR,
+    payload
+});
+
+export const sendMessageWatcher = (payload) => ({
+    type: actionTypes.SEND_MESSAGE_WATCHER,
+    payload
+});
+export const sendMessageSuccess = (payload) => ({
+    type: actionTypes.SEND_MESSAGE_SUCCESS,
+    payload
+});
+export const sendMessageError = (payload) => ({
+    type: actionTypes.SEND_MESSAGE_ERRROR,
+    payload
+});

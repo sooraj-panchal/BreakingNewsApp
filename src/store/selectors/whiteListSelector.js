@@ -2,11 +2,20 @@ import { createSelector } from 'reselect';
 
 const whiteListReducer = state => state.whiteListReducer;
 
-export const asyncBuyerDataSelector = createSelector(
+export const asyncUserDataSelector = createSelector(
     whiteListReducer,
-    asyncBuyerDataSelector => asyncBuyerDataSelector.asyncBuyerData.data,
+    asyncUserDataSelector => asyncUserDataSelector.asyncUserData.data,
 );
-export const asyncBuyerDataLoading = createSelector(
+export const asyncUserDataLoading = createSelector(
     whiteListReducer,
-    asyncBuyerDataLoading => asyncBuyerDataLoading.asyncBuyerData.isLoading
+    asyncUserDataLoading => asyncUserDataLoading.asyncUserData.isLoading
+);
+
+export const saveUserDataSelector = createSelector(
+    whiteListReducer,
+    saveUserDataSelector => saveUserDataSelector.saveUserData.data,
+);
+export const saveUserDataLoading = createSelector(
+    whiteListReducer,
+    saveUserDataLoading => saveUserDataLoading.saveUserData.isLoading
 );

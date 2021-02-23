@@ -1,19 +1,20 @@
 import { connect } from "react-redux";
-import { asyncBuyerDataWatcher, verifyOtpSuccess, verifyOtpWatcher } from "../../../store/actions";
-import { verifyOtpLoading, verifyOtpSelector } from "../../../store/selectors";
+import { asyncUserDataWatcher, verifyOtpSuccess, verifyOtpWatcher } from "../../../store/actions";
+import { asyncUserDataSelector, verifyOtpLoading, verifyOtpSelector } from "../../../store/selectors";
 import VerificationScreen from "./view";
 
 const mapStateToProps = store => {
     return {
         verifyOtpLoading: verifyOtpLoading(store),
-        verifyOtpResponse: verifyOtpSelector(store)
+        verifyOtpResponse: verifyOtpSelector(store),
+        asyncUserDataResponse:asyncUserDataSelector(store)
     }
 }
 
 const mapDispatchToProps = {
     verifyOtpWatcher,
     verifyOtpSuccess,
-    asyncBuyerDataWatcher
+    asyncUserDataWatcher,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(VerificationScreen);

@@ -6,6 +6,7 @@ export default StyleSheet.create({
         padding: 10,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor:"white"
     },
     absLoadingContainer: {
         position: 'absolute',

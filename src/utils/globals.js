@@ -1,12 +1,14 @@
 import { Dimensions, Platform } from "react-native";
 
 export const appName = 'BuyABlock'
-export const mainUrl = "https://chessmafia.com/php/BuyaBlock/api/buyer/"
+export const mainUrl = "https://chessmafia.com/php/BreakingNews/api/"
 export const isInternetConnected = true;
 export const fcmToken = '';
-export const authToken = "sJ4[pR3=bM5^gJ0]pS6.gI2$hV5*uS"
+export const authToken = ""
 export const toastMessage = ""
 export const buyer_id = ""
+export const user_id = ""
+
 
 
 export const screenWidth = Dimensions.get("window").width;
@@ -18,11 +20,12 @@ export const iPhoneX =
   Dimensions.get("window").width === 375;
 
 
-export const registerUser = 'auth/register'
-export const otp_verify = 'auth/verifyOtp'
-export const loginUser = 'auth/login'
-export const forgotPassword = 'auth/forgotPassword'
-export const Resetpassword = 'auth/Resetpassword'
-// export const getUserData = 'user/Getprofile'
-// export const updateProfile = 'user/Updateprofile'
+export const registerUser = 'register'
+export const otp_verify = 'otpVerify'
+export const loginUser = 'login'
+export const forgotPassword = 'forgotPassword'
+export const Resetpassword = 'Resetpassword'
+export const chatData = 'chatData'
+export const sendMessage = 'sendData'
+
 

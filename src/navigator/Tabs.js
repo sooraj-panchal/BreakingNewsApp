@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
+import { Dimensions, View } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../container/AppModule/HomeScreen/view';
+import HomeScreen from '../container/AppModule/HomeScreen';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { PrimaryColor } from "../assets/colors";
 import SavedScreen from "../container/AppModule/SavedScreen";
@@ -8,7 +9,6 @@ import NotificationScreen from "../container/AppModule/NotificationScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import ChatScreen from "../container/AppModule/ChatScreen";
 import ChatDetailScreen from "../container/AppModule/ChatDetailScreen";
-import { Dimensions, Pressable, View } from "react-native";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import Label from "../components/Label";
 import { semiBold } from "../assets/fonts/fonts";
@@ -76,7 +76,7 @@ const AlertStack = ({ }) => {
         </StackScreen.Navigator>
     )
 }
-const HomeStack = ({ }) => {
+const HomeStack = () => {
     return (
         <StackScreen.Navigator
         >
@@ -102,19 +102,6 @@ const HomeStack = ({ }) => {
                         },
                         headerTitleAlign: "left",
                         headerTintColor: "black",
-                        headerRight: () => {
-                            return <Pressable onPress={() => {
-                                // alert("logout")
-                                navigation.dispatch(AuthStack)
-                            }} >
-                                <Label
-                                    labelSize={15}
-                                    labelStyle={{
-                                        color: "red",
-                                        fontWeight: "bold",
-                                    }}  >Logout</Label>
-                            </Pressable>
-                        }
                     })
                 }}
             />
@@ -123,7 +110,7 @@ const HomeStack = ({ }) => {
 }
 const Tab = createBottomTabNavigator()
 
-function Tabs({ route }) {
+function Tabs({ navigation, route }) {
     // const name = getFocusedRouteNameFromRoute({...route.state})
     // console.log(route.state.index)
     const { width, height } = Dimensions.get("screen")
@@ -214,8 +201,9 @@ function Tabs({ route }) {
                         },
                     })
                 }}
+
             />
-            <Tab.Screen name="SavedStack" component={ChatStack}
+            <Tab.Screen name="ChatStack" component={ChatStack}
                 options={{
                     tabBarLabel: "Alert",
                     tabBarIcon: ({ color, focused }) => {
@@ -225,7 +213,14 @@ function Tabs({ route }) {
                             </CustomTabIconContainer>
                         )
                     },
-                }} />
+                }}
+                listeners={{
+                    tabPress: e => {
+                        e.preventDefault()
+                        navigation.navigate("ChatDetail")
+                    },
+                }}
+            />
             <Tab.Screen name="AlertStack" component={AlertStack}
                 options={{
                     tabBarLabel: "Alert",

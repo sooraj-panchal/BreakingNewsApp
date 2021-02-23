@@ -9,6 +9,7 @@ import { combineReducers } from 'redux';
 // import profileReducer from './profileReducer';
 import whiteListReducer from './whiteListReducer';
 import authReducer from './authReducer';
+import homeReducer from './homeReducer';
 
 export default combineReducers({
     // productCountReducer,
@@ -20,5 +21,6 @@ export default combineReducers({
     // mapReducer,
     // orderReducer,
     // paymentReducer,
-    authReducer
+    authReducer,
+    homeReducer
 });

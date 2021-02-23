@@ -7,3 +7,5 @@
 // export * from './orderSelector'
 // export * from './paymentSelector'
 export * from './authSelector'
+export * from './whiteListSelector'
+export * from './homeSelector'

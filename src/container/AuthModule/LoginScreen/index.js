@@ -1,19 +1,21 @@
 import LoginScreen from "./view";
 import { connect } from 'react-redux';
-import { loginLoading, loginSelector } from "../../../store/selectors";
-import { asyncBuyerDataWatcher, loginSuccess, loginWatcher } from "../../../store/actions";
+import { loginLoading, loginSelector, saveUserDataSelector } from "../../../store/selectors";
+import { asyncUserDataWatcher, loginSuccess, loginWatcher, SaveUserDataWatcher } from "../../../store/actions";
 
 
 const mapStateToProps = store => {
     return {
         loginResponse: loginSelector(store),
         loginLoading: loginLoading(store),
+        SaveUserDataReasponse: saveUserDataSelector(store)
     }
 }
 
 const mapDispatchToProps = {
     loginWatcher,
     loginSuccess,
-    asyncBuyerDataWatcher,
+    asyncUserDataWatcher,
+    SaveUserDataWatcher
 };
 export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen)

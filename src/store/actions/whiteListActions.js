@@ -1,17 +1,32 @@
 import * as actionTypes from '../actionTypes';
 
-export const asyncBuyerDataWatcher = (payload) => ({
-    type: actionTypes.ASYNC_BUYER_DATA_WATCHER,
+export const asyncUserDataWatcher = (payload) => ({
+    type: actionTypes.ASYNC_USER_DATA_WATCHER,
     payload
 });
 
-export const asyncBuyerDataSuccess = (payload) => ({
-    type: actionTypes.ASYNC_BUYER_DATA_SUCCESS,
+export const asyncUserDataSuccess = (payload) => ({
+    type: actionTypes.ASYNC_USER_DATA_SUCCESS,
     payload
 });
 
-export const asyncBuyerDataError = (payload) => ({
-    type: actionTypes.ASYNC_BUYER_DATA_ERROR,
+export const asyncUserDataError = (payload) => ({
+    type: actionTypes.ASYNC_USER_DATA_ERROR,
+    payload
+});
+
+export const SaveUserDataWatcher = (payload) => ({
+    type: actionTypes.SAVE_USER_DATA_WATCHER,
+    payload
+});
+
+export const SaveUserDataSuccess = (payload) => ({
+    type: actionTypes.SAVE_USER_DATA_SUCCESS,
+    payload
+});
+
+export const SaveUserDataError = (payload) => ({
+    type: actionTypes.SAVE_USER_DATA_ERRROR,
     payload
 });
 // /

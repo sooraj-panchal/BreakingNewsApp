@@ -4,7 +4,12 @@ const initialState = {
     data: null,
     error: null,
     isLoading: false,
-    asyncBuyerData: {
+    asyncUserData: {
+        data: null,
+        error: null,
+        isLoading: false
+    },
+    saveUserData:{
         data: null,
         error: null,
         isLoading: false
@@ -13,33 +18,60 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.ASYNC_BUYER_DATA_WATCHER:
+        case actionTypes.ASYNC_USER_DATA_WATCHER:
             return {
                 ...state,
-                asyncBuyerData: {
+                asyncUserData: {
                     data: null,
                     error: null,
                     isLoading: true
                 },
             };
-        case actionTypes.ASYNC_BUYER_DATA_SUCCESS:
+        case actionTypes.ASYNC_USER_DATA_SUCCESS:
             return {
                 ...state,
-                asyncBuyerData: {
+                asyncUserData: {
                     data: action.payload,
                     error: null,
                     isLoading: false
                 }
             };
-        case actionTypes.ASYNC_BUYER_DATA_ERROR:
+        case actionTypes.ASYNC_USER_DATA_ERROR:
             return {
                 ...state,
-                asyncBuyerData: {
+                asyncUserData: {
                     data: null,
                     error: action.payload,
                     isLoading: false
                 }
             };
+            case actionTypes.SAVE_USER_DATA_WATCHER:
+                return {
+                    ...state,
+                    saveUserData: {
+                        data: null,
+                        error: null,
+                        isLoading: true
+                    },
+                };
+            case actionTypes.SAVE_USER_DATA_SUCCESS:
+                return {
+                    ...state,
+                    saveUserData: {
+                        data: action.payload,
+                        error: null,
+                        isLoading: false
+                    }
+                };
+            case actionTypes.SAVE_USER_DATA_ERRROR:
+                return {
+                    ...state,
+                    saveUserData: {
+                        data: null,
+                        error: action.payload,
+                        isLoading: false
+                    }
+                };
         default:
             return state;
     }

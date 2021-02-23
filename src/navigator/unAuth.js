@@ -69,7 +69,7 @@ const AppStackScreen = () => {
                 component={ChatDetailScreen}
                 options={({  }) => {
                     return ({
-                        headerTitle: "John Williams",
+                        headerTitle: "Admin",
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,

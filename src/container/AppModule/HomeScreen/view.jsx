@@ -1,5 +1,5 @@
-import React from "react";
-import { View, ScrollView, FlatList, StatusBar } from "react-native";
+import React, { useEffect } from "react";
+import { View, ScrollView, FlatList, StatusBar, Alert } from "react-native";
 import Btn from "../../../components/Btn";
 import CardView from "../../../components/CardView";
 import Img from "../../../components/Img";
@@ -12,11 +12,16 @@ import { medium } from "../../../assets/fonts/fonts";
 import { AppImages, AuthImages } from "../../../assets/images/map";
 import Container from "../../../components/Container";
 import { screenWidth } from "../../../utils/styleUtils";
-import { headerImageArray ,NewsArray} from "../../../../dummyArray";
+import { headerImageArray, NewsArray } from "../../../../dummyArray";
+import { AuthStack } from "../../../navigator/navActions";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
 const HomeScreen = ({
-    navigation
+    navigation,
+    route,
+    asyncUserDataWatcher,
+    asyncUserDataResponse
 }) => {
 
     const HeaderImagesList = ({
@@ -66,9 +71,9 @@ const HomeScreen = ({
                     borderWidth: 1,
                     borderColor: LightGrayColor
                 }} mpContainer={{ ph: 10, mh: 15, pv: 10 }}
-            onPressCard={() => {
-                navigation.navigate("NewsDetail")
-            }}
+                onPressCard={() => {
+                    navigation.navigate("NewsDetail")
+                }}
             >
                 <View style={{
                     flexDirection: "row",
@@ -103,9 +108,52 @@ const HomeScreen = ({
         )
     }
 
+    const logoutHandler = () => {
+        Alert.alert(
+            "Breaking News",
+            "Are you sure to want logout?",
+            [
+                {
+                    text: "Cancel",
+                    style: "cancel"
+                },
+                {
+                    text: "OK", onPress: () => AsyncStorage.clear().then(() => {
+                        navigation.dispatch(AuthStack)
+                    }),
+                }
+            ],
+            { cancelable: false }
+        );
+    }
+
+    useEffect(() => {
+        navigation.setOptions({
+            headerRight: () => {
+                return <Label
+                    labelSize={15}
+                    labelStyle={{
+                        color: "red",
+                        fontWeight: "bold",
+                    }}
+                    onPressLabel={() => {
+                        logoutHandler()
+                    }}
+                >Logout</Label>
+            }
+        })
+    }, [])
+
+    // useEffect(() => {
+    //     if (!asyncUserDataResponse) {
+    //         console.log("logout", true)
+    //         navigation.dispatch(AuthStack)
+    //     }
+    // }, [asyncUserDataResponse])
+
     return (
         <MainContainer style={{ backgroundColor: 'white' }} >
-            <StatusBar backgroundColor={"white"} barStyle="dark-content"  />
+            <StatusBar backgroundColor={"white"} barStyle="dark-content" />
             {/* <Container containerStyle={styles.headerTopContainer}
                 mpContainer={{ ph: 20, pt: 15 }}
                 height={60}
@@ -120,6 +168,7 @@ const HomeScreen = ({
             <ScrollView
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
+                scrollEnabled={false}
             >
                 <FlatList
                     showsHorizontalScrollIndicator={false}

@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, Fragment } from 'react'
-import { ScrollView, StatusBar, View, Text } from 'react-native'
-import { PrimaryColor, LightGrayColor, OrangeColor, GrayColor } from '../../../assets/colors'
-import { medium, semiBold } from '../../../assets/fonts/fonts'
+import React, { useEffect, Fragment } from 'react'
+import { ScrollView, StatusBar } from 'react-native'
+import { PrimaryColor, LightGrayColor, GrayColor } from '../../../assets/colors'
+import { medium } from '../../../assets/fonts/fonts'
 import { AuthImages } from '../../../assets/images/map'
 import Btn from '../../../components/Btn'
 import Img from '../../../components/Img'
@@ -9,11 +9,8 @@ import Label from '../../../components/Label'
 import MainContainer from '../../../components/MainContainer'
 import TextInputComp from '../../../components/TextInputComp'
 import Ionicans from 'react-native-vector-icons/Ionicons'
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
-import Octicons from 'react-native-vector-icons/Octicons'
 import { Formik } from 'formik'
 import * as yup from 'yup';
-import { authToken, fcmToken } from '../../../utils/globals'
 import { AppStack } from '../../../navigator/navActions'
 import Container from '../../../components/Container'
 function LoginScreen({
@@ -23,29 +20,24 @@ function LoginScreen({
     loginSuccess,
     loginResponse,
     loginLoading,
-    asyncBuyerDataWatcher
+    asyncUserDataWatcher
 }) {
     const loginHandler = (values) => {
-        navigation.navigate("Verification", {
-            phoneNumber: values.phoneNumber
-        })
+
         // alert("hello")
-        // let data = new FormData()
-        // data.append("auth_token", authToken)
-        // data.append("email", values.email)
-        // data.append("password", values.password)
-        // data.append("type", "N")
-        // data.append("device_id", fcmToken)
-        // data.append("name", "")
-        // data.append("mobile_no", "")
-        // loginWatcher(data)
+        let data = new FormData()
+        data.append("mobile_no", values.phoneNumber)
+        loginWatcher(data)
     }
     useEffect(() => {
         if (loginResponse) {
             console.log(loginResponse)
-            if (loginResponse.status == "success") {
-                navigation.dispatch(AppStack)
-                asyncBuyerDataWatcher({ ...loginResponse?.data })
+            if (loginResponse.success) {
+                navigation.navigate("Verification", {
+                    phoneNumber: loginResponse.success.mobile_no
+                })
+                // navigation.dispatch(AppStack)
+                // asyncUserDataWatcher({ ...loginResponse?.data })
             }
         }
         return () => {

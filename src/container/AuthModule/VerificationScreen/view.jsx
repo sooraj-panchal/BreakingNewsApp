@@ -13,6 +13,7 @@ import {
 import Header from '../../../components/Header'
 import * as globals from '../../../utils/globals'
 import { AppStack } from '../../../navigator/navActions'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 function VerificationScreen({
     navigation,
@@ -20,7 +21,7 @@ function VerificationScreen({
     verifyOtpLoading,
     verifyOtpResponse,
     verifyOtpWatcher,
-    asyncBuyerDataWatcher,
+    asyncUserDataWatcher,
     verifyOtpSuccess
 }) {
     const CELL_COUNT = 4;
@@ -33,27 +34,22 @@ function VerificationScreen({
     });
 
     const verifyOtpHandler = () => {
-        navigation.navigate("Profile")
-        // let data = new FormData()
-        // data.append("auth_token", globals.authToken)
-        // data.append("otp", value)
-        // data.append("id", route.params.buyer_id)
-        // console.log(data)
-        // verifyOtpWatcher(data)
+        // navigation.navigate("Profile")
+        let data = new FormData()
+        data.append("mobile_no", route.params.phoneNumber)
+        data.append("otp", value)
+        // loginWatcher(data)
+        verifyOtpWatcher(data)
     }
 
     useEffect(() => {
-        if (verifyOtpResponse?.status == "success") {
-            if (route.params?.from == "forgoPassword") {
-                navigation.navigate('ResetPassword', {
-                    email: route.params?.email
-                    // ...route.params
-                })
-            } else {
-                globals.buyer_id = verifyOtpResponse.data.buyer_id
-                asyncBuyerDataWatcher({ ...verifyOtpResponse?.data })
-                navigation.dispatch(AppStack)
-            }
+        console.log(verifyOtpResponse)
+        if (verifyOtpResponse?.success) {
+            // globals.authToken = verifyOtpResponse.success.token
+            console.log("otpsdadsadsdsdas", verifyOtpResponse.success)
+            navigation.dispatch(AppStack)
+            asyncUserDataWatcher(verifyOtpResponse.success)
+            AsyncStorage.setItem("userData", JSON.stringify(verifyOtpResponse.success))
         }
         return () => verifyOtpSuccess(null)
     }, [verifyOtpResponse])
@@ -62,7 +58,7 @@ function VerificationScreen({
         <MainContainer statusBarBg="#f2f2f2" modalLoader
             absoluteLoading={verifyOtpLoading}
         >
-            <StatusBar backgroundColor="#f2f2f2" barStyle="dark-content"/>
+            <StatusBar backgroundColor="#f2f2f2" barStyle="dark-content" />
             <ScrollView contentContainerStyle={{ paddingBottom: 100 }} >
                 <Header navigation={navigation} />
                 {/* <Img

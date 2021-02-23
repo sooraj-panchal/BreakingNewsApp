@@ -31,7 +31,7 @@ const App = () => {
       </View>
     } else {
       return <>
-        <StatusBar backgroundColor={redColor} barStyle="light-content"/>
+        <StatusBar backgroundColor={redColor} barStyle="light-content" />
         <AppContainer />
       </>
     }
