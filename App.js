@@ -1,5 +1,5 @@
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import React from 'react';
+import React,{useEffect} from 'react';
 import {
   View, StatusBar, StyleSheet, Platform, ActivityIndicator
 } from 'react-native';
@@ -9,6 +9,8 @@ import AppContainer from './src/navigator';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { configureStore } from './src/store';
+import { NotificationHandler } from './src/utils/NotificationService';
+
 // import { enableScreens } from 'react-native-screens';
 
 // enableScreens()
@@ -16,13 +18,10 @@ import { configureStore } from './src/store';
 const getBottomSpace = 40
 
 const App = () => {
-  // const MyTheme = {
-  //   ...DefaultTheme,
-  //   colors: {
-  //     ...DefaultTheme.colors,
-  //     primary: 'rgb(255, 45, 85)',
-  //   },
-  // };
+  useEffect(() => {
+    NotificationHandler()
+  }, [])
+
   const _renderStatusBar = () => {
     if (Platform.OS === "ios") {
       return <View style={styles.header} >
@@ -51,7 +50,6 @@ const App = () => {
         </PersistGate>
       </Provider>
       {/* </SafeAreaView> */}
-
     </SafeAreaProvider>
   );
 };
@@ -59,18 +57,6 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     backgroundColor: PrimaryColor,
-    // position: 'absolute',
-    // top: 0,
-    // left: 0,
-    // right: 0,
-    // padding: 10,
-    // height: 60,
-    // ...ifIphoneX({
-    //   paddingTop: 50
-    // }, {
-    //   paddingTop: 20
-    // }),
-    // paddingTop: getStatusBarHeight() + 10,
     marginBottom: getBottomSpace
   },
 });
