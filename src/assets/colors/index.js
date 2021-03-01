@@ -1,5 +1,5 @@
-export const PrimaryColor = '#b3223a'
-export const StatusBarColor = '#07559D'
+export const PrimaryColor = '#414141'
+export const StatusBarColor = '#3F1314'
 export const OrangeColor = "#F79521"
 export const DarkBlueColor = "#002F47"
 export const GrayColor = "#8E8E8E"

@@ -4,7 +4,7 @@
             "outputFile": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/p/.gradle/caches/transforms-2/files-2.1/8f4dd6765e14761b2cc2b956c30f1e05/material-1.1.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/p/.gradle/caches/transforms-3/efb78b8e226dbf8cd93b1f2604fa09b9/transformed/material-1.1.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

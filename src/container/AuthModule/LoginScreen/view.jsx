@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment } from 'react'
 import { ScrollView, StatusBar } from 'react-native'
-import { PrimaryColor, LightGrayColor, GrayColor } from '../../../assets/colors'
+import { PrimaryColor, LightGrayColor, GrayColor, StatusBarColor } from '../../../assets/colors'
 import { medium } from '../../../assets/fonts/fonts'
 import { AuthImages } from '../../../assets/images/map'
 import Btn from '../../../components/Btn'
@@ -13,6 +13,8 @@ import { Formik } from 'formik'
 import * as yup from 'yup';
 import { AppStack } from '../../../navigator/navActions'
 import Container from '../../../components/Container'
+import { screenHeight, screenWidth } from '../../../utils/styleUtils'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 function LoginScreen({
     navigation,
     route,
@@ -33,11 +35,12 @@ function LoginScreen({
         if (loginResponse) {
             console.log(loginResponse)
             if (loginResponse.success) {
-                navigation.navigate("Verification", {
-                    phoneNumber: loginResponse.success.mobile_no
-                })
-                // navigation.dispatch(AppStack)
+                // navigation.navigate("Verification", {
+                //     phoneNumber: loginResponse.success.mobile_no
+                // })
+                navigation.dispatch(AppStack)
                 // asyncUserDataWatcher({ ...loginResponse?.data })
+                AsyncStorage.setItem("userData", JSON.stringify(loginResponse?.success))
             }
         }
         return () => {
@@ -49,21 +52,20 @@ function LoginScreen({
             statusBarBg="#f2f2f2"
             absoluteLoading={loginLoading}
             modalLoader
+            style={{
+                // paddingTop:StatusBar.currentHeight,
+            }}
         >
-            <StatusBar backgroundColor={PrimaryColor} />
+            <StatusBar backgroundColor={StatusBarColor} />
             <ScrollView>
                 <Formik
-                    initialValues={{ email: '', phoneNumber: "" }}
+                    initialValues={{ userName: "", email: '', phoneNumber: "" }}
                     onSubmit={values => loginHandler(values)}
                     validationSchema={yup.object().shape({
-                        // email: yup
-                        //     .string()
-                        //     .email()
-                        //     .required("Email is must be required"),
-                        // password: yup
-                        //     .string()
-                        //     .min(6)
-                        //     .required("Password is must be required"),
+                        userName: yup
+                            .string()
+                            .min(5)
+                            .required('Name is required field'),
                         phoneNumber: yup
                             .string()
                             .min(10)
@@ -73,28 +75,32 @@ function LoginScreen({
                 >
                     {({ values, handleChange, errors, setFieldTouched, touched, isValid, handleSubmit }) => (
                         <Fragment>
-
                             <Container
-                                height={300}
+                                // height={300}
                                 containerStyle={{
-                                    backgroundColor: PrimaryColor,
                                     justifyContent: "center",
                                     alignItems: "center"
                                 }}
                             >
                                 <Img
-                                    imgSrc={AuthImages.loginBg_Image}
-                                    // width={100}
-                                    // height={100}
+                                    imgSrc={AuthImages.splashBg_image}
                                     imgStyle={{
-                                        width: "50%",
-                                        height: "60%",
+                                        width: screenWidth,
+                                        height: screenHeight / 2,
+                                        // resizeMode:"stretch"
+                                    }}
+                                />
+                                <Img
+                                    imgSrc={AuthImages.splashLogo_image}
+                                    imgStyle={{
+                                        width: "90%",
+                                        height: 70,
+                                        position: "absolute",
                                         resizeMode: "contain"
                                     }}
-                                // mpImage={{ mr: 10 }}
                                 />
                             </Container>
-                            <Btn
+                            {/* <Btn
                                 label="Select Country"
                                 btnContainerStyle={{
                                     borderWidth: 1,
@@ -119,6 +125,39 @@ function LoginScreen({
                                         />
                                     )
                                 }}
+                            /> */}
+                            <TextInputComp
+                                value={values.userName}
+                                onChangeText={handleChange('userName')}
+                                onBlur={() => setFieldTouched('userName')}
+                                // maxLength={12}
+                                touched={touched.userName}
+                                errors={errors.userName}
+                                mpInputContainer={{ mt: 20, mh: 20 }}
+                                inputHeight={55}
+                                placeholder="User name"
+                                inputContainerStyle={{
+                                    backgroundColor: "white",
+                                    borderColor: LightGrayColor,
+                                    borderRadius: 10
+                                }}
+                                inputStyle={{
+                                    width: "70%",
+                                }}
+                                leftIcon={() => {
+                                    return (
+                                        <Ionicans
+                                            name="md-person"
+                                            size={25}
+                                            style={{
+                                                width: 35,
+                                                marginLeft: 15,
+                                            }}
+                                            color={PrimaryColor}
+                                        />
+                                    )
+                                }}
+                                placeholderTextColor={GrayColor}
                             />
                             <TextInputComp
                                 value={values.phoneNumber}
@@ -131,7 +170,7 @@ function LoginScreen({
                                 errors={errors.phoneNumber}
                                 mpInputContainer={{ mt: 20, mh: 20 }}
                                 inputHeight={55}
-                                placeholder="Your Phone Number"
+                                placeholder="Phone"
                                 inputContainerStyle={{
                                     backgroundColor: "white",
                                     borderColor: LightGrayColor,
@@ -149,7 +188,7 @@ function LoginScreen({
                                                 width: 35,
                                                 marginLeft: 15,
                                             }}
-                                        // color={GrayColor}
+                                            color={PrimaryColor}
                                         />
                                     )
                                 }}
@@ -171,11 +210,11 @@ function LoginScreen({
                         </Fragment>
                     )}
                 </Formik>
-                <Label labelStyle={{
+                {/* <Label labelStyle={{
                     textAlign: "center",
                     alignSelf: "center",
                     width: "80%",
-                }} mpLabelStyle={{ pt: 40 }} labelSize={18} >We will send you a One time SMS message</Label>
+                }} mpLabelStyle={{ pt: 40 }} labelSize={18} >We will send you a One time SMS message</Label> */}
             </ScrollView>
         </MainContainer>
     )

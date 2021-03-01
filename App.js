@@ -4,7 +4,7 @@ import {
   View, StatusBar, StyleSheet, Platform, ActivityIndicator
 } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { PrimaryColor, redColor } from './src/assets/colors';
+import { PrimaryColor, redColor, StatusBarColor } from './src/assets/colors';
 import AppContainer from './src/navigator';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -26,11 +26,11 @@ const App = () => {
     if (Platform.OS === "ios") {
       return <View style={styles.header} >
         <AppContainer />
-        <StatusBar backgroundColor={redColor} barStyle="light-content" />
+        <StatusBar backgroundColor={StatusBarColor} barStyle="light-content" />
       </View>
     } else {
       return <>
-        <StatusBar backgroundColor={redColor} barStyle="light-content" />
+        <StatusBar backgroundColor={StatusBarColor} barStyle="light-content" />
         <AppContainer />
       </>
     }
@@ -43,7 +43,7 @@ const App = () => {
       <Provider store={store}>
         <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
           <NavigationContainer
-            theme={{ colors: { background: PrimaryColor } }}
+            theme={{ colors: { background:"#3F1314" } }}
           >
             {_renderStatusBar()}
           </NavigationContainer>

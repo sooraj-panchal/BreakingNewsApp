@@ -4,7 +4,7 @@
             "outputFile": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/Users/p/.gradle/caches/transforms-2/files-2.1/1407a986925c8facc88e38d49d4207e8/appcompat-1.1.0/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

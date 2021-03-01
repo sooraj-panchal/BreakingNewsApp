@@ -1,21 +1,22 @@
 import React from 'react'
 import { StatusBar } from 'react-native'
-import { redColor } from '../../../assets/colors'
+import { redColor, StatusBarColor } from '../../../assets/colors'
 import { AuthImages } from '../../../assets/images/map'
 import Img from '../../../components/Img'
 import Label from '../../../components/Label'
 import MainContainer from '../../../components/MainContainer'
+import { screenHeight, screenWidth } from '../../../utils/styleUtils'
 
 function SplashScreen({
 
 }) {
     return (
         <MainContainer style={{
-            backgroundColor: redColor,
+            // backgroundColor: redColor,
             justifyContent: "center",
             alignItems: "center"
         }} >
-            <StatusBar backgroundColor={redColor} barStyle='light-content' />
+            <StatusBar backgroundColor={StatusBarColor}/>
             {/* <Image
                 source={AuthImages.splashLogo_image}
                 // width="100%"
@@ -26,19 +27,21 @@ function SplashScreen({
                 }}
             /> */}
             <Img
-                imgSrc={AuthImages.splashLogo_image}
-                width={200}
-                height={200}
-            />
-            <Label
-                labelSize={40}
-                labelStyle={{
-                    color: "white",
-                    fontWeight: "bold",
-                    letterSpacing: 2
+                imgSrc={AuthImages.splashBg_image}
+                imgStyle={{
+                    width: screenWidth,
+                    height: screenHeight
                 }}
-                mpLabelStyle={{ mt: 20 }}
-            >Breaking News</Label>
+            />
+            <Img
+                imgSrc={AuthImages.splashLogo_image}
+                imgStyle={{
+                    width: "90%",
+                    height: 70,
+                    position: "absolute",
+                    resizeMode: "contain"
+                }}
+            />
         </MainContainer>
     )
 }

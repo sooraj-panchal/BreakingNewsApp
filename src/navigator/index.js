@@ -74,7 +74,7 @@ const AppContainer = ({
             </StackScreen.Navigator>
         )
     }
-    if (token)
+    if (!token)
         return (
             <RootStack.Navigator
                 headerMode="none"
