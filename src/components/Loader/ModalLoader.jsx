@@ -19,7 +19,7 @@ const ModalLoader = ({
     loading
 }) => {
     return (
-        <Modal transparent={true} visible={loading}>
+        <Modal transparent={true} visible={loading} statusBarTranslucent>
             <View style={styles.modalView}>
                 {Platform.OS == "android"
                     ? (

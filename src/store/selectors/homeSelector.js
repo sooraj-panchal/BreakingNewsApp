@@ -20,7 +20,15 @@ export const sendMessageLoading = createSelector(
     homeReducer,
     sendMessageLoading => sendMessageLoading.sendMessage.isLoading
 );
-
+////
+export const getArticeListSelector = createSelector(
+    homeReducer,
+    getArticeListSelector => getArticeListSelector.getArticleListReducer.data,
+);
+export const getArticeListLoading = createSelector(
+    homeReducer,
+    getArticeListLoading => getArticeListLoading.getArticleListReducer.isLoading
+);
 // export const getHomeSliderSelector = createSelector(
 //     homeReducer,
 //     sliderImage => sliderImage.data,

@@ -1,8 +1,8 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import * as globals from '../../utils/globals'
 import * as actionTypes from "../../store/actionTypes";
-import { chatDataError, chatDataSuccess, sendMessageError, sendMessageSuccess } from "../actions/homeAction";
-import { chatDataApi, sendMessageApi } from "../apiService";
+import { chatDataError, chatDataSuccess, getArticleListError, getArticleListSuccess, sendMessageError, sendMessageSuccess } from "../actions/homeAction";
+import { chatDataApi, getArticleListApi, sendMessageApi } from "../apiService";
 
 function* chatDataActionEffect(action) {
     let variable = {
@@ -39,4 +39,23 @@ function* sendMessageActionEffect(action) {
 
 export function* sendMessageSaga() {
     yield takeLatest(actionTypes.SEND_MESSAGE_WATCHER, sendMessageActionEffect);
+}
+
+
+function* getArticleListActionEffect(action) {
+    let variable = {
+        ...action.payload
+    }
+    try {
+        const response = yield call(getArticleListApi, action.payload);
+        console.log("======>getArticleListApi success ", response)
+        yield put(getArticleListSuccess(response));
+    } catch (e) {
+        console.log("=====>getArticleListApi Error", e)
+        yield put(getArticleListError(e));
+    }
+}
+
+export function* getArticleListSaga() {
+    yield takeLatest(actionTypes.GET_ARTICLE_LIST_WATCHER, getArticleListActionEffect);
 }

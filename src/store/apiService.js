@@ -40,3 +40,7 @@ export function chatDataApi(data) {
 export function sendMessageApi(data) {
     return buildFormData(globals.mainUrl + globals.sendMessage, data)
 }
+
+export function getArticleListApi(data) {
+    return buildFormData(globals.mainUrl + globals.articleData, data)
+}

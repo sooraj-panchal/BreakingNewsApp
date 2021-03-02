@@ -1,6 +1,6 @@
 import { all } from 'redux-saga/effects';
 import { forgotPasswordSaga, loginSaga, registerSaga, resetPasswordSaga, verifyOtpSaga } from './authSaga';
-import { chatDataSaga, sendMessageSaga } from './homeSaga';
+import { chatDataSaga, getArticleListSaga, sendMessageSaga } from './homeSaga';
 import { asyncUserDataSaga, SaveUserDataSaga } from './whiteListSaga';
 export default function* rootSaga() {
   yield all([
@@ -12,6 +12,7 @@ export default function* rootSaga() {
     resetPasswordSaga(),
     asyncUserDataSaga(),
     chatDataSaga(),
-    sendMessageSaga()
+    sendMessageSaga(),
+    getArticleListSaga()
   ]);
 }

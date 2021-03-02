@@ -41,7 +41,7 @@ const ChatList = ({
                     mpContainer={{ pl: 15 }}
                 >
                     <Label labelStyle={{
-                        fontWeight:"bold"
+                        fontWeight: "bold"
                     }}
                         labelSize={16}
                     >John Williams</Label>

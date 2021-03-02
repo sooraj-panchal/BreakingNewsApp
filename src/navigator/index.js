@@ -43,7 +43,6 @@ const AppContainer = ({
         if (data) {
             setToken(data.token)
             globals.authToken = data.token
-            globals.user_id = data.user_data.id
             console.log("data", data)
         }
     }
@@ -74,7 +73,7 @@ const AppContainer = ({
             </StackScreen.Navigator>
         )
     }
-    if (!token)
+    if (token)
         return (
             <RootStack.Navigator
                 headerMode="none"

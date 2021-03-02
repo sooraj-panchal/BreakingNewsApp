@@ -29,18 +29,20 @@ function LoginScreen({
         // alert("hello")
         let data = new FormData()
         data.append("mobile_no", values.phoneNumber)
+        data.append("user_name", values.userName)
+
         loginWatcher(data)
     }
     useEffect(() => {
         if (loginResponse) {
             console.log(loginResponse)
-            if (loginResponse.success) {
+            if (loginResponse.status == "success") {
                 // navigation.navigate("Verification", {
                 //     phoneNumber: loginResponse.success.mobile_no
                 // })
                 navigation.dispatch(AppStack)
                 // asyncUserDataWatcher({ ...loginResponse?.data })
-                AsyncStorage.setItem("userData", JSON.stringify(loginResponse?.success))
+                AsyncStorage.setItem("userData", JSON.stringify(loginResponse?.data))
             }
         }
         return () => {
@@ -56,7 +58,7 @@ function LoginScreen({
                 // paddingTop:StatusBar.currentHeight,
             }}
         >
-            <StatusBar backgroundColor={StatusBarColor} />
+            {/* <StatusBar backgroundColor={StatusBarColor} /> */}
             <ScrollView>
                 <Formik
                     initialValues={{ userName: "", email: '', phoneNumber: "" }}
@@ -79,7 +81,9 @@ function LoginScreen({
                                 // height={300}
                                 containerStyle={{
                                     justifyContent: "center",
-                                    alignItems: "center"
+                                    alignItems: "center",
+                                    backgroundColor: '#3F1314',
+                                    // paddingTop: StatusBar.currentHeight
                                 }}
                             >
                                 <Img
@@ -87,7 +91,7 @@ function LoginScreen({
                                     imgStyle={{
                                         width: screenWidth,
                                         height: screenHeight / 2,
-                                        // resizeMode:"stretch"
+                                        resizeMode:"stretch"
                                     }}
                                 />
                                 <Img
@@ -98,6 +102,7 @@ function LoginScreen({
                                         position: "absolute",
                                         resizeMode: "contain"
                                     }}
+                                    fadeDuration={0}
                                 />
                             </Container>
                             {/* <Btn

@@ -16,7 +16,7 @@ function SplashScreen({
             justifyContent: "center",
             alignItems: "center"
         }} >
-            <StatusBar backgroundColor={StatusBarColor}/>
+            {/* <StatusBar backgroundColor={StatusBarColor}/> */}
             {/* <Image
                 source={AuthImages.splashLogo_image}
                 // width="100%"
@@ -32,6 +32,8 @@ function SplashScreen({
                     width: screenWidth,
                     height: screenHeight
                 }}
+                fadeDuration={0}
+
             />
             <Img
                 imgSrc={AuthImages.splashLogo_image}

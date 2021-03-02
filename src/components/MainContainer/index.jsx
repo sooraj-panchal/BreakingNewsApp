@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Platform, SafeAreaView, View } from 'react-native';
+import { Platform, SafeAreaView, StatusBar, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { PrimaryColor } from '../../assets/colors';
 import * as globals from '../../utils/globals';
@@ -53,7 +53,6 @@ const MainContainer = ({
                 // marginBottom: insets.bottom,
                 paddingRight: insets.right,
                 paddingLeft: insets.left,
-                // paddingTop: Platform.OS == "ios" ? getStatusBarHeight() + 10 : 0,
                 // marginBottom: getBottomSpace()
             }, style]}>
             {Platform.OS === "ios" && <SafeAreaView style={{ backgroundColor: statusBarBg ? statusBarBg : PrimaryColor }} />}

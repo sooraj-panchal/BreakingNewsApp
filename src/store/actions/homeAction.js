@@ -64,7 +64,6 @@ export const chatDataError = (payload) => ({
     type: actionTypes.CHAT_DATA_ERRROR,
     payload
 });
-
 export const sendMessageWatcher = (payload) => ({
     type: actionTypes.SEND_MESSAGE_WATCHER,
     payload
@@ -77,3 +76,18 @@ export const sendMessageError = (payload) => ({
     type: actionTypes.SEND_MESSAGE_ERRROR,
     payload
 });
+
+export const getArticleListWatcher = (payload) => ({
+    type: actionTypes.GET_ARTICLE_LIST_WATCHER,
+    payload
+});
+export const getArticleListSuccess = (payload) => ({
+    type: actionTypes.GET_ARTICLE_LIST_SUCCESS,
+    payload
+});
+export const getArticleListError = (payload) => ({
+    type: actionTypes.GET_ARTICLE_LIST_ERRROR,
+    payload
+});
+
+

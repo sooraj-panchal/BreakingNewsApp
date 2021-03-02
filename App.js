@@ -1,7 +1,7 @@
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import React,{useEffect} from 'react';
 import {
-  View, StatusBar, StyleSheet, Platform, ActivityIndicator
+  View, StatusBar, StyleSheet, Platform, ActivityIndicator, LogBox
 } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { PrimaryColor, redColor, StatusBarColor } from './src/assets/colors';
@@ -14,7 +14,7 @@ import { NotificationHandler } from './src/utils/NotificationService';
 // import { enableScreens } from 'react-native-screens';
 
 // enableScreens()
-
+  LogBox.ignoreAllLogs(true)
 const getBottomSpace = 40
 
 const App = () => {
@@ -26,11 +26,11 @@ const App = () => {
     if (Platform.OS === "ios") {
       return <View style={styles.header} >
         <AppContainer />
-        <StatusBar backgroundColor={StatusBarColor} barStyle="light-content" />
+        <StatusBar backgroundColor={"transparent"} barStyle="light-content" translucent />
       </View>
     } else {
       return <>
-        <StatusBar backgroundColor={StatusBarColor} barStyle="light-content" />
+        <StatusBar backgroundColor={"transparent"} barStyle="light-content" translucent />
         <AppContainer />
       </>
     }

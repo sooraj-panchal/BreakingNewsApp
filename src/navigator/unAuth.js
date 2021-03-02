@@ -4,6 +4,7 @@ import ProfileScreen from '../container/AppModule/ProfileScreen/view';
 import Tabs from './Tabs';
 import NewsDetailScreen from '../container/AppModule/NewsDetailScreen';
 import ChatDetailScreen from '../container/AppModule/ChatDetailScreen';
+import { StatusBar } from 'react-native';
 
 const StackScreen = createStackNavigator();
 const AppStackScreen = () => {
@@ -29,7 +30,7 @@ const AppStackScreen = () => {
             <StackScreen.Screen
                 name="Tabs"
                 component={Tabs}
-                options={({  }) => {
+                options={({ }) => {
                     return ({
                         headerShown: false
                     })
@@ -45,35 +46,35 @@ const AppStackScreen = () => {
             <StackScreen.Screen
                 name="NewsDetail"
                 component={NewsDetailScreen}
-                    options={({  }) => {
-                        return ({
-                                                // headerShown: false,
-                            headerTitle: "Back",
-                            headerStyle: {
-                                backgroundColor: "white",
-                                elevation:0
-                            },
-                            headerTitleStyle: {
-                                fontSize: 18,
-                                right: 10
-                                // fontWeight: "bold",
-                            },
-                            headerBackTitle: false,
-                            headerTitleAlign: "left",
-                            headerTintColor: "black",
-                        })
-                    }}
+                options={({ }) => {
+                    return ({
+                        // headerShown: false,
+                        headerTitle: "Back",
+                        headerStyle: {
+                            backgroundColor: "white",
+                            elevation: 0
+                        },
+                        headerTitleStyle: {
+                            fontSize: 18,
+                            right: 10
+                            // fontWeight: "bold",
+                        },
+                        headerBackTitle: false,
+                        headerTitleAlign: "left",
+                        headerTintColor: "black",
+                    })
+                }}
             />
             <StackScreen.Screen
                 name="ChatDetail"
                 component={ChatDetailScreen}
-                options={({  }) => {
+                options={({ }) => {
                     return ({
                         headerTitle: "Admin",
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
-                            height: 60,
+                            // height: 60+StatusBar.currentHeight,
                         },
                         headerTitleStyle: {
                             fontSize: 18,

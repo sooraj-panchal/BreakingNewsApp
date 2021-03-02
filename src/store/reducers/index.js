@@ -12,15 +12,8 @@ import authReducer from './authReducer';
 import homeReducer from './homeReducer';
 
 export default combineReducers({
-    // productCountReducer,
     // homeReducer,
-    // profileReducer,
-    // productReducer,
-    // cartReducer,
     whiteListReducer,
-    // mapReducer,
-    // orderReducer,
-    // paymentReducer,
     authReducer,
     homeReducer
 });

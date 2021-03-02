@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, StatusBar } from 'react-native';
 import { PrimaryColor } from '../../assets/colors';
 
 import styles from './styles';
@@ -20,6 +20,7 @@ const Loader = ({ absolute, loaderTop }) => {
     }
     return (
         <View style={style}>
+            <StatusBar barStyle="dark-content" />
             <ActivityIndicator size="large" color={PrimaryColor} />
         </View>
     );
