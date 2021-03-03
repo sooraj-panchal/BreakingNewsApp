@@ -12,7 +12,7 @@ const AppStackScreen = () => {
         <StackScreen.Navigator
             initialRouteName="Tabs"
             screenOptions={{
-                // headerStatusBarHeight: 0,
+                headerStatusBarHeight:StatusBar.currentHeight,
                 headerStyle: {
                     backgroundColor: "#f2f2f2"
                 },

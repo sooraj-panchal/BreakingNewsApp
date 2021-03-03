@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Dimensions, View } from "react-native";
+import { Dimensions, StatusBar, View } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../container/AppModule/HomeScreen';
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -25,6 +25,7 @@ const ChatStack = ({ }) => {
                 options={({ navigation, route }) => {
                     return ({
                         headerStyle: {
+                            headerStatusBarHeight: StatusBar.currentHeight,
                             backgroundColor: "white",
                             elevation: 0,
                             // height: 60
@@ -55,6 +56,7 @@ const AlertStack = ({ }) => {
                 component={NotificationScreen}
                 options={({ navigation, route }) => {
                     return ({
+                        headerStatusBarHeight: StatusBar.currentHeight,
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
@@ -86,7 +88,7 @@ const HomeStack = () => {
                 options={({ navigation, route }) => {
                     return ({
                         headerTitle: "Trending",
-                        // headerStatusBarHeight:30,
+                        headerStatusBarHeight: StatusBar.currentHeight,
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,

@@ -33,15 +33,19 @@ const MainContainer = ({
             else return <Loader absolute={true} />
         }
     }
-    if (loading) {
-        if (modalLoader) {
-            return (
-                <ModalLoader />
-            )
+    const loadingContainer = () => {
+        if (loading) {
+            if (modalLoader) {
+                return (
+                    <ModalLoader />
+                )
+            } else {
+                return (
+                    <Loader absolute={absolute} loaderTop={loaderTop} />
+                )
+            }
         } else {
-            return (
-                <Loader absolute={absolute} loaderTop={loaderTop} />
-            )
+            return children
         }
     }
     return (
@@ -55,13 +59,14 @@ const MainContainer = ({
                 paddingLeft: insets.left,
                 // marginBottom: getBottomSpace()
             }, style]}>
-            {Platform.OS === "ios" && <SafeAreaView style={{ backgroundColor: statusBarBg ? statusBarBg : PrimaryColor }} />}
-            {children}
+            { loadingContainer()}
+            {/* {Platform.OS === "ios" && <SafeAreaView style={{ backgroundColor: statusBarBg ? statusBarBg : PrimaryColor }} />} */}
+            {/* {children} */}
             {/* {error ? <ErrorView /> : children} */}
             {/* {(absoluteLoading) && <Loader absolute={true}
                 // animating={absoluteLoading}
                 />} */}
-            {absoluteLoadingContainer()}
+            {/* {absoluteLoadingContainer()} */}
         </View>
     );
 

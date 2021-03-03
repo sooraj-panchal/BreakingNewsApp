@@ -1,5 +1,5 @@
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   View, StatusBar, StyleSheet, Platform, ActivityIndicator, LogBox
 } from 'react-native';
@@ -14,7 +14,7 @@ import { NotificationHandler } from './src/utils/NotificationService';
 // import { enableScreens } from 'react-native-screens';
 
 // enableScreens()
-  LogBox.ignoreAllLogs(true)
+LogBox.ignoreAllLogs(true)
 const getBottomSpace = 40
 
 const App = () => {
@@ -43,7 +43,7 @@ const App = () => {
       <Provider store={store}>
         <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
           <NavigationContainer
-            theme={{ colors: { background:"#3F1314" } }}
+            theme={{ colors: { background: "#3F1314" } }}
           >
             {_renderStatusBar()}
           </NavigationContainer>

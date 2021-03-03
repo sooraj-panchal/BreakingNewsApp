@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ScrollView, FlatList, StatusBar, Alert, TouchableOpacity } from "react-native";
+import { View, ScrollView, FlatList, StatusBar, Alert, TouchableOpacity, ActivityIndicator } from "react-native";
 import Btn from "../../../components/Btn";
 import CardView from "../../../components/CardView";
 import Img from "../../../components/Img";
@@ -20,14 +20,13 @@ import * as globals from "../../../utils/globals";
 
 const HomeScreen = ({
     navigation,
-    route,
-    asyncUserDataWatcher,
-    asyncUserDataResponse,
     getArticleListWatcher,
-    getArticeListLoading,
+    // getArticeListLoading,
     getArticeListResponse
 }) => {
     const [getArticleListData, setgetArticleListData] = useState([])
+    const [getArticeListLoading, setGetArticeListLoading] = useState(true)
+    const [getArticeListPaginLoading, setGetArticeListPaginLoading] = useState(true)
     const [offset, setOffset] = useState(0);
 
     const HeaderImagesList = ({
@@ -39,13 +38,10 @@ const HomeScreen = ({
                 <Img
                     imgSrc={imgSrc}
                     // width={300}
-                    // height={300}
+                    height={180}
                     imgStyle={{
                         width: screenWidth * 0.80,
-                        height: 180,
-                        // resizeMode: "stretch",
                         borderRadius: 5,
-                        // alignSelf:"center"
                     }}
                     mpImage={{ mt: 10 }}
                 />
@@ -150,47 +146,30 @@ const HomeScreen = ({
         })
     }, [])
 
-    // useEffect(() => {
-    //     if (!asyncUserDataResponse) {
-    //         console.log("logout", true)
-    //         navigation.dispatch(AuthStack)
-    //     }
-    // }, [asyncUserDataResponse])
+    useEffect(() => { getArticleList() }, [])
 
-    useEffect(() => {
-        getArticleList()
-    }, [])
     const getArticleList = () => {
         let data = new FormData()
         data.append("sort", "id")
         data.append("order", 'asc')
-        data.append("limit", '5')
+        data.append("limit", '10')
         data.append("page", offset)
         getArticleListWatcher(data)
     }
     useEffect(() => {
+        setGetArticeListPaginLoading(false)
         if (getArticeListResponse?.status == "success") {
-            // setOffset(offset + 1);
-            // setgetArticleListData(arr => [arr, ...getArticeListResponse?.data])
+            setGetArticeListLoading(false)
             if (getArticeListResponse?.data?.length) {
                 setOffset(offset + 1);
                 setgetArticleListData(arr => [...arr, ...getArticeListResponse?.data])
-                // setgetArticleListData([...getArticleListData, ...getArticeListResponse?.data]);
             }
         }
     }, [getArticeListResponse])
-    return (
-        <MainContainer style={{ backgroundColor: 'white' }}
-            loading={true}
-        modalLoader
-        >
-            <StatusBar backgroundColor={"transparent"} barStyle="dark-content" />
-            {/* <ScrollView
-                contentContainerStyle={{ paddingBottom: 100 }}
-                showsVerticalScrollIndicator={false}
-            scrollEnabled={false}
-            > */}
-            <View>
+
+    const heaederImageListRender = () => {
+        return (
+            <>
                 <FlatList
                     showsHorizontalScrollIndicator={false}
                     // style={styles.propertyTypeListContainer}
@@ -204,18 +183,32 @@ const HomeScreen = ({
                     keyExtractor={(_, index) => index.toString()}
                     pagingEnabled
                     horizontal={true}
-                    ListHeaderComponent={() => (<View style={{ marginRight: 20 }} />)}
-                    ItemSeparatorComponent={() => (<View style={{ marginLeft: 10 }} />)}
-                    ListFooterComponent={() => (<View style={{ marginRight: 40 }} />)}
+                    ListHeaderComponent={() => (<Container mpContainer={{ mr: 20 }} />)}
+                    ItemSeparatorComponent={() => (<Container mpContainer={{ ml: 10 }} />)}
+                    ListFooterComponent={() => (<Container mpContainer={{ mr: 40 }} />)}
                 />
-            </View>
-            <Label
-                labelSize={25}
-                mpLabelStyle={{ mt: 20, pl: 15 }}
+                <Label
+                    labelSize={25}
+                    mpLabelStyle={{ mt: 20, pl: 15 }}
+                    labelStyle={styles.headerLabel}  >News</Label>
+            </>
+        )
+    }
 
-                labelStyle={styles.headerLabel}  >News</Label>
+    return (
+        <MainContainer style={{ backgroundColor: 'white' }}
+            loading={getArticeListLoading}
+        // modalLoader
+        >
+            <StatusBar backgroundColor={"transparent"} barStyle="dark-content" />
+            {/* <ScrollView
+                contentContainerStyle={{ paddingBottom: 100 }}
+                showsVerticalScrollIndicator={false}
+            scrollEnabled={false}
+            > */}
             <FlatList
                 data={getArticleListData}
+                contentContainerStyle={{ paddingBottom: 100 }}
                 renderItem={({ item, index }) => {
                     // console.log(`${getArticeListResponse?.path}${item.image}`)
                     return <NewsList
@@ -228,18 +221,34 @@ const HomeScreen = ({
                 // scrollEnabled={false}
                 keyExtractor={(item, index) => index.toString()}
                 ItemSeparatorComponent={() => <View style={{ marginVertical: 5 }} />}
-                ListHeaderComponent={() => <View style={{ marginTop: 10 }} />}
-                ListFooterComponent={() =>
-                    <View style={{ marginBottom: 10 }}
+                ListHeaderComponent={() => heaederImageListRender()}
+                ListHeaderComponentStyle={{
+                    // backgroundColor:"red",
+                    marginBottom: 10
+                }}
+                ListFooterComponent={() => {
+                    return (
+                        <View style={{
+                            height: 100,
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }} >
+                            <ActivityIndicator
+                                size="large"
+                                color="black"
+                                animating={getArticeListPaginLoading}
+                            />
 
-                    />
-                }
-                onEndReachedThreshold={0.1}
-                showsVerticalScrollIndicator={false}
-                onEndReached={(info) => {
-                    // console.log("hello")
+                        </View>
+                    )
+                }}
+                onEndReachedThreshold={0.2}
+                onEndReached={() => {
+                    setGetArticeListPaginLoading(true)
                     getArticleList()
                 }}
+
+
             />
             {/* </ScrollView> */}
         </MainContainer>
@@ -247,6 +256,7 @@ const HomeScreen = ({
 }
 
 export default HomeScreen;
+
 
 // import React, { useState, useEffect } from 'react';
 
@@ -265,7 +275,7 @@ export default HomeScreen;
 //     const [loading, setLoading] = useState(true);
 //     const [dataSource, setDataSource] = useState([]);
 //     const [offset, setOffset] = useState(1);
-
+//     const [loadingForPagin, setLoadingForPagin] = useState(false)
 //     useEffect(() => getData(), []);
 
 //     const getData = () => {
@@ -281,6 +291,7 @@ export default HomeScreen;
 //                 //Increasing the offset for the next API call
 //                 setDataSource((arr) => [...arr, ...responseJson.results]);
 //                 setLoading(false);
+//                 setLoadingForPagin(false)
 //             })
 //             .catch((error) => {
 //                 console.error(error);
@@ -291,18 +302,11 @@ export default HomeScreen;
 //         return (
 //             //Footer View with Load More button
 //             <View style={styles.footer}>
-//                 <TouchableOpacity
-//                     activeOpacity={0.9}
-//                     onPress={getData}
-//                     //On Click of button load more data
-//                     style={styles.loadMoreBtn}>
-//                     <Text style={styles.btnText}>Load More</Text>
-//                     {loading ? (
-//                         <ActivityIndicator
-//                             color="white"
-//                             style={{ marginLeft: 8 }} />
-//                     ) : null}
-//                 </TouchableOpacity>
+//                 <ActivityIndicator
+//                     size="large"
+//                     color="red"
+//                     animating={loadingForPagin}
+//                 />
 //             </View>
 //         );
 //     };
@@ -347,8 +351,9 @@ export default HomeScreen;
 //                     ItemSeparatorComponent={ItemSeparatorView}
 //                     enableEmptySections={true}
 //                     renderItem={ItemView}
-//                     //   ListFooterComponent={renderFooter}
+//                     ListFooterComponent={renderFooter}
 //                     onEndReached={() => {
+//                         setLoadingForPagin(true)
 //                         getData()
 //                     }}
 //                 />
