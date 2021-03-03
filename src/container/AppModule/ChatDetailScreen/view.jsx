@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, FlatList, View } from 'react-native'
+import { ActivityIndicator, FlatList, Linking, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { DarkBlueColor, GrayColor } from '../../../assets/colors'
 import Container from '../../../components/Container'
@@ -9,6 +9,9 @@ import TextInputComp from '../../../components/TextInputComp'
 import { chatDataSaga } from '../../../store/sagas/homeSaga'
 import { user_id } from '../../../utils/globals'
 import MessagesList from './ChatList'
+import moment from 'moment'
+import Img from '../../../components/Img'
+import { AppImages } from '../../../assets/images/map'
 
 const data = [
     {
@@ -51,8 +54,8 @@ function ChatDetailScreen({
 }) {
     const [message, setMessage] = useState("")
     const [messageArray, setMessageArray] = useState([])
-    const [NewDataLoading, setNewDataLoading] = useState(false)
-    const [offset, setOffset] = useState(0);
+    const [NewDataLoading, setNewDataLoading] = useState(true)
+    const [offset, setOffset] = useState(1);
     const [getChatDataLoading, setGetChatDataLoading] = useState(true)
 
     useEffect(() => {
@@ -61,12 +64,12 @@ function ChatDetailScreen({
         // var now = new Date().toLocaleTimeString();
         getMessages()
         return () => {
-            getMessages()
+            chatDataWatcher(null)
         }
     }, [])
 
     const getMessages = () => {
-        setGetChatDataLoading(true)
+        // setGetChatDataLoading(true)
         let formData = new FormData()
         formData.append("sort", "id")
         formData.append("order", "desc")
@@ -77,11 +80,12 @@ function ChatDetailScreen({
     useEffect(() => {
         if (chatDataResponse) {
             setNewDataLoading(false)
-            setGetChatDataLoading(false)
+            // alert(chatDataResponse?.data?.length)
             if (chatDataResponse?.data?.length) {
                 setOffset(offset + 1);
                 setMessageArray(arr => [...arr, ...chatDataResponse?.data])
             }
+            setGetChatDataLoading(false)
         }
     }, [chatDataResponse])
 
@@ -92,23 +96,17 @@ function ChatDetailScreen({
     }, [sendMessageeResponse])
 
     const onSendMessage = () => {
-        var date = new Date()
-        var hours = date.getHours() % 12
-        var minute = date.getMinutes()
-        var hourss = date.getHours()
-        var ampm = hourss >= 12 ? 'PM' : 'AM';
-        let currentTime = hours + ':' + minute + ' ' + ampm
+        // var date = new Date()
+        // var hours = date.getHours() % 12
+        // var minute = date.getMinutes()
+        // var hourss = date.getHours()
+        // var ampm = hourss >= 12 ? 'PM' : 'AM';
+        // let currentTime = hours + ':' + minute + ' ' + ampm
         // alert(currentTime)
         setMessageArray(arr => [{
-            "id": 148,
-            // "reply_id": 0,
-            "admin_id": 1,
-            "user_id": user_id,
             "msg": message,
             "admin_msg": null,
-            "created_at": "2021-02-23T10:45:33.000000Z",
-            "updated_at": "2021-02-23T10:45:33.000000Z",
-            "time": currentTime
+            "time": moment(new Date()).format('LT')
         }, ...arr]);
         setMessage("")
         let formData = new FormData()
@@ -183,11 +181,23 @@ function ChatDetailScreen({
             <FlatList inverted
                 data={messageArray}
                 renderItem={({ item }) => {
+                    // console.log(time)
+                    let newTime;
+                    const time = moment(item.created_at).startOf('day').fromNow();
+                    if (time <= "24 hours ago") {
+                        newTime = moment(item.created_at).format('LT');
+                    }
+                    if (time >= "24 hours ago" && time <= "7 days ago") {
+                        newTime = moment(item.created_at).startOf('hour').fromNow();
+                    }
+                    if (time >= "7 days ago") {
+                        newTime = moment(item.created_at).format('D/M/Y');
+                    }
                     return <MessagesList
                         userId={item.id}
                         adminMsg={item.admin_msg}
                         userMsg={item.msg}
-                        timeStamp={item.time}
+                        timeStamp={newTime}
                     />
                 }}
                 style={{ flex: 1 }}
@@ -229,18 +239,43 @@ function ChatDetailScreen({
                     )
                 }}
                 showsVerticalScrollIndicator={false}
-                onEndReachedThreshold={0.5}
+                onEndReachedThreshold={0.2}
                 onEndReached={() => {
-                    setNewDataLoading(true)
-                    let formData = new FormData()
-                    formData.append("sort", "id")
-                    formData.append("order", "desc")
-                    formData.append("limit", "15")
-                    formData.append("page", offset)
-                    chatDataWatcher(formData)
+                    if (messageArray.length >= 10) {
+                        setNewDataLoading(true)
+                        getMessages()
+                    }
                 }}
             />
             {MessageContainer()}
+            <Img
+                withContainer
+                containerStyle={{
+                    position: "absolute",
+                    right: 15,
+                    top: 10,
+                    // top:-20,
+                    zIndex: 100
+                }}
+                imgSrc={AppImages.whatsAppImage}
+                width={50}
+                height={50}
+                onPress={() => {
+                    let url =
+                        "whatsapp://send?text=" +
+                        "" +
+                        "&phone=91" +
+                        9723271763;
+                    Linking.openURL(url)
+                        .then(data => {
+                            console.log("WhatsApp Opened successfully " + data);
+                        })
+                        .catch(() => {
+                            alert("Make sure WhatsApp installed on your device");
+                        });
+                    // navigation.push("ChatDetail")
+                }}
+            />
         </MainContainer>
     )
 }

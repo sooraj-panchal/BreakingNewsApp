@@ -15,6 +15,7 @@ import { AppStack } from '../../../navigator/navActions'
 import Container from '../../../components/Container'
 import { screenHeight, screenWidth } from '../../../utils/styleUtils'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import * as globals from '../../../utils/globals'
 function LoginScreen({
     navigation,
     route,
@@ -30,18 +31,15 @@ function LoginScreen({
         let data = new FormData()
         data.append("mobile_no", values.phoneNumber)
         data.append("user_name", values.userName)
-
+        data.append("fcm_token", globals.fcmToken)
         loginWatcher(data)
     }
     useEffect(() => {
         if (loginResponse) {
             console.log(loginResponse)
             if (loginResponse.status == "success") {
-                // navigation.navigate("Verification", {
-                //     phoneNumber: loginResponse.success.mobile_no
-                // })
+                globals.authToken = loginResponse?.data?.token
                 navigation.dispatch(AppStack)
-                // asyncUserDataWatcher({ ...loginResponse?.data })
                 AsyncStorage.setItem("userData", JSON.stringify(loginResponse?.data))
             }
         }
@@ -91,7 +89,7 @@ function LoginScreen({
                                     imgStyle={{
                                         width: screenWidth,
                                         height: screenHeight / 2,
-                                        resizeMode:"stretch"
+                                        resizeMode: "stretch"
                                     }}
                                 />
                                 <Img

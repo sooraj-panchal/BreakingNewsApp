@@ -66,7 +66,7 @@ const MainContainer = ({
             {/* {(absoluteLoading) && <Loader absolute={true}
                 // animating={absoluteLoading}
                 />} */}
-            {/* {absoluteLoadingContainer()} */}
+            {absoluteLoadingContainer()}
         </View>
     );
 

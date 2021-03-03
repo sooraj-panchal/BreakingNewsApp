@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ScrollView, FlatList, StatusBar, Alert, TouchableOpacity, ActivityIndicator } from "react-native";
+import { View, ScrollView, FlatList, StatusBar, Alert, TouchableOpacity, ActivityIndicator, StyleSheet, Platform, Text } from "react-native";
 import Btn from "../../../components/Btn";
 import CardView from "../../../components/CardView";
 import Img from "../../../components/Img";
@@ -7,16 +7,95 @@ import Label from "../../../components/Label";
 import MainContainer from "../../../components/MainContainer";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { PrimaryColor, LightGrayColor, OrangeColor } from "../../../assets/colors";
-import styles from "./styles";
+// import styles from "./styles";
 import { medium } from "../../../assets/fonts/fonts";
-import { AppImages, AuthImages } from "../../../assets/images/map";
+import { AppImages, AuthImages, HomeImages } from "../../../assets/images/map";
 import Container from "../../../components/Container";
 import { screenHeight, screenWidth } from "../../../utils/styleUtils";
 import { headerImageArray, NewsArray } from "../../../../dummyArray";
 import { AuthStack } from "../../../navigator/navActions";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as globals from "../../../utils/globals";
+import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
+import moment from 'moment'
+import messaging from '@react-native-firebase/messaging';
 
+const HeaderImagesList = ({
+    item,
+    index
+}, parallaxProps) => {
+    // console.log(imgSrc)
+    return (
+        <View style={styles.item}>
+            <ParallaxImage
+                source={item.image}
+                containerStyle={styles.imageContainer}
+                style={styles.image}
+                parallaxFactor={0.4}
+                {...parallaxProps}
+            />
+            <Text style={{
+                position: "absolute",
+                color: "white",
+                bottom: 5,
+                left: 10
+            }} numberOfLines={2}>
+                hello how are you
+            </Text>
+        </View>
+    )
+}
+
+const NewsList = ({
+    imgSrc,
+    title,
+    description,
+    time,
+    onPress
+}) => {
+    return (
+        <Container
+            containerStyle={{
+                justifyContent: "center",
+                borderRadius: 4,
+                height: null,
+                borderWidth: 1,
+                borderColor: LightGrayColor
+            }} mpContainer={{ ph: 10, mh: 15, pv: 10 }}
+            onPressCard={onPress}
+        >
+            <View style={{
+                flexDirection: "row",
+                alignItems: "center"
+            }} >
+                <Img
+                    imgSrc={imgSrc}
+                    height={90}
+                    width={90}
+                    imgStyle={{
+                        // margin:20
+                        borderRadius: 5
+                    }}
+                />
+                <View style={{
+                    paddingLeft: 15
+                }} >
+                    <Label labelSize={16}
+                        labelStyle={{ maxWidth: 200, fontWeight: "900" }}
+                    >{title}</Label>
+                    <Label labelSize={12}
+                        labelStyle={{ color: "grey", maxWidth: 200 }}
+                        mpLabelStyle={{ mt: 5 }}
+                        numberOfLines={3} >{description}</Label>
+                    <Label labelSize={12}
+                        labelStyle={{ color: "grey", maxWidth: 200 }}
+                        mpLabelStyle={{ mt: 5 }}
+                        numberOfLines={3} >{time}</Label>
+                </View>
+            </View>
+        </Container>
+    )
+}
 
 const HomeScreen = ({
     navigation,
@@ -24,91 +103,44 @@ const HomeScreen = ({
     // getArticeListLoading,
     getArticeListResponse
 }) => {
+
+
+    useEffect(() => {
+        messaging().onNotificationOpenedApp(remoteMessage => {
+            console.log(
+                'Notification caused app to open from background state:',
+                remoteMessage.notification,
+            );
+            if (remoteMessage) {
+                const { message } = remoteMessage.data
+                let parsedMessage = JSON.parse(message);
+                navigation.navigate("NewsDetail", {
+                    article_Id: parsedMessage.article_id
+                })
+            }
+        });
+        messaging()
+            .getInitialNotification()
+            .then(remoteMessage => {
+                if (remoteMessage) {
+                    console.log(
+                        'Notification caused app to open from quit state:',
+                        remoteMessage,
+                    );
+                    // {"collapseKey": "com.breakingnews", "data": {"message": "{\"article_id\":45,\"color\":\"#203E78\",\"show_in_foreground\":true,\"sound\":\"mySound\",\"targetScreen\":\"Article Details\",\"title\":\"Breaking News\",\"body\":\"good news for new product\"}"}, "from": "549316489690", "messageId": "0:1614776624323741%e6669f23e6669f23", "notification": {"android": {"color": "#203E78", "sound": "mySound"}, "body": "good news for new product", "title": "Breaking News"}, "sentTime": 1614776624316, "ttl": 2419200}    
+                    const { message } = remoteMessage.data
+                    let parsedMessage = JSON.parse(message);
+                    navigation.navigate("NewsDetail", {
+                        article_Id: parsedMessage.article_id
+                    })
+                }
+            });
+    }, [])
+
     const [getArticleListData, setgetArticleListData] = useState([])
     const [getArticeListLoading, setGetArticeListLoading] = useState(true)
     const [getArticeListPaginLoading, setGetArticeListPaginLoading] = useState(true)
     const [offset, setOffset] = useState(0);
-
-    const HeaderImagesList = ({
-        imgSrc,
-        imageTitle
-    }) => {
-        return (
-            <>
-                <Img
-                    imgSrc={imgSrc}
-                    // width={300}
-                    height={180}
-                    imgStyle={{
-                        width: screenWidth * 0.80,
-                        borderRadius: 5,
-                    }}
-                    mpImage={{ mt: 10 }}
-                />
-                <Label
-                    labelStyle={{
-                        position: "absolute",
-                        color: "white",
-                        bottom: 5,
-                        left: 10
-                    }}
-                    labelSize={18}
-                >{imageTitle}</Label>
-            </>
-        )
-    }
-
-    const NewsList = ({
-        imgSrc,
-        title,
-        description,
-        time
-    }) => {
-        return (
-            <Container
-                containerStyle={{
-                    justifyContent: "center",
-                    borderRadius: 4,
-                    height: null,
-                    borderWidth: 1,
-                    borderColor: LightGrayColor
-                }} mpContainer={{ ph: 10, mh: 15, pv: 10 }}
-                onPressCard={() => {
-                    navigation.navigate("NewsDetail")
-                }}
-            >
-                <View style={{
-                    flexDirection: "row",
-                    alignItems: "center"
-                }} >
-                    <Img
-                        imgSrc={imgSrc}
-                        height={90}
-                        width={90}
-                        imgStyle={{
-                            // margin:20
-                            borderRadius: 5
-                        }}
-                    />
-                    <View style={{
-                        paddingLeft: 15
-                    }} >
-                        <Label labelSize={16}
-                            labelStyle={{ maxWidth: 200, fontWeight: "900" }}
-                        >{title}</Label>
-                        <Label labelSize={12}
-                            labelStyle={{ color: "grey", maxWidth: 200 }}
-                            mpLabelStyle={{ mt: 5 }}
-                            numberOfLines={3} >{description}</Label>
-                        <Label labelSize={12}
-                            labelStyle={{ color: "grey", maxWidth: 200 }}
-                            mpLabelStyle={{ mt: 5 }}
-                            numberOfLines={3} >{time}</Label>
-                    </View>
-                </View>
-            </Container>
-        )
-    }
 
     const logoutHandler = () => {
         Alert.alert(
@@ -157,12 +189,14 @@ const HomeScreen = ({
         getArticleListWatcher(data)
     }
     useEffect(() => {
-        setGetArticeListPaginLoading(false)
-        if (getArticeListResponse?.status == "success") {
-            setGetArticeListLoading(false)
-            if (getArticeListResponse?.data?.length) {
-                setOffset(offset + 1);
-                setgetArticleListData(arr => [...arr, ...getArticeListResponse?.data])
+        if (getArticeListResponse) {
+            setGetArticeListPaginLoading(false)
+            if (getArticeListResponse?.status == "success") {
+                setGetArticeListLoading(false)
+                if (getArticeListResponse?.data?.length) {
+                    setOffset(offset + 1);
+                    setgetArticleListData(arr => [...arr, ...getArticeListResponse?.data])
+                }
             }
         }
     }, [getArticeListResponse])
@@ -170,22 +204,13 @@ const HomeScreen = ({
     const heaederImageListRender = () => {
         return (
             <>
-                <FlatList
-                    showsHorizontalScrollIndicator={false}
-                    // style={styles.propertyTypeListContainer}
+                <Carousel
+                    sliderWidth={screenWidth}
+                    sliderHeight={screenWidth}
+                    itemWidth={screenWidth - 30}
                     data={headerImageArray}
-                    renderItem={({ item, index }) => {
-                        return <HeaderImagesList
-                            imgSrc={item.image}
-                            imageTitle="Loream-ipsulm dummy text"
-                        />
-                    }}
-                    keyExtractor={(_, index) => index.toString()}
-                    pagingEnabled
-                    horizontal={true}
-                    ListHeaderComponent={() => (<Container mpContainer={{ mr: 20 }} />)}
-                    ItemSeparatorComponent={() => (<Container mpContainer={{ ml: 10 }} />)}
-                    ListFooterComponent={() => (<Container mpContainer={{ mr: 40 }} />)}
+                    renderItem={HeaderImagesList}
+                    hasParallaxImages={true}
                 />
                 <Label
                     labelSize={25}
@@ -211,11 +236,24 @@ const HomeScreen = ({
                 contentContainerStyle={{ paddingBottom: 100 }}
                 renderItem={({ item, index }) => {
                     // console.log(`${getArticeListResponse?.path}${item.image}`)
+                    const time = moment(item.created_at).startOf('hour').fromNow();
+                    let newTime;
+                    if (time > "7 days ago") {
+                        newTime = moment(item.created_at).format('D/M/Y');
+                    } else {
+                        newTime = moment(item.created_at).startOf('hour').fromNow();
+                    }
+                    // console.log( time = moment(item.created_at).startOf('hour').fromNow();)
                     return <NewsList
                         imgSrc={{ uri: `${getArticeListResponse?.path}${item.image}` }}
                         title={item.title}
                         description={item.description}
-                        time={item.time}
+                        time={newTime}
+                        onPress={() => {
+                            navigation.navigate("NewsDetail", {
+                                article_Id: item.id
+                            })
+                        }}
                     />
                 }}
                 // scrollEnabled={false}
@@ -238,7 +276,6 @@ const HomeScreen = ({
                                 color="black"
                                 animating={getArticeListPaginLoading}
                             />
-
                         </View>
                     )
                 }}
@@ -257,135 +294,19 @@ const HomeScreen = ({
 
 export default HomeScreen;
 
-
-// import React, { useState, useEffect } from 'react';
-
-// //import all the components we are going to use
-// import {
-//     SafeAreaView,
-//     View,
-//     Text,
-//     TouchableOpacity,
-//     StyleSheet,
-//     FlatList,
-//     ActivityIndicator,
-// } from 'react-native';
-
-// const App = () => {
-//     const [loading, setLoading] = useState(true);
-//     const [dataSource, setDataSource] = useState([]);
-//     const [offset, setOffset] = useState(1);
-//     const [loadingForPagin, setLoadingForPagin] = useState(false)
-//     useEffect(() => getData(), []);
-
-//     const getData = () => {
-//         console.log('getData');
-//         setLoading(true);
-//         //Service to get the data from the server to render
-//         fetch('https://aboutreact.herokuapp.com/getpost.php?offset=' + offset)
-//             //Sending the currect offset with get request
-//             .then((response) => response.json())
-//             .then((responseJson) => {
-//                 //Successful response
-//                 setOffset(offset + 1);
-//                 //Increasing the offset for the next API call
-//                 setDataSource((arr) => [...arr, ...responseJson.results]);
-//                 setLoading(false);
-//                 setLoadingForPagin(false)
-//             })
-//             .catch((error) => {
-//                 console.error(error);
-//             });
-//     };
-
-//     const renderFooter = () => {
-//         return (
-//             //Footer View with Load More button
-//             <View style={styles.footer}>
-//                 <ActivityIndicator
-//                     size="large"
-//                     color="red"
-//                     animating={loadingForPagin}
-//                 />
-//             </View>
-//         );
-//     };
-
-//     const ItemView = ({ item }) => {
-//         return (
-//             // Flat List Item
-//             <Text
-//                 style={styles.itemStyle}
-//                 onPress={() => getItem(item)}>
-//                 {item.id}
-//                 {'.'}
-//                 {item.title.toUpperCase()}
-//             </Text>
-//         );
-//     };
-
-//     const ItemSeparatorView = () => {
-//         return (
-//             // Flat List Item Separator
-//             <View
-//                 style={{
-//                     height: 0.5,
-//                     width: '100%',
-//                     backgroundColor: '#C8C8C8',
-//                 }}
-//             />
-//         );
-//     };
-
-//     const getItem = (item) => {
-//         //Function for click on an item
-//         alert('Id : ' + item.id + ' Title : ' + item.title);
-//     };
-
-//     return (
-//         <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
-//             <View style={styles.container}>
-//                 <FlatList contentContainerStyle={{ paddingBottom: 100 }}
-//                     data={dataSource}
-//                     keyExtractor={(item, index) => index.toString()}
-//                     ItemSeparatorComponent={ItemSeparatorView}
-//                     enableEmptySections={true}
-//                     renderItem={ItemView}
-//                     ListFooterComponent={renderFooter}
-//                     onEndReached={() => {
-//                         setLoadingForPagin(true)
-//                         getData()
-//                     }}
-//                 />
-//             </View>
-//         </SafeAreaView>
-//     );
-// };
-
-// const styles = StyleSheet.create({
-//     container: {
-//         justifyContent: 'center',
-//         flex: 1,
-//     },
-//     footer: {
-//         padding: 10,
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         flexDirection: 'row',
-//     },
-//     loadMoreBtn: {
-//         padding: 10,
-//         backgroundColor: '#800000',
-//         borderRadius: 4,
-//         flexDirection: 'row',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//     },
-//     btnText: {
-//         color: 'white',
-//         fontSize: 15,
-//         textAlign: 'center',
-//     },
-// });
-
-// export default App;
+const styles = StyleSheet.create({
+    item: {
+        width: screenWidth * 0.92,
+        height: screenWidth * 0.60,
+    },
+    imageContainer: {
+        flex: 1,
+        marginBottom: Platform.select({ ios: 0, android: 1 }), // Prevent a random Android rendering issue
+        backgroundColor: 'white',
+        borderRadius: 8,
+    },
+    image: {
+        ...StyleSheet.absoluteFillObject,
+        resizeMode: 'cover',
+    },
+});

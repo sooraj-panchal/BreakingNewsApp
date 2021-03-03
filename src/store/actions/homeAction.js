@@ -89,5 +89,19 @@ export const getArticleListError = (payload) => ({
     type: actionTypes.GET_ARTICLE_LIST_ERRROR,
     payload
 });
+////
+
+export const getArticleDetailsWatcher = (payload) => ({
+    type: actionTypes.GET_ARTICLE_DETAILS_WATCHER,
+    payload
+});
+export const getArticleDetailsSuccess = (payload) => ({
+    type: actionTypes.GET_ARTICLE_DETAILS_SUCCESS,
+    payload
+});
+export const getArticleDetailsError = (payload) => ({
+    type: actionTypes.GET_ARTICLE_DETAILS_ERRROR,
+    payload
+});
 
 

@@ -105,6 +105,18 @@ com/facebook/react/R.java
  com.facebook.react.R$style
  com.facebook.react.R$styleable
  com.facebook.react.R$xml
+com/google/firebase/R.java
+ com.google.firebase.R
+ com.google.firebase.R$attr
+ com.google.firebase.R$color
+ com.google.firebase.R$dimen
+ com.google.firebase.R$drawable
+ com.google.firebase.R$id
+ com.google.firebase.R$integer
+ com.google.firebase.R$layout
+ com.google.firebase.R$string
+ com.google.firebase.R$style
+ com.google.firebase.R$styleable
 com/facebook/flipper/plugins/fresco/R.java
  com.facebook.flipper.plugins.fresco.R
  com.facebook.flipper.plugins.fresco.R$anim
@@ -120,18 +132,6 @@ com/facebook/flipper/plugins/fresco/R.java
  com.facebook.flipper.plugins.fresco.R$string
  com.facebook.flipper.plugins.fresco.R$style
  com.facebook.flipper.plugins.fresco.R$styleable
-com/google/firebase/R.java
- com.google.firebase.R
- com.google.firebase.R$attr
- com.google.firebase.R$color
- com.google.firebase.R$dimen
- com.google.firebase.R$drawable
- com.google.firebase.R$id
- com.google.firebase.R$integer
- com.google.firebase.R$layout
- com.google.firebase.R$string
- com.google.firebase.R$style
- com.google.firebase.R$styleable
 androidx/interpolator/R.java
  androidx.interpolator.R
 androidx/core/R.java
@@ -284,6 +284,8 @@ com/facebook/flipper/R.java
  com.facebook.flipper.R$styleable
 com/google/android/gms/cloudmessaging/R.java
  com.google.android.gms.cloudmessaging.R
+com/google/firebase/components/R.java
+ com.google.firebase.components.R
 com/facebook/flipper/plugins/network/R.java
  com.facebook.flipper.plugins.network.R
  com.facebook.flipper.plugins.network.R$anim
@@ -299,8 +301,6 @@ com/facebook/flipper/plugins/network/R.java
  com.facebook.flipper.plugins.network.R$string
  com.facebook.flipper.plugins.network.R$style
  com.facebook.flipper.plugins.network.R$styleable
-com/google/firebase/components/R.java
- com.google.firebase.components.R
 com/facebook/fresco/ui/common/R.java
  com.facebook.fresco.ui.common.R
 com/facebook/drawee/R.java
@@ -634,12 +634,12 @@ com/reactnativecommunity/asyncstorage/R.java
  com.reactnativecommunity.asyncstorage.R$style
  com.reactnativecommunity.asyncstorage.R$styleable
  com.reactnativecommunity.asyncstorage.R$xml
-com/google/android/datatransport/R.java
- com.google.android.datatransport.R
-com/google/android/datatransport/runtime/R.java
- com.google.android.datatransport.runtime.R
 com/google/firebase/measurement_impl/R.java
  com.google.firebase.measurement_impl.R
+com/google/android/datatransport/runtime/R.java
+ com.google.android.datatransport.runtime.R
+com/google/android/datatransport/R.java
+ com.google.android.datatransport.R
 androidx/lifecycle/R.java
  androidx.lifecycle.R
 androidx/documentfile/R.java

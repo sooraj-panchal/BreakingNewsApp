@@ -1,8 +1,8 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import * as globals from '../../utils/globals'
 import * as actionTypes from "../../store/actionTypes";
-import { chatDataError, chatDataSuccess, getArticleListError, getArticleListSuccess, sendMessageError, sendMessageSuccess } from "../actions/homeAction";
-import { chatDataApi, getArticleListApi, sendMessageApi } from "../apiService";
+import { chatDataError, chatDataSuccess, getArticleDetailsError, getArticleDetailsSuccess, getArticleListError, getArticleListSuccess, sendMessageError, sendMessageSuccess } from "../actions/homeAction";
+import { chatDataApi, getArticleDetailsApi, getArticleListApi, sendMessageApi } from "../apiService";
 
 function* chatDataActionEffect(action) {
     let variable = {
@@ -59,3 +59,22 @@ function* getArticleListActionEffect(action) {
 export function* getArticleListSaga() {
     yield takeLatest(actionTypes.GET_ARTICLE_LIST_WATCHER, getArticleListActionEffect);
 }
+
+function* getArticleDetailsActionEffect(action) {
+    let variable = {
+        ...action.payload
+    }
+    try {
+        const response = yield call(getArticleDetailsApi, action.payload);
+        console.log("======>getArticleDetailsApi success ", response)
+        yield put(getArticleDetailsSuccess(response));
+    } catch (e) {
+        console.log("=====>getArticleDetailsApi Error", e)
+        yield put(getArticleDetailsError(e));
+    }
+}
+
+export function* getArticleDetailsSaga() {
+    yield takeLatest(actionTypes.GET_ARTICLE_DETAILS_WATCHER, getArticleDetailsActionEffect);
+}
+

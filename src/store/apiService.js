@@ -1,19 +1,27 @@
 import * as globals from '../utils/globals';
 
-const buildFormData = (url, data) => {
+const buildFormData = (url, data, method) => {
     console.log("url=====>", url)
     console.log("data=====>", data)
     const token = `Bearer ${globals.authToken}`
     // console.log(token)
-    return fetch(url, {
-        method: 'post',
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "multipart/form-data",
-            "Authorization": token,
-        },
-        body: data
-    }).then((res) => res.json())
+    let headers = {
+        "Accept": "application/json",
+        "Content-Type": "multipart/form-data",
+        "Authorization": token,
+    }
+    if (method == "get" || method == "GET") {
+        return fetch(url, {
+            method: 'GET',
+            headers,
+        }).then((res) => res.json())
+    } else {
+        return fetch(url, {
+            method: 'post',
+            headers,
+            body: data
+        }).then((res) => res.json())
+    }
 }
 
 export function registerApi(data) {
@@ -43,4 +51,10 @@ export function sendMessageApi(data) {
 
 export function getArticleListApi(data) {
     return buildFormData(globals.mainUrl + globals.articleData, data)
+}
+export function getArticleDetailsApi(data) {
+    // console.log("data", data)
+
+    let url = `${globals.mainUrl + globals.articleDetail}?article_id=${data?.article_id}`
+    return buildFormData(url, data, "GET")
 }

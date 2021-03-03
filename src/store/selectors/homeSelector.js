@@ -29,6 +29,14 @@ export const getArticeListLoading = createSelector(
     homeReducer,
     getArticeListLoading => getArticeListLoading.getArticleListReducer.isLoading
 );
+export const getArticleDetailsSelector = createSelector(
+    homeReducer,
+    getArticleDetailsSelector => getArticleDetailsSelector.getArticleDetailsReducer.data,
+);
+export const getArticleDetailsLoading = createSelector(
+    homeReducer,
+    getArticleDetailsLoading => getArticleDetailsLoading.getArticleDetailsReducer.isLoading
+);
 // export const getHomeSliderSelector = createSelector(
 //     homeReducer,
 //     sliderImage => sliderImage.data,

@@ -1,4 +1,5 @@
 import messaging from '@react-native-firebase/messaging';
+import * as globals from './globals'
 // function netInfoStatus() {
 //     NetInfo.addEventListener(state => {
 //       console.log("Connection type", state.type);
@@ -6,6 +7,9 @@ import messaging from '@react-native-firebase/messaging';
 //       globals.isInternetConnected = state.isConnected;
 //     });
 //   }
+import * as React from 'react';
+
+
 export const NotificationHandler = () => {
     checkPermission()
     createNotificationListeners()
@@ -13,7 +17,7 @@ export const NotificationHandler = () => {
 }
 
 
-function createNotificationListeners() {
+function createNotificationListeners(navigation) {
     // PushNotification.configure({
     //     onNotification: function (notification) {
     //         console.log("NOTIFICATION:", notification);
@@ -32,28 +36,39 @@ function createNotificationListeners() {
     //     popInitialNotification: true,
     //     requestPermissions: true,
     // });
-    messaging().onNotificationOpenedApp(remoteMessage => {
-        console.log(
-          'Notification caused app to open from background state:',
-          remoteMessage.notification,
-        );
-        // navigation.navigate(remoteMessage.data.type);
-      });
-  
-      // Check whether an initial notification is available
-    //   messaging()
+
+    // messaging().onNotificationOpenedApp(remoteMessage => {
+    //     console.log(
+    //         'Notification caused app to open from background state:',
+    //         remoteMessage.notification,
+    //     );
+    //     // const { data } = remoteMessage;
+    //     const url = "myNotification://NewsDetail"
+    //     // const url = `${prefix}${data.path}/${data.id}`;
+    
+    //     if (remoteMessage) {
+    //         Linking.openURL(url).catch(err => console.error(err));
+    //         // firebase.messaging().setBadgeNumber(0);
+    //     }
+    //     // navigate("NewsDetail");
+    //     // navigate(remoteMessage.data.type);
+    // });
+
+    // // Check whether an initial notification is available
+    // messaging()
     //     .getInitialNotification()
     //     .then(remoteMessage => {
-    //       if (remoteMessage) {
-    //         console.log(
-    //           'Notification caused app to open from quit state:',
-    //           remoteMessage.notification,
-    //         );
-    //         setInitialRoute(remoteMessage.data.type); // e.g. "Settings"
-    //       }
-    //       setLoading(false);
+    //         if (remoteMessage) {
+    //             console.log(
+    //                 'Notification caused app to open from quit state:',
+    //                 remoteMessage.notification,
+    //             );
+    //             // setTimeout(() => {
+    //             //     navigate("NewsDetail");
+    //             // }, 100);
+    //         }
     //     });
-  
+
 }
 async function checkPermission() {
     const enabled = await messaging().hasPermission();
@@ -64,30 +79,15 @@ async function checkPermission() {
     }
 }
 async function getToken() {
-    // let fcmToken = await AsyncStorage.getItem('fcmToken');
-    // if (!fcmToken) {
     let fcmToken = await messaging().getToken();
-    // if (fcmToken) {
-    // user has a device token
-    // globals.fcmToken = fcmToken
+    globals.fcmToken = fcmToken
     console.log('Fcm Token --->', fcmToken);
-    // await AsyncStorage.setItem('fcmToken', fcmToken);
-    //   }
-    // } else {
-    //   console.log('Fcm Token --->', fcmToken);
-    //   // AsyncStorage.setItem('fcmToken', fcmToken);
-    //   globals.fcmToken = fcmToken;
-    //   console.log('User Have All Ready Fcm Token')
-    // }
 }
 async function requestPermission() {
-
     try {
         await messaging().requestPermission();
-        // User has authorised
         getToken();
     } catch (error) {
-        // User has rejected permissions
         console.log('permission rejected');
     }
 }

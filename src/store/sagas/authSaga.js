@@ -11,7 +11,7 @@ function* registerActionEffect(action) {
     try {
         const response = yield call(registerApi, action.payload);
         console.log("======>registerApi success ", response)
-        globals.toastMessage = response.message
+        globals.toastMessage = response.msg
         yield put(registerSuccess(response));
     } catch (e) {
         console.log("=====>registerApi Error", e)
@@ -29,6 +29,8 @@ function* loginActionEffect(action) {
     try {
         const response = yield call(loginApi, action.payload);
         console.log("======>loginApi success ", response)
+        globals.toastMessage = response.msg
+        // response
         yield put(loginSuccess(response));
     } catch (e) {
         console.log("=====>loginApi Error", e)

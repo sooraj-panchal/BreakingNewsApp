@@ -28,6 +28,11 @@ const initialState = {
         data: null,
         error: null,
         isLoading: false,
+    },
+    getArticleDetailsReducer: {
+        data: null,
+        error: null,
+        isLoading: false,
     }
 };
 
@@ -115,6 +120,33 @@ export default (state = initialState, action) => {
                         isLoading: false,
                     },
                 };
+                case actionTypes.GET_ARTICLE_DETAILS_WATCHER:
+                    return {
+                        ...state,
+                        getArticleDetailsReducer: {
+                            data: null,
+                            error: null,
+                            isLoading: true,
+                        },
+                    };
+                case actionTypes.GET_ARTICLE_DETAILS_SUCCESS:
+                    return {
+                        ...state,
+                        getArticleDetailsReducer: {
+                            data: action.payload,
+                            error: null,
+                            isLoading: false,
+                        },
+                    }
+                case actionTypes.GET_ARTICLE_DETAILS_ERRROR:
+                    return {
+                        ...state,
+                        getArticleDetailsReducer: {
+                            data: null,
+                            error: action.payload,
+                            isLoading: false,
+                        },
+                    };
         // case actionTypes.HOME_SLIDER_WATCHER:
         //     return {
         //         ...state,

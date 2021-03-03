@@ -30,10 +30,9 @@ function SplashScreen({
                 imgSrc={AuthImages.splashBg_image}
                 imgStyle={{
                     width: screenWidth,
-                    height: screenHeight
+                    height: screenHeight + StatusBar.currentHeight
                 }}
                 fadeDuration={0}
-
             />
             <Img
                 imgSrc={AuthImages.splashLogo_image}

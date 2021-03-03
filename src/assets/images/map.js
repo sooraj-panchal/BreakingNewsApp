@@ -4,7 +4,7 @@ export const AuthImages = {
 }
 
 export const AppImages = {
-    
+    whatsAppImage: require("./whatsapp.webp"), 
 }
 export const HomeImages = {
     img1: require("./HomeImages/img1.png"),
@@ -15,4 +15,5 @@ export const HomeImages = {
     maskImage3: require("./HomeImages/MaskGroup-3.png"),
     maskImage4: require("./HomeImages/MaskGroup-4.png"),
     maskImage5: require("./HomeImages/MaskGroup-5.png"),
+
 }

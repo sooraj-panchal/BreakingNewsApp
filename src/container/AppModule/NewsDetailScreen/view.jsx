@@ -1,63 +1,73 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, FlatList, Dimensions, StatusBar, ScrollView } from 'react-native'
-import Animated from "react-native-reanimated";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { headerImageArray } from "../../../../dummyArray";
-import { AppImages } from "../../../assets/images/map";
-import Container from "../../../components/Container";
-import Header from "../../../components/Header";
 import Img from "../../../components/Img";
 import Label from "../../../components/Label";
 import MainContainer from "../../../components/MainContainer";
 import { screenWidth } from "../../../utils/styleUtils";
+import moment from 'moment'
+const HEADER_HEIGHT = 60;
+const IMAGE_HEIGHT = 240;
+// const CONTACT_PADDING = 10
+
+
+const HeaderImagesList = ({
+    imgSrc,
+    imageTitle,
+    imagePath,
+    image
+}) => {
+    return (
+        <>
+            <Img
+                imgSrc={{ uri: imagePath + image }}
+                // width={300}
+                // height={300}
+                imgStyle={{
+                    width: screenWidth * 0.95,
+                    height: 200,
+                    resizeMode: "stretch",
+                    borderRadius: 5,
+                    // borderWidth:1,
+                    backgroundColor: "#f2f2f2"
+                    // alignSelf:"center"
+                }}
+                mpImage={{ mt: 10 }}
+            />
+        </>
+    )
+}
 
 function NewsDetailScreen({
     navigation,
+    route,
+    getArticleDetailsWatcher,
+    getArticleDetailsLoading,
+    getArticleDetailsResponse
 }) {
-    const HEADER_HEIGHT = 60;
-    const IMAGE_HEIGHT = 240;
-    // const CONTACT_PADDING = 10
+    const { article_Id } = route.params
+    // alert(route.params.article_Id)
 
-    const propertyImages = [
-        { id: "1" },
-        { id: "2" },
-        { id: "3" }
-    ]
+    useEffect(() => {
+        getArticleDetailsWatcher({
+            article_id: article_Id
+        })
+    }, [])
 
-    const HeaderImagesList = ({
-        imgSrc,
-        imageTitle
-    }) => {
-        return (
-            <>
-                <Img
-                    imgSrc={imgSrc}
-                    // width={300}
-                    // height={300}
-                    imgStyle={{
-                        width: screenWidth * 0.95,
-                        height: 180,
-                        resizeMode: "stretch",
-                        borderRadius: 5,
-                        // alignSelf:"center"
-                    }}
-                    mpImage={{ mt: 10 }}
-                />
-            </>
-        )
-    }
+    // const phpDate = "2021-02-23T12:30:00.000Z"
+    // const newDate = moment(phpDate).startOf('hour').hours();
+    // console.log(newDate)
 
 
     return (
-        <MainContainer style={{ backgroundColor: "white" }} >
-            {/* <Container height={StatusBar.currentHeight} /> */}
+        <MainContainer
+            style={{ backgroundColor: "white" }}
+            loading={getArticleDetailsLoading}
+        >
             {/* <StatusBar translucent backgroundColor="red"/> */}
             <ScrollView
                 contentContainerStyle={{ paddingBottom: 100 }}
             >
-                {/* <Header
-                    navigation={navigation}
-                /> */}
                 <View style={{
                     zIndex: 100,
                     position: "absolute",
@@ -69,14 +79,16 @@ function NewsDetailScreen({
                 </View>
                 <FlatList
                     showsHorizontalScrollIndicator={false}
-                    // style={styles.propertyTypeListContainer}
                     data={headerImageArray}
                     renderItem={({ item, index }) => {
                         return <HeaderImagesList
-                            imgSrc={item.image}
-                            imageTitle="Loream-ipsulm dummy text"
+                            // imgSrc={item.image}
+                            // imageTitle="Loream-ipsulm dummy text"
+                            image={getArticleDetailsResponse?.data[0]?.image}
+                            imagePath={getArticleDetailsResponse?.path}
                         />
                     }}
+                    keyExtractor={(_, index) => index.toString()}
                     scrollEnabled={false}
                     pagingEnabled
                     horizontal={true}
@@ -87,34 +99,13 @@ function NewsDetailScreen({
                 <Label labelStyle={{
                     color: "black",
                     fontWeight: "bold"
-                }} labelSize={25} mpLabelStyle={{ pl: 20, pt: 20 }} >Title</Label>
+                }} labelSize={25} mpLabelStyle={{ pl: 20, pt: 20 }}>
+                    {getArticleDetailsResponse?.data[0]?.title}</Label>
                 <Label labelStyle={{
                     fontSize: 20,
                     color: "black"
                 }} mpLabelStyle={{ pl: 20, pt: 10 }} labelSize={20}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                    semper turpis. Ut in fringilla nisl, sit amet aliquet urna. Donec
-                    sollicitudin libero sapien, ut accumsan justo venenatis et. Proin iaculis
-                    ac dolor eget malesuada. Cras commodo, diam id semper sodales, tortor leo
-                    suscipit leo, vitae dignissim velit turpis et diam. Proin tincidunt
-                    euismod elit, at porttitor justo maximus vel. Proin viverra, nibh non
-                    accumsan sollicitudin, arcu metus sagittis nunc, et tempor tellus ligula
-                    et justo. Pellentesque ultrices fermentum efficitur. Lorem ipsum dolor sit
-                    amet, consectetur adipiscing elit. Praesent nec convallis nisl, et rhoncus
-                    mauris. Morbi consequat sem tellus, in scelerisque lorem vehicula ut.
-      {'\n\n'}Nam vel imperdiet massa. Donec aliquet turpis quis orci fermentum,
-      eget egestas tellus suscipit. Sed commodo lectus ac augue mattis, a
-      pulvinar metus venenatis. Vestibulum cursus rhoncus mauris, fringilla
-      luctus risus eleifend ut. Vestibulum efficitur imperdiet scelerisque.
-      Pellentesque sit amet lorem bibendum, congue dolor suscipit, bibendum est.
-      Aenean leo nibh, varius vel felis nec, sagittis posuere nunc. Vestibulum
-      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-      curae; Duis ullamcorper laoreet orci, ac tempus dui aliquet et. Morbi
-      porta nisi sed augue vestibulum tristique. Donec nisi ligula, efficitur at
-      arcu et, sagittis imperdiet urna. Sed sollicitudin nisi eget pulvinar
-      ultricies. Ut sit amet dolor luctus massa dapibus tincidunt non posuere
-      odio. Aliquam sit amet vehicula nisi.
-    </Label>
+                    {getArticleDetailsResponse?.data[0]?.description}</Label>
             </ScrollView>
             {/* <Animated.View style={{
                 height: CONTACT_HEIGHT,

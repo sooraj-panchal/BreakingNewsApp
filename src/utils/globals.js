@@ -28,6 +28,7 @@ export const Resetpassword = 'Resetpassword'
 export const chatData = 'chatData'
 export const sendMessage = 'sendData'
 export const articleData = 'articleData'
+export const articleDetail = 'articleDetail'
 
 
 
