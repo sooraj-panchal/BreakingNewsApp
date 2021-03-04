@@ -39,12 +39,12 @@
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 22-->[androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:24:18-86
 23        android:debuggable="true"
-24        android:icon="@mipmap/breaking_news"
-24-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:7-43
+24        android:icon="@mipmap/wmcs"
+24-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:7-34
 25        android:label="@string/app_name"
 25-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:8:7-39
-26        android:roundIcon="@mipmap/breaking_news"
-26-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:10:7-48
+26        android:roundIcon="@mipmap/wmcs"
+26-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:10:7-39
 27        android:theme="@style/AppTheme"
 27-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:12:7-38
 28        android:usesCleartextTraffic="true" >

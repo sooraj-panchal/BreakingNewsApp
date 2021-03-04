@@ -228,7 +228,7 @@ const HomeScreen = ({
                 contentContainerStyle={{ paddingBottom: 100 }}
                 renderItem={({ item }) => {
                     const time = moment(item.created_at).startOf('hour').fromNow();
-                    console.log(time)
+                    // console.log(time)
                     let newTime;
                     if (time >= "7 days ago") {
                         newTime = moment(item.created_at).format('D/M/Y');
