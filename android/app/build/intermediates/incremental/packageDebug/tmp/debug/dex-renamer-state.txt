@@ -1,7 +1,7 @@
-#Thu Mar 04 18:12:54 IST 2021
-base.0=/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
+#Thu Mar 04 18:46:38 IST 2021
 base.1=/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex
+path.1=classes2.dex
+base.0=/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

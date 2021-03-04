@@ -55,11 +55,12 @@ const TextInputComp = ({
             flexDirection: "row",
             alignItems: "center",
             paddingLeft: 25,
+            marginTop:4
         },
         errorText: {
-            fontSize: 14,
+            fontSize:12,
             color: "red",
-            paddingLeft: 15
+            paddingLeft:5
         }
     })
     return (
@@ -76,7 +77,7 @@ const TextInputComp = ({
                 <View style={styles.errorView} >
                     <Icon
                         color="red"
-                        name="exclamationcircle" size={15}
+                        name="exclamationcircle" size={12}
                     />
                     <Label
                         labelStyle={styles.errorText}

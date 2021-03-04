@@ -64,13 +64,13 @@ function LoginScreen({
                     validationSchema={yup.object().shape({
                         userName: yup
                             .string()
-                            .min(5)
+                            .min(2,"Name must be at least 2 characetrs")
                             .required('Name is required field'),
                         phoneNumber: yup
                             .string()
-                            .min(10)
-                            .max(20)
-                            .required('Mobile No is required field')
+                            .min(8,"Mobile no must be at least 8 numbers")
+                            .max(12)
+                            .required('Mobile no is required field')
                     })}
                 >
                     {({ values, handleChange, errors, setFieldTouched, touched, isValid, handleSubmit }) => (
@@ -103,42 +103,15 @@ function LoginScreen({
                                     fadeDuration={0}
                                 />
                             </Container>
-                            {/* <Btn
-                                label="Select Country"
-                                btnContainerStyle={{
-                                    borderWidth: 1,
-                                    backgroundColor: "white",
-                                    borderColor: LightGrayColor,
-                                    // justifyContent:"center"
-                                }}
-                                labelStyle={{
-                                    color: GrayColor
-                                }}
-                                mpBtnContainer={{ mt: 20, mh: 20, pl: 20 }}
-                                rightIcon={() => {
-                                    return (
-                                        <Ionicans
-                                            name="ios-chevron-down"
-                                            size={25}
-                                            style={{
-                                                position: "absolute",
-                                                right: 10
-                                            }}
-                                        // color={GrayColor}
-                                        />
-                                    )
-                                }}
-                            /> */}
                             <TextInputComp
                                 value={values.userName}
                                 onChangeText={handleChange('userName')}
                                 onBlur={() => setFieldTouched('userName')}
-                                // maxLength={12}
                                 touched={touched.userName}
                                 errors={errors.userName}
                                 mpInputContainer={{ mt: 20, mh: 20 }}
                                 inputHeight={55}
-                                placeholder="User name"
+                                placeholder="Name"
                                 inputContainerStyle={{
                                     backgroundColor: "white",
                                     borderColor: LightGrayColor,
@@ -213,11 +186,6 @@ function LoginScreen({
                         </Fragment>
                     )}
                 </Formik>
-                {/* <Label labelStyle={{
-                    textAlign: "center",
-                    alignSelf: "center",
-                    width: "80%",
-                }} mpLabelStyle={{ pt: 40 }} labelSize={18} >We will send you a One time SMS message</Label> */}
             </ScrollView>
         </MainContainer>
     )

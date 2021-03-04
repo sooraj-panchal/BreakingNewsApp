@@ -1,32 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { View, ScrollView, FlatList, StatusBar, Alert, TouchableOpacity, ActivityIndicator, StyleSheet, Platform, Text, Linking } from "react-native";
-import Btn from "../../../components/Btn";
-import CardView from "../../../components/CardView";
+import { View, FlatList, StatusBar, Alert, ActivityIndicator, StyleSheet, Platform } from "react-native";
 import Img from "../../../components/Img";
 import Label from "../../../components/Label";
 import MainContainer from "../../../components/MainContainer";
-import Ionicons from 'react-native-vector-icons/Ionicons'
-import { PrimaryColor, LightGrayColor, OrangeColor } from "../../../assets/colors";
-// import styles from "./styles";
-import { medium } from "../../../assets/fonts/fonts";
-import { AppImages, AuthImages, HomeImages } from "../../../assets/images/map";
+import { LightGrayColor } from "../../../assets/colors";
 import Container from "../../../components/Container";
-import { screenHeight, screenWidth } from "../../../utils/styleUtils";
-import { headerImageArray, NewsArray } from "../../../../dummyArray";
+import { screenWidth } from "../../../utils/styleUtils";
 import { AuthStack } from "../../../navigator/navActions";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as globals from "../../../utils/globals";
 import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
 import moment from 'moment'
 import messaging from '@react-native-firebase/messaging';
-import HTML from "react-native-render-html";
 
 const HeaderImagesList = ({
-    item,
-    index
+    item
 }, parallaxProps) => {
-    console.log(item)
-
     return (
         <View>
             <View style={styles.item}>
@@ -43,10 +32,7 @@ const HeaderImagesList = ({
                 color: "white",
                 alignSelf: "center",
                 bottom: 5,
-                // overFlow: "hidden",
-                // width: "50%",
                 textAlign: "center",
-                // right: 10,
                 elevation: 1,
                 borderRadius: 5,
                 backgroundColor: "rgba(0,0,0,0.7)",
@@ -65,7 +51,6 @@ const NewsList = ({
     onPress
 }) => {
     var text = description.replace(/(<([^>]+)>)/g, "");
-    // console.log(text)
     return (
         <Container
             containerStyle={{
@@ -86,7 +71,6 @@ const NewsList = ({
                     height={90}
                     width={90}
                     imgStyle={{
-                        // margin:20
                         borderRadius: 5
                     }}
                 />
@@ -113,7 +97,6 @@ const NewsList = ({
 const HomeScreen = ({
     navigation,
     getArticleListWatcher,
-    // getArticeListLoading,
     getArticeListResponse,
     getTrandingImageListWatcher,
     getTrandingImageListLoading,
@@ -123,7 +106,6 @@ const HomeScreen = ({
     const [getArticeListLoading, setGetArticeListLoading] = useState(true)
     const [getArticeListPaginLoading, setGetArticeListPaginLoading] = useState(true)
     const [offset, setOffset] = useState(1);
-
 
     useEffect(() => {
         navigation.setOptions({
@@ -163,7 +145,6 @@ const HomeScreen = ({
                         'Notification caused app to open from quit state:',
                         remoteMessage,
                     );
-                    // {"collapseKey": "com.breakingnews", "data": {"message": "{\"article_id\":45,\"color\":\"#203E78\",\"show_in_foreground\":true,\"sound\":\"mySound\",\"targetScreen\":\"Article Details\",\"title\":\"Breaking News\",\"body\":\"good news for new product\"}"}, "from": "549316489690", "messageId": "0:1614776624323741%e6669f23e6669f23", "notification": {"android": {"color": "#203E78", "sound": "mySound"}, "body": "good news for new product", "title": "Breaking News"}, "sentTime": 1614776624316, "ttl": 2419200}    
                     const { message } = remoteMessage.data
                     let parsedMessage = JSON.parse(message);
                     navigation.navigate("NewsDetail", {
@@ -192,7 +173,6 @@ const HomeScreen = ({
             { cancelable: false }
         );
     }
-    // useEffect(() => { getArticleList() }, [])
 
     const getArticleList = () => {
         let data = new FormData()
@@ -233,12 +213,11 @@ const HomeScreen = ({
                     labelSize={25}
                     mpLabelStyle={{ mt: 20, pl: 15 }}
                     labelStyle={{
-
-                    }}  >News</Label>
+                        fontWeight: "bold"
+                    }} >Latest Post</Label>
             </>
         )
     }
-
     return (
         <MainContainer style={{ backgroundColor: 'white' }}
             loading={getArticeListLoading || getTrandingImageListLoading}
@@ -247,10 +226,11 @@ const HomeScreen = ({
             <FlatList
                 data={getArticleListData}
                 contentContainerStyle={{ paddingBottom: 100 }}
-                renderItem={({ item, index }) => {
+                renderItem={({ item }) => {
                     const time = moment(item.created_at).startOf('hour').fromNow();
+                    console.log(time)
                     let newTime;
-                    if (time > "7 days ago") {
+                    if (time >= "7 days ago") {
                         newTime = moment(item.created_at).format('D/M/Y');
                     } else {
                         newTime = moment(item.created_at).startOf('hour').fromNow();
@@ -296,45 +276,6 @@ const HomeScreen = ({
                     }
                 }}
             />
-            {/* <Img
-                withContainer
-                containerStyle={{
-                    position: "absolute",
-                    right: -5,
-                    borderRadius: 0,
-                    borderTopLeftRadius: 40,
-                    borderBottomLeftRadius: 40,
-                    bottom: 100,
-                    width: 60,
-                    height: 50,
-                    paddingRight: 5,
-                    // elevation:0.5,
-                    // borderWidth:1,
-                    // borderColor:"#f8f8f8"
-                    backgroundColor: "#f2f2f2"
-                    // top:-20,
-                    // zIndex: 100
-                }}
-
-                imgSrc={AppImages.whatsAppImage}
-                width={40}
-                height={40}
-                onPress={() => {
-                    let url =
-                        "whatsapp://send?text=" +
-                        "" +
-                        "&phone=91" +
-                        9723271763;
-                    Linking.openURL(url)
-                        .then(data => {
-                            console.log("WhatsApp Opened successfully " + data);
-                        })
-                        .catch(() => {
-                            alert("Make sure WhatsApp installed on your device");
-                        });
-                    // navigation.push("ChatDetail")
-                }}
-            /> */}
         </MainContainer>
     )
 }
@@ -345,11 +286,10 @@ const styles = StyleSheet.create({
     item: {
         width: screenWidth * 0.92,
         height: screenWidth * 0.60,
-        // alignSelf:"center"
     },
     imageContainer: {
         flex: 1,
-        marginBottom: Platform.select({ ios: 0, android: 1 }), // Prevent a random Android rendering issue
+        marginBottom: Platform.select({ ios: 0, android: 1 }),
         backgroundColor: '#f7f7f7',
         borderRadius: 8,
         elevation: 1,

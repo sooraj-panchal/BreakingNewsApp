@@ -89,7 +89,7 @@ const HomeStack = () => {
                 component={HomeScreen}
                 options={({ navigation, route }) => {
                     return ({
-                        headerTitle: "Trending",
+                        headerTitle: "Post",
                         headerStatusBarHeight: StatusBar.currentHeight,
                         headerStyle: {
                             backgroundColor: "white",
@@ -168,29 +168,14 @@ function Tabs({ navigation, route }) {
                     position: "absolute",
                     marginHorizontal: width * 0.20,
                     paddingHorizontal: 10,
-                    // width:300,
                     bottom: 20,
-                    // alignSelf:"center",
-                },
-                tabStyle: {
-                    // borderRadius:5,
-                    // backgroundColor: "red",
-                    // height: 60,
-                    // alignItems: "center",
-                    // borderBottomColor: "red",
-                    // bottom:2,
-                    // marginHorizontal: 15,
-                    // width: 10,
-                    // borderBottomWidth:2,
                 },
                 activeTintColor: PrimaryColor,
-                // activeBackgroundColor:"red",
                 inactiveTintColor: 'gray',
                 labelStyle: {
                     fontSize: 14
                 },
                 showLabel: false,
-                // activeBackgroundColor:"red"
             }}
         >
             <Tab.Screen
@@ -238,36 +223,6 @@ function Tabs({ navigation, route }) {
                         )
                     },
                 }} />
-{/* 
-            <Tab.Screen name="hello" component={ChatStack}
-                options={{
-                    tabBarLabel: "Alert",
-                    tabBarIcon: ({ color, focused }) => {
-                        return (
-                            <Ionicons name="logo-whatsapp" size={30} color={color} />
-                        )
-                    },
-                }}
-                listeners={{
-                    tabPress: e => {
-                        e.preventDefault()
-                        // navigation.navigate("ChatDetail")
-                        let url =
-                            "whatsapp://send?text=" +
-                            "" +
-                            "&phone=91" +
-                            9723271763;
-                        Linking.openURL(url)
-                            .then(data => {
-                                console.log("WhatsApp Opened successfully " + data);
-                            })
-                            .catch(() => {
-                                alert("Make sure WhatsApp installed on your device");
-                            });
-                    },
-                }}
-            /> */}
-
         </Tab.Navigator>
     );
 }

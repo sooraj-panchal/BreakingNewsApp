@@ -160,8 +160,8 @@ function NewsDetailScreen({
                     let url =
                         "whatsapp://send?text=" +
                         "" +
-                        "&phone=91" +
-                        9723271763;
+                        "&phone=41" +
+                        791248202;
                     Linking.openURL(url)
                         .then(data => {
                             console.log("WhatsApp Opened successfully " + data);
