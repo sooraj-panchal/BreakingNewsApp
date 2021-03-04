@@ -37,6 +37,32 @@ export const getArticleDetailsLoading = createSelector(
     homeReducer,
     getArticleDetailsLoading => getArticleDetailsLoading.getArticleDetailsReducer.isLoading
 );
+
+export const getNotificationSelector = createSelector(
+    homeReducer,
+    getNotificationSelector => getNotificationSelector.getNotificationReducer.data,
+);
+export const getNotificationLoading = createSelector(
+    homeReducer,
+    getNotificationLoading => getNotificationLoading.getNotificationReducer.isLoading
+);
+export const updateNotificationSelector = createSelector(
+    homeReducer,
+    updateNotificationSelector => updateNotificationSelector.updateNotificationReducer.data,
+);
+export const updateNotificationLoading = createSelector(
+    homeReducer,
+    updateNotificationLoading => updateNotificationLoading.updateNotificationReducer.isLoading
+);
+export const getTrandingImageListSelector = createSelector(
+    homeReducer,
+    getTrandingImageListSelector => getTrandingImageListSelector.getTrandingImageListReducer.data,
+);
+export const getTrandingImageListLoading = createSelector(
+    homeReducer,
+    getTrandingImageListLoading => getTrandingImageListLoading.getTrandingImageListReducer.isLoading
+);
+// export
 // export const getHomeSliderSelector = createSelector(
 //     homeReducer,
 //     sliderImage => sliderImage.data,

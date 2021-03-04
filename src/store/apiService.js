@@ -58,3 +58,21 @@ export function getArticleDetailsApi(data) {
     let url = `${globals.mainUrl + globals.articleDetail}?article_id=${data?.article_id}`
     return buildFormData(url, data, "GET")
 }
+
+export function getNotificationApi(data) {
+    // console.log("data", data)
+
+    let url = `${globals.mainUrl + globals.notificationList}`
+    return buildFormData(url, data, "GET")
+}
+export function updateNotificationApi(data) {
+    return buildFormData(globals.mainUrl + globals.notificationSeen, data)
+
+}
+
+export function trendingArticleApi(data) {
+    // console.log("data", data)
+
+    let url = `${globals.mainUrl + globals.trendingArticle}?article_id=${data?.article_id}`
+    return buildFormData(url, data, "GET")
+}

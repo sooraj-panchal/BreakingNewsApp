@@ -104,4 +104,47 @@ export const getArticleDetailsError = (payload) => ({
     payload
 });
 
+////
+
+export const getNotificationWatcher = (payload) => ({
+    type: actionTypes.GET_NOTIFICATION_WATCHER,
+    payload
+});
+export const getNotificationSuccess = (payload) => ({
+    type: actionTypes.GET_NOTIFICATION_SUCCESS,
+    payload
+});
+export const getNotificationError = (payload) => ({
+    type: actionTypes.GET_NOTIFICATION_ERRROR,
+    payload
+});
+
+////
+
+
+export const updateNotificationWatcher = (payload) => ({
+    type: actionTypes.UPDATE_NOTIFICATION_WATCHER,
+    payload
+});
+export const updateNotificationSuccess = (payload) => ({
+    type: actionTypes.UPDATE_NOTIFICATION_SUCCESS,
+    payload
+});
+export const updateNotificationError = (payload) => ({
+    type: actionTypes.UPDATE_NOTIFICATION_ERRROR,
+    payload
+});
+///
+export const getTrandingImageListWatcher = (payload) => ({
+    type: actionTypes.GET_TRANDING_IMAGE_LIST_WATCHER,
+    payload
+});
+export const getTrandingImageListSucces = (payload) => ({
+    type: actionTypes.GET_TRANDING_IMAGE_LIST_SUCCESS,
+    payload
+});
+export const getTrandingImageListError = (payload) => ({
+    type: actionTypes.GET_TRANDING_IMAGE_LIST_ERROR,
+    payload
+});
 

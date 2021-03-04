@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import { hs, mpStyle, vs } from '../utils/styleUtils';
 
 const Img = ({
@@ -42,7 +42,7 @@ const Img = ({
     //         />
     //     </View>
     // )
-    if (withContainer || onPress) return (
+    if (withContainer) return (
         <TouchableOpacity
             onPress={onPress}
             activeOpacity={0.8}
@@ -55,11 +55,14 @@ const Img = ({
         </TouchableOpacity>
     )
     return (
-        <Image
-            {...props}
-            style={[styles.imgStyle, imgStyle]}
-            source={imgSrc}
-        />
+        <Pressable onPress={onPress} >
+            <Image
+                {...props}
+                style={[styles.imgStyle, imgStyle]}
+                source={imgSrc}
+            />
+        </Pressable>
+
     )
 }
 

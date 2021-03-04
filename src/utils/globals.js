@@ -8,7 +8,7 @@ export const authToken = ""
 export const toastMessage = ""
 export const buyer_id = ""
 export const user_id = ""
-
+export const imagePath ="https://chessmafia.com/php/BreakingNews/public/uploads/"
 
 
 export const screenWidth = Dimensions.get("window").width;
@@ -29,6 +29,8 @@ export const chatData = 'chatData'
 export const sendMessage = 'sendData'
 export const articleData = 'articleData'
 export const articleDetail = 'articleDetail'
-
+export const notificationList = 'notificationList'
+export const notificationSeen = 'notificationSeen'
+export const trendingArticle = 'trendingArticle'
 
 

@@ -1,8 +1,8 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import * as globals from '../../utils/globals'
 import * as actionTypes from "../../store/actionTypes";
-import { chatDataError, chatDataSuccess, getArticleDetailsError, getArticleDetailsSuccess, getArticleListError, getArticleListSuccess, sendMessageError, sendMessageSuccess } from "../actions/homeAction";
-import { chatDataApi, getArticleDetailsApi, getArticleListApi, sendMessageApi } from "../apiService";
+import { chatDataError, chatDataSuccess, getArticleDetailsError, getArticleDetailsSuccess, getArticleListError, getArticleListSuccess, getNotificationError, getNotificationSuccess, getNotificationWatcher, getTrandingImageListError, getTrandingImageListSucces, sendMessageError, sendMessageSuccess, updateNotificationError, updateNotificationSuccess } from "../actions/homeAction";
+import { chatDataApi, getArticleDetailsApi, getArticleListApi, getNotificationApi, sendMessageApi, trendingArticleApi, updateNotificationApi } from "../apiService";
 
 function* chatDataActionEffect(action) {
     let variable = {
@@ -76,5 +76,60 @@ function* getArticleDetailsActionEffect(action) {
 
 export function* getArticleDetailsSaga() {
     yield takeLatest(actionTypes.GET_ARTICLE_DETAILS_WATCHER, getArticleDetailsActionEffect);
+}
+
+function* getNotificationActionEffect(action) {
+    let variable = {
+        ...action.payload
+    }
+    try {
+        const response = yield call(getNotificationApi, action.payload);
+        console.log("======>getNotificationApi success ", response)
+        yield put(getNotificationSuccess(response));
+    } catch (e) {
+        console.log("=====>getNotificationApi Error", e)
+        yield put(getNotificationError(e));
+    }
+}
+
+export function* getNotificationSaga() {
+    yield takeLatest(actionTypes.GET_NOTIFICATION_WATCHER, getNotificationActionEffect);
+}
+
+function* updateNotificationActionEffect(action) {
+    let variable = {
+        ...action.payload
+    }
+    try {
+        const response = yield call(updateNotificationApi, action.payload);
+        console.log("======>updateNotificationApi success ", response)
+        yield put(updateNotificationSuccess(response));
+        // yield put(getNotificationWatcher());
+    } catch (e) {
+        console.log("=====>updateNotificationApi Error", e)
+        yield put(updateNotificationError(e));
+    }
+}
+
+export function* updateNotificationSaga() {
+    yield takeLatest(actionTypes.UPDATE_NOTIFICATION_WATCHER, updateNotificationActionEffect);
+}
+
+function* getTrandingImageListActionEffect(action) {
+    let variable = {
+        ...action.payload
+    }
+    try {
+        const response = yield call(trendingArticleApi, action.payload);
+        console.log("======>trendingArticleApi success ", response)
+        yield put(getTrandingImageListSucces(response));
+    } catch (e) {
+        console.log("=====>trendingArticleApi Error", e)
+        yield put(getTrandingImageListError(e));
+    }
+}
+
+export function* getTrandingImageListSaga() {
+    yield takeLatest(actionTypes.GET_TRANDING_IMAGE_LIST_WATCHER, getTrandingImageListActionEffect);
 }
 

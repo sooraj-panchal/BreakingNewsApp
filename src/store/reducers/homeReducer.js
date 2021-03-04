@@ -4,16 +4,6 @@ const initialState = {
     data: [],
     error: null,
     isLoading: false,
-    // homeCategory: {
-    //     data: [],
-    //     error: null,
-    //     isLoading: false,
-    // },
-    // subCatAll: {
-    //     data: [],
-    //     error: null,
-    //     isLoading: false,
-    // },
     chatData: {
         data: null,
         error: null,
@@ -30,6 +20,21 @@ const initialState = {
         isLoading: false,
     },
     getArticleDetailsReducer: {
+        data: null,
+        error: null,
+        isLoading: false,
+    },
+    getNotificationReducer: {
+        data: null,
+        error: null,
+        isLoading: false,
+    },
+    updateNotificationReducer:{
+        data: null,
+        error: null,
+        isLoading: false,
+    },
+    getTrandingImageListReducer:{
         data: null,
         error: null,
         isLoading: false,
@@ -147,6 +152,87 @@ export default (state = initialState, action) => {
                             isLoading: false,
                         },
                     };
+                    case actionTypes.GET_NOTIFICATION_WATCHER:
+                    return {
+                        ...state,
+                        getNotificationReducer: {
+                            data: null,
+                            error: null,
+                            isLoading: true,
+                        },
+                    };
+                case actionTypes.GET_NOTIFICATION_SUCCESS:
+                    return {
+                        ...state,
+                        getNotificationReducer: {
+                            data: action.payload,
+                            error: null,
+                            isLoading: false,
+                        },
+                    }
+                case actionTypes.GET_NOTIFICATION_ERRROR:
+                    return {
+                        ...state,
+                        getNotificationReducer: {
+                            data: null,
+                            error: action.payload,
+                            isLoading: false,
+                        },
+                    };
+                    case actionTypes.UPDATE_NOTIFICATION_WATCHER:
+                        return {
+                            ...state,
+                            updateNotificationReducer: {
+                                data: null,
+                                error: null,
+                                isLoading: true,
+                            },
+                        };
+                    case actionTypes.UPDATE_NOTIFICATION_SUCCESS:
+                        return {
+                            ...state,
+                            updateNotificationReducer: {
+                                data: action.payload,
+                                error: null,
+                                isLoading: false,
+                            },
+                        }
+                    case actionTypes.UPDATE_NOTIFICATION_ERRROR:
+                        return {
+                            ...state,
+                            updateNotificationReducer: {
+                                data: null,
+                                error: action.payload,
+                                isLoading: false,
+                            },
+                        };
+                        case actionTypes.GET_TRANDING_IMAGE_LIST_WATCHER:
+                            return {
+                                ...state,
+                                getTrandingImageListReducer: {
+                                    data: null,
+                                    error: null,
+                                    isLoading: true,
+                                },
+                            };
+                        case actionTypes.GET_TRANDING_IMAGE_LIST_SUCCESS:
+                            return {
+                                ...state,
+                                getTrandingImageListReducer: {
+                                    data: action.payload,
+                                    error: null,
+                                    isLoading: false,
+                                },
+                            }
+                        case actionTypes.GET_TRANDING_IMAGE_LIST_ERROR:
+                            return {
+                                ...state,
+                                getTrandingImageListReducer: {
+                                    data: null,
+                                    error: action.payload,
+                                    isLoading: false,
+                                },
+                            };
         // case actionTypes.HOME_SLIDER_WATCHER:
         //     return {
         //         ...state,

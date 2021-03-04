@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Dimensions, StatusBar, View } from "react-native";
+import { Dimensions, Linking, StatusBar, View } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../container/AppModule/HomeScreen';
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -13,6 +13,8 @@ import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import Label from "../components/Label";
 import { semiBold } from "../assets/fonts/fonts";
 import { AuthStack } from "./navActions";
+import Img from "../components/Img";
+import { AppImages } from "../assets/images/map";
 const StackScreen = createStackNavigator()
 
 const ChatStack = ({ }) => {
@@ -145,7 +147,7 @@ function Tabs({ navigation, route }) {
                         style={{
                             position: "absolute",
                             bottom: 0,
-                            backgroundColor: "red",
+                            backgroundColor: PrimaryColor,
                             width: 35,
                             height: 2
                         }}
@@ -165,6 +167,7 @@ function Tabs({ navigation, route }) {
                     borderRadius: 100,
                     position: "absolute",
                     marginHorizontal: width * 0.20,
+                    paddingHorizontal: 10,
                     // width:300,
                     bottom: 20,
                     // alignSelf:"center",
@@ -235,6 +238,36 @@ function Tabs({ navigation, route }) {
                         )
                     },
                 }} />
+{/* 
+            <Tab.Screen name="hello" component={ChatStack}
+                options={{
+                    tabBarLabel: "Alert",
+                    tabBarIcon: ({ color, focused }) => {
+                        return (
+                            <Ionicons name="logo-whatsapp" size={30} color={color} />
+                        )
+                    },
+                }}
+                listeners={{
+                    tabPress: e => {
+                        e.preventDefault()
+                        // navigation.navigate("ChatDetail")
+                        let url =
+                            "whatsapp://send?text=" +
+                            "" +
+                            "&phone=91" +
+                            9723271763;
+                        Linking.openURL(url)
+                            .then(data => {
+                                console.log("WhatsApp Opened successfully " + data);
+                            })
+                            .catch(() => {
+                                alert("Make sure WhatsApp installed on your device");
+                            });
+                    },
+                }}
+            /> */}
+
         </Tab.Navigator>
     );
 }

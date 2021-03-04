@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { getArticleDetailsWatcher } from "../../../store/actions";
+import { getArticleDetailsWatcher, updateNotificationWatcher } from "../../../store/actions";
 import { getArticleDetailsSelector, getArticleDetailsLoading } from "../../../store/selectors";
 import NewsDetailScreen from "./view";
 
@@ -11,7 +11,8 @@ const mapStateToProps = store => {
 }
 
 const mapDispatchToProps = {
-  getArticleDetailsWatcher
+  getArticleDetailsWatcher,
+  updateNotificationWatcher
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsDetailScreen);

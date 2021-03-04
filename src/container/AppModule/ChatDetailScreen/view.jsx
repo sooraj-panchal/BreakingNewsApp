@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, FlatList, Linking, View } from 'react-native'
+import { ActivityIndicator, FlatList, Linking, Text, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { DarkBlueColor, GrayColor } from '../../../assets/colors'
 import Container from '../../../components/Container'
@@ -173,31 +173,64 @@ function ChatDetailScreen({
             </Container>
         )
     }
+    function groupedDays(messages) {
+        return messages.reduce((acc, el, i) => {
+            // console.log("acc",acc)
+            const messageDay = moment(el.created_at).format('YYYY-MM-DD');
+            if (acc[messageDay]) {
+                return { ...acc, [messageDay]: acc[messageDay].concat([el]) };
+            }
+            return { ...acc, [messageDay]: [el] };
+        }, {});
+    }
+    function generateItems(messages) {
+        // console.log("messages", messages)
+        const days = groupedDays(messages);
+        // console.log(days)
+        const sortedDays = Object.keys(days).sort(
+            (x, y) => moment(y, 'YYYY-MM-DD').unix() - moment(x, 'YYYY-MM-DD').unix()
+        );
+
+        const items = sortedDays.reduce((acc, date) => {
+            const sortedMessages = days[date].sort(
+                (x, y) => new Date(y.created_at) - new Date(x.created_at)
+            );
+            return acc.concat([...sortedMessages, { type: 'day', date, id: date }]);
+        }, []);
+        return items;
+    }
     return (
         <MainContainer
             style={{ backgroundColor: "white" }}
             loading={getChatDataLoading}
         >
             <FlatList inverted
-                data={messageArray}
-                renderItem={({ item }) => {
-                    // console.log(time)
-                    let newTime;
-                    const time = moment(item.created_at).startOf('day').fromNow();
-                    if (time <= "24 hours ago") {
-                        newTime = moment(item.created_at).format('LT');
-                    }
-                    if (time >= "24 hours ago" && time <= "7 days ago") {
-                        newTime = moment(item.created_at).startOf('hour').fromNow();
-                    }
-                    if (time >= "7 days ago") {
-                        newTime = moment(item.created_at).format('D/M/Y');
+                data={generateItems(messageArray)}
+                extraData={generateItems(messageArray)}
+                renderItem={({ item, index }) => {
+                    if (item.type && item.type === 'day') {
+                        return <Container containerStyle={{
+                            justifyContent: "center",
+                            alignItems: 'center',
+                            backgroundColor: "#f0f0f0",
+                            elevation: 0.3,
+                            width: 120,
+                            alignSelf: "center",
+                            borderRadius: 5,
+                            height: 25
+                        }} mpContainer={{ mv: 10 }} >
+                            <Label
+                                labelSize={12}
+                                labelStyle={{ color: "gray", letterSpacing: 1 }}
+
+                            >{item.date}</Label>
+                        </Container>
                     }
                     return <MessagesList
                         userId={item.id}
                         adminMsg={item.admin_msg}
                         userMsg={item.msg}
-                        timeStamp={newTime}
+                        timeStamp={moment(item.created_at).format('LT')}
                     />
                 }}
                 style={{ flex: 1 }}
@@ -253,9 +286,9 @@ function ChatDetailScreen({
                 containerStyle={{
                     position: "absolute",
                     right: 15,
-                    top: 10,
+                    bottom: 100,
                     // top:-20,
-                    zIndex: 100
+                    // zIndex: 100
                 }}
                 imgSrc={AppImages.whatsAppImage}
                 width={50}

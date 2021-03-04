@@ -1,7 +1,7 @@
 import HomeScreen from "./view";
 import { connect } from "react-redux";
-import { asyncUserDataWatcher, getArticleListWatcher } from "../../../store/actions";
-import { asyncUserDataSelector, getArticeListLoading, getArticeListSelector } from "../../../store/selectors";
+import { asyncUserDataWatcher, getArticleListWatcher, getTrandingImageListWatcher } from "../../../store/actions";
+import { asyncUserDataSelector, getArticeListLoading, getArticeListSelector, getTrandingImageListLoading, getTrandingImageListSelector } from "../../../store/selectors";
 const mapStateToProps = store => {
     return {
         // verifyOtpLoading: verifyOtpLoading(store),
@@ -9,12 +9,15 @@ const mapStateToProps = store => {
         asyncUserDataResponse:asyncUserDataSelector(store),
         getArticeListResponse:getArticeListSelector(store),
         getArticeListLoading:getArticeListLoading(store),
+        getTrandingImageListResponse:getTrandingImageListSelector(store),
+        getTrandingImageListLoading:getTrandingImageListLoading(store),
     }
 }
 
 const mapDispatchToProps = {
     asyncUserDataWatcher,
-   getArticleListWatcher
+   getArticleListWatcher,
+   getTrandingImageListWatcher
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
