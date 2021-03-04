@@ -32,5 +32,6 @@ export const articleDetail = 'articleDetail'
 export const notificationList = 'notificationList'
 export const notificationSeen = 'notificationSeen'
 export const trendingArticle = 'trendingArticle'
+export const articleSeen = 'articleSeen'
 
 

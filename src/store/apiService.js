@@ -1,5 +1,9 @@
 import * as globals from '../utils/globals';
 
+// const res = await AsyncStorage.getItem("userData")
+// const parsedData = await JSON.parse(res)
+// const token = `Bearer ${parsedData?.token}`
+
 const buildFormData = (url, data, method) => {
     console.log("url=====>", url)
     console.log("data=====>", data)
@@ -67,7 +71,6 @@ export function getNotificationApi(data) {
 }
 export function updateNotificationApi(data) {
     return buildFormData(globals.mainUrl + globals.notificationSeen, data)
-
 }
 
 export function trendingArticleApi(data) {

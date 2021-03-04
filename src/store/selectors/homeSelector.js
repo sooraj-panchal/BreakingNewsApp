@@ -62,6 +62,7 @@ export const getTrandingImageListLoading = createSelector(
     homeReducer,
     getTrandingImageListLoading => getTrandingImageListLoading.getTrandingImageListReducer.isLoading
 );
+
 // export
 // export const getHomeSliderSelector = createSelector(
 //     homeReducer,

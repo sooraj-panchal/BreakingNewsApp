@@ -281,7 +281,7 @@ function ChatDetailScreen({
                 }}
             />
             {MessageContainer()}
-            <Img
+            {/* <Img
                 withContainer
                 containerStyle={{
                     position: "absolute",
@@ -308,7 +308,7 @@ function ChatDetailScreen({
                         });
                     // navigation.push("ChatDetail")
                 }}
-            />
+            /> */}
         </MainContainer>
     )
 }

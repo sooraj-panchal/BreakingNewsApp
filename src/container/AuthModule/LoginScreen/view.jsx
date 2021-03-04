@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from 'react'
-import { ScrollView, StatusBar } from 'react-native'
+import { ScrollView, StatusBar, KeyboardAvoidingView } from 'react-native'
 import { PrimaryColor, LightGrayColor, GrayColor, StatusBarColor } from '../../../assets/colors'
 import { medium } from '../../../assets/fonts/fonts'
 import { AuthImages } from '../../../assets/images/map'
@@ -38,8 +38,8 @@ function LoginScreen({
         if (loginResponse) {
             console.log(loginResponse)
             if (loginResponse.status == "success") {
-                globals.authToken = loginResponse?.data?.token
                 navigation.dispatch(AppStack)
+                globals.authToken = loginResponse?.data?.token
                 AsyncStorage.setItem("userData", JSON.stringify(loginResponse?.data))
             }
         }
@@ -57,7 +57,7 @@ function LoginScreen({
             }}
         >
             {/* <StatusBar backgroundColor={StatusBarColor} /> */}
-            <ScrollView>
+            <ScrollView  >
                 <Formik
                     initialValues={{ userName: "", email: '', phoneNumber: "" }}
                     onSubmit={values => loginHandler(values)}

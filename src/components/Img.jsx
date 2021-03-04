@@ -55,14 +55,14 @@ const Img = ({
         </TouchableOpacity>
     )
     return (
-        <Pressable onPress={onPress} >
-            <Image
-                {...props}
-                style={[styles.imgStyle, imgStyle]}
-                source={imgSrc}
-            />
-        </Pressable>
-
+        // <Pressable>
+        <Image
+            {...props}
+            style={[styles.imgStyle, imgStyle]}
+            source={imgSrc}
+            
+        />
+        // </Pressable>
     )
 }
 

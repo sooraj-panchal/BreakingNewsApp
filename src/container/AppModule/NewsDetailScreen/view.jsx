@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import { View, FlatList, Dimensions, StatusBar, ScrollView } from 'react-native'
+import { View, FlatList, Dimensions, StatusBar, ScrollView, Linking } from 'react-native'
 import { headerImageArray } from "../../../../dummyArray";
 import Img from "../../../components/Img";
 import Label from "../../../components/Label";
 import MainContainer from "../../../components/MainContainer";
 import { screenHeight, screenWidth } from "../../../utils/styleUtils";
 import HTML from "react-native-render-html";
+import { AppImages } from "../../../assets/images/map";
 
 const HEADER_HEIGHT = 60;
 const IMAGE_HEIGHT = 240;
@@ -131,6 +132,46 @@ function NewsDetailScreen({
                     mpBtnContainer={{ mh: 20 }}
                 />
             </Animated.View> */}
+            <Img
+                withContainer
+                containerStyle={{
+                    position: "absolute",
+                    right: -5,
+                    borderRadius: 0,
+                    borderTopLeftRadius: 40,
+                    borderBottomLeftRadius: 40,
+                    bottom: 40,
+                    width: 60,
+                    height: 50,
+                    elevation: 5,
+                    paddingRight: 5,
+                    // elevation:0.5,
+                    // borderWidth:1,
+                    // borderColor:"#f8f8f8"
+                    // backgroundColor: "#f2f2f2"
+                    // top:-20,
+                    // zIndex: 100
+                }}
+
+                imgSrc={AppImages.whatsAppImage}
+                width={40}
+                height={40}
+                onPress={() => {
+                    let url =
+                        "whatsapp://send?text=" +
+                        "" +
+                        "&phone=91" +
+                        9723271763;
+                    Linking.openURL(url)
+                        .then(data => {
+                            console.log("WhatsApp Opened successfully " + data);
+                        })
+                        .catch(() => {
+                            alert("Make sure WhatsApp installed on your device");
+                        });
+                    // navigation.push("ChatDetail")
+                }}
+            />
         </MainContainer>
     )
 }

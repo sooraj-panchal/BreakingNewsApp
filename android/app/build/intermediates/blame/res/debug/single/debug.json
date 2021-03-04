@@ -304,10 +304,6 @@
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/anim/abc_tooltip_exit.xml"
     },
     {
-        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_breaking_news.png.flat",
-        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-xxhdpi/breaking_news.png"
-    },
-    {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable_btn_checkbox_unchecked_mtrl.xml.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/drawable/btn_checkbox_unchecked_mtrl.xml"
     },
@@ -458,10 +454,6 @@
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/res/layout/notification_template_part_time.xml"
-    },
-    {
-        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_breaking_news.png.flat",
-        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-mdpi/breaking_news.png"
     },
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable_abc_btn_check_material_anim.xml.flat",
@@ -766,6 +758,10 @@
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_breaking_news.jpg.flat",
+        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-mdpi/breaking_news.jpg"
     },
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable_btn_radio_on_to_off_mtrl_animation.xml.flat",
@@ -1084,10 +1080,6 @@
         "source": "/Users/p/.gradle/caches/transforms-3/efb78b8e226dbf8cd93b1f2604fa09b9/transformed/material-1.1.0/res/interpolator/mtrl_linear_out_slow_in.xml"
     },
     {
-        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_breaking_news.png.flat",
-        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-xxxhdpi/breaking_news.png"
-    },
-    {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_design_ic_visibility.png.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/efb78b8e226dbf8cd93b1f2604fa09b9/transformed/material-1.1.0/res/drawable-xxhdpi-v4/design_ic_visibility.png"
     },
@@ -1270,6 +1262,10 @@
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_breaking_news.jpg.flat",
+        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-hdpi/breaking_news.jpg"
     },
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",
@@ -1470,6 +1466,10 @@
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_breaking_news.jpg.flat",
+        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-xxhdpi/breaking_news.jpg"
     },
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -1864,10 +1864,6 @@
         "source": "/Users/p/.gradle/caches/transforms-3/efb78b8e226dbf8cd93b1f2604fa09b9/transformed/material-1.1.0/res/layout/mtrl_picker_text_input_date.xml"
     },
     {
-        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_breaking_news.png.flat",
-        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-xhdpi/breaking_news.png"
-    },
-    {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/drawable/abc_ratingbar_indicator_material.xml"
     },
@@ -2082,6 +2078,10 @@
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_dark_normal.xml.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_breaking_news.jpg.flat",
+        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-xhdpi/breaking_news.jpg"
     },
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -2520,6 +2520,10 @@
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_breaking_news.jpg.flat",
+        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-xxxhdpi/breaking_news.jpg"
+    },
+    {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
@@ -2598,10 +2602,6 @@
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
-        "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_breaking_news.png.flat",
-        "source": "/Users/p/react-native/BreakingNewsApp/android/app/src/main/res/mipmap-hdpi/breaking_news.png"
     },
     {
         "merged": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/res/merged/debug/color_mtrl_bottom_nav_ripple_color.xml.flat",

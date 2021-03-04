@@ -185,6 +185,7 @@ const HomeScreen = ({
                 {
                     text: "OK", onPress: () => AsyncStorage.clear().then(() => {
                         navigation.dispatch(AuthStack)
+                        globals.authToken = ""
                     }),
                 }
             ],
@@ -212,6 +213,7 @@ const HomeScreen = ({
                     setgetArticleListData(arr => [...arr, ...getArticeListResponse?.data])
                 }
             }
+            setGetArticeListLoading(false)
         }
     }, [getArticeListResponse])
 
@@ -294,7 +296,7 @@ const HomeScreen = ({
                     }
                 }}
             />
-            <Img
+            {/* <Img
                 withContainer
                 containerStyle={{
                     position: "absolute",
@@ -332,7 +334,7 @@ const HomeScreen = ({
                         });
                     // navigation.push("ChatDetail")
                 }}
-            />
+            /> */}
         </MainContainer>
     )
 }
