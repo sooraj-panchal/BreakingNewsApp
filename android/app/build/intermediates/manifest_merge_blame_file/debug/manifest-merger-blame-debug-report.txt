@@ -9,321 +9,427 @@
 9        android:targetSdkVersion="29" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\debug\AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:4:5-67
-12-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:4:22-64
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.54.0] /Users/p/.gradle/caches/transforms-3/ccf9a398f252b68de3a2456bd223918e/transformed/flipper-0.54.0/AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.54.0] /Users/p/.gradle/caches/transforms-3/ccf9a398f252b68de3a2456bd223918e/transformed/flipper-0.54.0/AndroidManifest.xml:16:22-73
-14    <uses-permission android:name="android.permission.WAKE_LOCK" />
-14-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
-14-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
-15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-15-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
-15-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
-16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-16-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:26:5-82
-16-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:26:22-79
-17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-17-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:26:5-110
-17-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:26:22-107
-18
-19    <application
-19-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:6:5-25:19
-20        android:name="com.breakingnews.MainApplication"
-20-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:7:7-38
-21        android:allowBackup="false"
-21-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:11:7-34
-22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:24:18-86
-23        android:debuggable="true"
-24        android:icon="@mipmap/wmcs"
-24-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:7-34
-25        android:label="@string/app_name"
-25-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:8:7-39
-26        android:roundIcon="@mipmap/wmcs"
-26-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:10:7-39
-27        android:theme="@style/AppTheme"
-27-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:12:7-38
-28        android:usesCleartextTraffic="true" >
-28-->/Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:7:18-53
-29        <activity
-29-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:13:7-23:18
-30            android:name="com.breakingnews.MainActivity"
-30-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:14:9-37
-31            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-31-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:16:9-86
-32            android:label="@string/app_name"
-32-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:15:9-41
-33            android:launchMode="singleTask"
-33-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:17:9-40
-34            android:windowSoftInputMode="adjustResize" >
-34-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:18:9-51
-35            <intent-filter>
-35-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:19:9-22:25
-36                <action android:name="android.intent.action.MAIN" />
-36-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:20:13-65
-36-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:20:21-62
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:21:13-73
-38-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:21:23-70
-39            </intent-filter>
-40        </activity>
-41        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-41-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:24:7-84
-41-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:24:17-81
-42
-43        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
-43-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-111
-43-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-108
-44        <service
-44-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-23:19
-45            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
-45-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-95
-46            android:exported="false" >
-46-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-37
-47            <intent-filter>
-47-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-22:29
-48                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-48-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-78
-48-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:25-75
-49            </intent-filter>
-50        </service>
-51
-52        <receiver
-52-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:9-32:20
-53            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
-53-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-96
-54            android:exported="true"
-54-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-36
-55            android:permission="com.google.android.c2dm.permission.SEND" >
-55-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-73
-56            <intent-filter>
-56-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
-57                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-57-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
-57-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
-58            </intent-filter>
-59        </receiver>
+12-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:4:5-67
+12-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.VIBRATE" />
+13-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:5:5-66
+13-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:5:22-63
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:6:5-80
+14-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:6:22-78
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->[com.facebook.flipper:flipper:0.54.0] C:\Users\sooraj\.gradle\caches\transforms-3\ccf9a398f252b68de3a2456bd223918e\transformed\flipper-0.54.0\AndroidManifest.xml:16:5-76
+15-->[com.facebook.flipper:flipper:0.54.0] C:\Users\sooraj\.gradle\caches\transforms-3\ccf9a398f252b68de3a2456bd223918e\transformed\flipper-0.54.0\AndroidManifest.xml:16:22-73
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-68
+16-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-65
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+17-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-79
+17-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-76
+18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+18-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:26:5-82
+18-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:26:22-79
+19    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- for android -->
+19-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:26:5-110
+19-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:26:22-107
+20    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+21    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+22    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+23    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+24    <!-- for Samsung -->
+25    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+25-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:19:5-86
+25-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:19:22-83
+26    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+26-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:20:5-87
+26-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:20:22-84
+27    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+27-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:23:5-81
+27-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:23:22-78
+28    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+28-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:24:5-83
+28-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:24:22-80
+29    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+29-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:27:5-88
+29-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:27:22-85
+30    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+30-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:28:5-92
+30-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:28:22-89
+31    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+31-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:31:5-84
+31-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:31:22-81
+32    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+32-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:34:5-83
+32-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:34:22-80
+33    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+33-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:37:5-91
+33-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:37:22-88
+34    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+34-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:38:5-92
+34-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:38:22-89
+35    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+35-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:39:5-93
+35-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:39:22-90
+36    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+36-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:42:5-73
+36-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:42:22-70
+37    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+37-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:45:5-82
+37-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:45:22-79
+38    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+38-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:46:5-83
+38-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:46:22-80
+39    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+39-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:49:5-88
+39-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:49:22-85
+40    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+40-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:50:5-89
+40-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\sooraj\.gradle\caches\transforms-3\90b2f158e23282f4274545a280180094\transformed\ShortcutBadger-1.1.22\AndroidManifest.xml:50:22-86
+41
+42    <application
+42-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:8:5-52:19
+43        android:name="com.breakingnews.MainApplication"
+43-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:9:7-38
+44        android:allowBackup="false"
+44-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:13:7-34
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.1.0] C:\Users\sooraj\.gradle\caches\transforms-3\41d566f02e1d5172e0ab231b51d7e72d\transformed\core-1.1.0\AndroidManifest.xml:24:18-86
+46        android:debuggable="true"
+47        android:icon="@mipmap/wmcs"
+47-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:11:7-34
+48        android:label="@string/app_name"
+48-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:10:7-39
+49        android:roundIcon="@mipmap/wmcs"
+49-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:12:7-39
+50        android:theme="@style/AppTheme"
+50-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:14:7-38
+51        android:usesCleartextTraffic="true" >
+51-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\debug\AndroidManifest.xml:7:18-53
+52        <activity
+52-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:15:7-25:18
+53            android:name="com.breakingnews.MainActivity"
+53-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:16:9-37
+54            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+54-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:18:9-86
+55            android:label="@string/app_name"
+55-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:17:9-41
+56            android:launchMode="singleTask"
+56-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:19:9-40
+57            android:windowSoftInputMode="adjustResize" >
+57-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:20:9-51
+58            <intent-filter>
+58-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:21:9-24:25
+59                <action android:name="android.intent.action.MAIN" />
+59-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:22:13-65
+59-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:22:21-62
 60
-61        <meta-data
-61-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:9-36:36
-62            android:name="firebase_messaging_auto_init_enabled"
-62-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:13-64
-63            android:value="true" />
-63-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:13-33
-64        <meta-data
-64-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:9-39:32
-65            android:name="com.google.firebase.messaging.default_notification_channel_id"
-65-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:38:13-89
-66            android:value="" />
-66-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:39:13-29
-67        <meta-data
-67-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:40:9-42:47
-68            android:name="com.google.firebase.messaging.default_notification_color"
-68-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:41:13-84
-69            android:resource="@color/white" />
-69-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:42:13-44
-70        <!--
-71             FirebaseMessagingService performs security checks at runtime,
-72             but set to not exported to explicitly avoid allowing another app to call it.
-73        -->
-74        <service
-74-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:28:9-35:19
-75            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-75-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:29:13-82
-76            android:directBootAware="true"
-76-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:30:13-43
-77            android:exported="false" >
-77-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:31:13-37
-78            <intent-filter android:priority="-500" >
-78-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-22:29
-79                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-79-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-78
-79-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:25-75
-80            </intent-filter>
-81        </service>
-82        <service
-82-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:36:9-42:19
-83            android:name="com.google.firebase.components.ComponentDiscoveryService"
-83-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:37:13-84
-84            android:directBootAware="true"
-84-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
-85            android:exported="false" >
-85-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:38:13-37
-86            <meta-data
-86-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:39:13-41:85
-87                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-87-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:40:17-119
-88                android:value="com.google.firebase.components.ComponentRegistrar" />
-88-->[com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:41:17-82
-89            <meta-data
-89-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/p/.gradle/caches/transforms-3/b66e48058848b5a09dad43e4d9980c17/transformed/firebase-datatransport-17.0.10/AndroidManifest.xml:28:13-30:85
-90                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-90-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/p/.gradle/caches/transforms-3/b66e48058848b5a09dad43e4d9980c17/transformed/firebase-datatransport-17.0.10/AndroidManifest.xml:29:17-115
-91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/p/.gradle/caches/transforms-3/b66e48058848b5a09dad43e4d9980c17/transformed/firebase-datatransport-17.0.10/AndroidManifest.xml:30:17-82
-92            <meta-data
-92-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:32:13-34:85
-93                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-93-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:33:17-96
-94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:34:17-82
-95            <meta-data
-95-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/p/.gradle/caches/transforms-3/24e526a4c614aaf8827fb570bd966832/transformed/play-services-measurement-api-18.0.2/AndroidManifest.xml:30:13-32:85
-96                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-96-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/p/.gradle/caches/transforms-3/24e526a4c614aaf8827fb570bd966832/transformed/play-services-measurement-api-18.0.2/AndroidManifest.xml:31:17-139
-97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/p/.gradle/caches/transforms-3/24e526a4c614aaf8827fb570bd966832/transformed/play-services-measurement-api-18.0.2/AndroidManifest.xml:32:17-82
-98            <meta-data
-98-->[com.google.firebase:firebase-installations:16.3.5] /Users/p/.gradle/caches/transforms-3/2014398a33d5c4d92117eb141577d1a4/transformed/firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
-99                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-99-->[com.google.firebase:firebase-installations:16.3.5] /Users/p/.gradle/caches/transforms-3/2014398a33d5c4d92117eb141577d1a4/transformed/firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
-100                android:value="com.google.firebase.components.ComponentRegistrar" />
-100-->[com.google.firebase:firebase-installations:16.3.5] /Users/p/.gradle/caches/transforms-3/2014398a33d5c4d92117eb141577d1a4/transformed/firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
-101            <!--
-102                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
-103                clients to use it as well, by defining this registrar in their own core/common library.
-104            -->
-105            <meta-data
-105-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
-106                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-106-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
-107                android:value="com.google.firebase.components.ComponentRegistrar" />
-107-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
-108        </service>
-109        <service
-109-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
-110            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-110-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
-111            android:exported="false" >
-111-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
-112            <meta-data
-112-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
-113                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-113-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
-114                android:value="cct" />
-114-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
-115        </service>
-116
-117        <receiver
-117-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:37:9-44:20
-118            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-118-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:38:13-78
-119            android:exported="true"
-119-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:39:13-36
-120            android:permission="com.google.android.c2dm.permission.SEND" >
-120-->[com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:40:13-73
-121            <intent-filter>
-121-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
-122                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-122-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
-122-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
-123            </intent-filter>
-124        </receiver>
-125
-126        <provider
-126-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
-127            android:name="com.google.firebase.provider.FirebaseInitProvider"
-127-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
-128            android:authorities="com.breakingnews.firebaseinitprovider"
-128-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:23:13-73
+61-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:23:23-70
+62            </intent-filter>
+63        </activity>
+64        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" /> <!-- Change the value to true to enable pop-up for in foreground on receiving remote notifications (for prevent duplicating while showing local notifications set this to false) -->
+64-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:26:7-84
+64-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:26:17-81
+65        <meta-data
+65-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:29:9-30:43
+66            android:name="com.dieam.reactnativepushnotification.notification_foreground"
+66-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:29:21-97
+67            android:value="true" /> <!-- Change the resource name to your App's accent color - or any other color you want -->
+67-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:30:21-41
+68        <meta-data
+68-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:32:9-33:54
+69            android:name="com.dieam.reactnativepushnotification.notification_color"
+69-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:32:21-92
+70            android:resource="@color/white" /> <!-- or @android:color/{name} to use a standard color -->
+70-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:33:21-52
+71        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
+71-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:35:9-108
+71-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:35:19-105
+72        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+72-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:36:9-110
+72-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:36:19-107
+73        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver" >
+73-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:37:9-43:20
+73-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:37:19-115
+74            <intent-filter>
+74-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:38:13-42:29
+75                <action android:name="android.intent.action.BOOT_COMPLETED" />
+75-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:39:17-79
+75-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:39:25-76
+76                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+76-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:40:17-82
+76-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:40:25-79
+77                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+77-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:41:17-81
+77-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:41:25-79
+78            </intent-filter>
+79        </receiver>
+80
+81        <service
+81-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:45:9-51:19
+82            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+82-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:46:13-107
+83            android:exported="false" >
+83-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:47:13-37
+84            <intent-filter>
+84-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:48:13-50:29
+85                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+85-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:49:17-78
+85-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:49:25-75
+86            </intent-filter>
+87        </service>
+88        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
+88-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-111
+88-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:18-108
+89        <service
+89-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-23:19
+90            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+90-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-95
+91            android:exported="false" >
+91-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-37
+92            <intent-filter>
+92-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:48:13-50:29
+93                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+93-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:49:17-78
+93-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:49:25-75
+94            </intent-filter>
+95        </service>
+96
+97        <receiver
+97-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-32:20
+98            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+98-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-96
+99            android:exported="true"
+99-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-36
+100            android:permission="com.google.android.c2dm.permission.SEND" >
+100-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-73
+101            <intent-filter>
+101-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
+102                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+102-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
+102-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
+103            </intent-filter>
+104        </receiver>
+105
+106        <meta-data
+106-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:9-36:36
+107            android:name="firebase_messaging_auto_init_enabled"
+107-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-64
+108            android:value="true" />
+108-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-33
+109        <meta-data
+109-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:9-39:32
+110            android:name="com.google.firebase.messaging.default_notification_channel_id"
+110-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-89
+111            android:value="" />
+111-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-29
+112        <meta-data
+112-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:9-42:47
+113            android:name="com.google.firebase.messaging.default_notification_color"
+113-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-84
+114            android:resource="@color/white" />
+114-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-44
+115        <!--
+116             FirebaseMessagingService performs security checks at runtime,
+117             but set to not exported to explicitly avoid allowing another app to call it.
+118        -->
+119        <service
+119-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:28:9-35:19
+120            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+120-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:29:13-82
+121            android:directBootAware="true"
+121-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:30:13-43
+122            android:exported="false" >
+122-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:31:13-37
+123            <intent-filter android:priority="-500" >
+123-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:48:13-50:29
+124                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+124-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:49:17-78
+124-->F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\android\app\src\main\AndroidManifest.xml:49:25-75
+125            </intent-filter>
+126        </service>
+127        <service
+127-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:36:9-42:19
+128            android:name="com.google.firebase.components.ComponentDiscoveryService"
+128-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:37:13-84
 129            android:directBootAware="true"
-129-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
-130            android:exported="false"
-130-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
-131            android:initOrder="100" />
-131-->[com.google.firebase:firebase-common:19.5.0] /Users/p/.gradle/caches/transforms-3/0bebe1db141485b7b074bfb879ca214d/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
-132
-133        <service
-133-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/p/.gradle/caches/transforms-3/644fc34ec003159f891f63adc00bd05a/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
-134            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-134-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/p/.gradle/caches/transforms-3/644fc34ec003159f891f63adc00bd05a/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
-135            android:exported="false"
-135-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/p/.gradle/caches/transforms-3/644fc34ec003159f891f63adc00bd05a/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
-136            android:permission="android.permission.BIND_JOB_SERVICE" >
-136-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/p/.gradle/caches/transforms-3/644fc34ec003159f891f63adc00bd05a/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
-137        </service>
-138
-139        <receiver
-139-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/p/.gradle/caches/transforms-3/644fc34ec003159f891f63adc00bd05a/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
-140            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-140-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/p/.gradle/caches/transforms-3/644fc34ec003159f891f63adc00bd05a/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
-141            android:exported="false" />
-141-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/p/.gradle/caches/transforms-3/644fc34ec003159f891f63adc00bd05a/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
-142
-143        <activity
-143-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:23:9-27:75
-144            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-144-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:24:13-93
-145            android:excludeFromRecents="true"
-145-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:25:13-46
-146            android:exported="false"
-146-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:26:13-37
-147            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-147-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:27:13-72
-148        <!--
-149            Service handling Google Sign-In user revocation. For apps that do not integrate with
-150            Google Sign-In, this service will never be started.
-151        -->
-152        <service
-152-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:33:9-37:51
-153            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-153-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:34:13-89
-154            android:exported="true"
-154-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:35:13-36
-155            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-155-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:36:13-107
-156            android:visibleToInstantApps="true" />
-156-->[com.google.android.gms:play-services-auth:19.0.0] /Users/p/.gradle/caches/transforms-3/7025c06b6cc2fc6653041f967ec62be0/transformed/play-services-auth-19.0.0/AndroidManifest.xml:37:13-48
-157
-158        <activity
-158-->[com.google.android.gms:play-services-base:17.1.0] /Users/p/.gradle/caches/transforms-3/ccf867a4c2c4e7ea65bf7707bb53c52a/transformed/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
-159            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-159-->[com.google.android.gms:play-services-base:17.1.0] /Users/p/.gradle/caches/transforms-3/ccf867a4c2c4e7ea65bf7707bb53c52a/transformed/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
-160            android:exported="false"
-160-->[com.google.android.gms:play-services-base:17.1.0] /Users/p/.gradle/caches/transforms-3/ccf867a4c2c4e7ea65bf7707bb53c52a/transformed/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
-161            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-161-->[com.google.android.gms:play-services-base:17.1.0] /Users/p/.gradle/caches/transforms-3/ccf867a4c2c4e7ea65bf7707bb53c52a/transformed/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
-162
-163        <receiver
-163-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:29:9-33:20
-164            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-164-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:30:13-85
-165            android:enabled="true"
-165-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:31:13-35
-166            android:exported="false" >
-166-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:32:13-37
-167        </receiver>
-168
-169        <service
-169-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:35:9-38:40
-170            android:name="com.google.android.gms.measurement.AppMeasurementService"
-170-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:36:13-84
-171            android:enabled="true"
-171-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:37:13-35
-172            android:exported="false" />
-172-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:38:13-37
-173        <service
-173-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:39:9-43:72
-174            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-174-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:40:13-87
-175            android:enabled="true"
-175-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:41:13-35
-176            android:exported="false"
-176-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:42:13-37
-177            android:permission="android.permission.BIND_JOB_SERVICE" />
-177-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/p/.gradle/caches/transforms-3/3221c2653f74c7f59913dabf84470f19/transformed/play-services-measurement-18.0.2/AndroidManifest.xml:43:13-69
-178
-179        <meta-data
-179-->[com.google.android.gms:play-services-basement:17.1.1] /Users/p/.gradle/caches/transforms-3/999a46fdd7aa4f5358586a5bed40fac1/transformed/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
-180            android:name="com.google.android.gms.version"
-180-->[com.google.android.gms:play-services-basement:17.1.1] /Users/p/.gradle/caches/transforms-3/999a46fdd7aa4f5358586a5bed40fac1/transformed/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58
-181            android:value="@integer/google_play_services_version" />
-181-->[com.google.android.gms:play-services-basement:17.1.1] /Users/p/.gradle/caches/transforms-3/999a46fdd7aa4f5358586a5bed40fac1/transformed/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
-182    </application>
+129-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+130            android:exported="false" >
+130-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:38:13-37
+131            <meta-data
+131-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:39:13-41:85
+132                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+132-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:40:17-119
+133                android:value="com.google.firebase.components.ComponentRegistrar" />
+133-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\d2b60b3b614bc3e02a7e9b683bbf8315\transformed\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:41:17-82
+134            <meta-data
+134-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\sooraj\.gradle\caches\transforms-3\b66e48058848b5a09dad43e4d9980c17\transformed\firebase-datatransport-17.0.10\AndroidManifest.xml:28:13-30:85
+135                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+135-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\sooraj\.gradle\caches\transforms-3\b66e48058848b5a09dad43e4d9980c17\transformed\firebase-datatransport-17.0.10\AndroidManifest.xml:29:17-115
+136                android:value="com.google.firebase.components.ComponentRegistrar" />
+136-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\sooraj\.gradle\caches\transforms-3\b66e48058848b5a09dad43e4d9980c17\transformed\firebase-datatransport-17.0.10\AndroidManifest.xml:30:17-82
+137            <meta-data
+137-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:32:13-34:85
+138                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+138-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:33:17-96
+139                android:value="com.google.firebase.components.ComponentRegistrar" />
+139-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:34:17-82
+140            <meta-data
+140-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\24e526a4c614aaf8827fb570bd966832\transformed\play-services-measurement-api-18.0.2\AndroidManifest.xml:30:13-32:85
+141                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+141-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\24e526a4c614aaf8827fb570bd966832\transformed\play-services-measurement-api-18.0.2\AndroidManifest.xml:31:17-139
+142                android:value="com.google.firebase.components.ComponentRegistrar" />
+142-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\24e526a4c614aaf8827fb570bd966832\transformed\play-services-measurement-api-18.0.2\AndroidManifest.xml:32:17-82
+143            <meta-data
+143-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\sooraj\.gradle\caches\transforms-3\2014398a33d5c4d92117eb141577d1a4\transformed\firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+144                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+144-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\sooraj\.gradle\caches\transforms-3\2014398a33d5c4d92117eb141577d1a4\transformed\firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+145                android:value="com.google.firebase.components.ComponentRegistrar" />
+145-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\sooraj\.gradle\caches\transforms-3\2014398a33d5c4d92117eb141577d1a4\transformed\firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+146            <!--
+147                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+148                clients to use it as well, by defining this registrar in their own core/common library.
+149            -->
+150            <meta-data
+150-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+151                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+151-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+152                android:value="com.google.firebase.components.ComponentRegistrar" />
+152-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+153        </service>
+154        <service
+154-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\sooraj\.gradle\caches\transforms-3\1db1389e9bbd07316b5cdf11242d647f\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+155            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+155-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\sooraj\.gradle\caches\transforms-3\1db1389e9bbd07316b5cdf11242d647f\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+156            android:exported="false" >
+156-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\sooraj\.gradle\caches\transforms-3\1db1389e9bbd07316b5cdf11242d647f\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+157            <meta-data
+157-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\sooraj\.gradle\caches\transforms-3\1db1389e9bbd07316b5cdf11242d647f\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+158                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+158-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\sooraj\.gradle\caches\transforms-3\1db1389e9bbd07316b5cdf11242d647f\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+159                android:value="cct" />
+159-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\sooraj\.gradle\caches\transforms-3\1db1389e9bbd07316b5cdf11242d647f\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+160        </service>
+161
+162        <receiver
+162-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:37:9-44:20
+163            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+163-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:38:13-78
+164            android:exported="true"
+164-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:39:13-36
+165            android:permission="com.google.android.c2dm.permission.SEND" >
+165-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\sooraj\.gradle\caches\transforms-3\953591b13e3ba9b0b8978129c77ea143\transformed\firebase-iid-21.0.1\AndroidManifest.xml:40:13-73
+166            <intent-filter>
+166-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
+167                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+167-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
+167-->[:react-native-firebase_messaging] F:\React-Native\OfficeProject\BreakingNews\BreakingNewsApp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
+168            </intent-filter>
+169        </receiver>
+170
+171        <provider
+171-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+172            android:name="com.google.firebase.provider.FirebaseInitProvider"
+172-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+173            android:authorities="com.breakingnews.firebaseinitprovider"
+173-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+174            android:directBootAware="true"
+174-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+175            android:exported="false"
+175-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+176            android:initOrder="100" />
+176-->[com.google.firebase:firebase-common:19.5.0] C:\Users\sooraj\.gradle\caches\transforms-3\5db7b9f8106865449d7e4e3051d06892\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+177
+178        <service
+178-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\sooraj\.gradle\caches\transforms-3\e1972971f84f7319eff3b42222483ba4\transformed\jetified-transport-runtime-2.2.5\AndroidManifest.xml:26:9-30:19
+179            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+179-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\sooraj\.gradle\caches\transforms-3\e1972971f84f7319eff3b42222483ba4\transformed\jetified-transport-runtime-2.2.5\AndroidManifest.xml:27:13-117
+180            android:exported="false"
+180-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\sooraj\.gradle\caches\transforms-3\e1972971f84f7319eff3b42222483ba4\transformed\jetified-transport-runtime-2.2.5\AndroidManifest.xml:28:13-37
+181            android:permission="android.permission.BIND_JOB_SERVICE" >
+181-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\sooraj\.gradle\caches\transforms-3\e1972971f84f7319eff3b42222483ba4\transformed\jetified-transport-runtime-2.2.5\AndroidManifest.xml:29:13-69
+182        </service>
 183
-184</manifest>
+184        <receiver
+184-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\sooraj\.gradle\caches\transforms-3\e1972971f84f7319eff3b42222483ba4\transformed\jetified-transport-runtime-2.2.5\AndroidManifest.xml:32:9-34:40
+185            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+185-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\sooraj\.gradle\caches\transforms-3\e1972971f84f7319eff3b42222483ba4\transformed\jetified-transport-runtime-2.2.5\AndroidManifest.xml:33:13-132
+186            android:exported="false" />
+186-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\sooraj\.gradle\caches\transforms-3\e1972971f84f7319eff3b42222483ba4\transformed\jetified-transport-runtime-2.2.5\AndroidManifest.xml:34:13-37
+187
+188        <activity
+188-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:23:9-27:75
+189            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+189-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:24:13-93
+190            android:excludeFromRecents="true"
+190-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:25:13-46
+191            android:exported="false"
+191-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:26:13-37
+192            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+192-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:27:13-72
+193        <!--
+194            Service handling Google Sign-In user revocation. For apps that do not integrate with
+195            Google Sign-In, this service will never be started.
+196        -->
+197        <service
+197-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:33:9-37:51
+198            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+198-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:34:13-89
+199            android:exported="true"
+199-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:35:13-36
+200            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+200-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:36:13-107
+201            android:visibleToInstantApps="true" />
+201-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\sooraj\.gradle\caches\transforms-3\7025c06b6cc2fc6653041f967ec62be0\transformed\play-services-auth-19.0.0\AndroidManifest.xml:37:13-48
+202
+203        <activity
+203-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\sooraj\.gradle\caches\transforms-3\ccf867a4c2c4e7ea65bf7707bb53c52a\transformed\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+204            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+204-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\sooraj\.gradle\caches\transforms-3\ccf867a4c2c4e7ea65bf7707bb53c52a\transformed\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+205            android:exported="false"
+205-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\sooraj\.gradle\caches\transforms-3\ccf867a4c2c4e7ea65bf7707bb53c52a\transformed\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+206            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+206-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\sooraj\.gradle\caches\transforms-3\ccf867a4c2c4e7ea65bf7707bb53c52a\transformed\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+207
+208        <receiver
+208-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:29:9-33:20
+209            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+209-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:30:13-85
+210            android:enabled="true"
+210-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:31:13-35
+211            android:exported="false" >
+211-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:32:13-37
+212        </receiver>
+213
+214        <service
+214-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:35:9-38:40
+215            android:name="com.google.android.gms.measurement.AppMeasurementService"
+215-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:36:13-84
+216            android:enabled="true"
+216-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:37:13-35
+217            android:exported="false" />
+217-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:38:13-37
+218        <service
+218-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:39:9-43:72
+219            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+219-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:40:13-87
+220            android:enabled="true"
+220-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:41:13-35
+221            android:exported="false"
+221-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:42:13-37
+222            android:permission="android.permission.BIND_JOB_SERVICE" />
+222-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\sooraj\.gradle\caches\transforms-3\3221c2653f74c7f59913dabf84470f19\transformed\play-services-measurement-18.0.2\AndroidManifest.xml:43:13-69
+223
+224        <meta-data
+224-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\sooraj\.gradle\caches\transforms-3\da6720e5c401a60c185d7407e909e0ff\transformed\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+225            android:name="com.google.android.gms.version"
+225-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\sooraj\.gradle\caches\transforms-3\da6720e5c401a60c185d7407e909e0ff\transformed\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+226            android:value="@integer/google_play_services_version" />
+226-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\sooraj\.gradle\caches\transforms-3\da6720e5c401a60c185d7407e909e0ff\transformed\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+227    </application>
+228
+229</manifest>

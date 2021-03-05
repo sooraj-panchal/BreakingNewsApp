@@ -25,6 +25,7 @@
     "react-native": "0.63.4",
     "react-native-confirmation-code-field": "^6.5.1",
     "react-native-gesture-handler": "^1.10.1",
+    "react-native-push-notification": "^7.2.1",
     "react-native-reanimated": "^1.13.2",
     "react-native-render-html": "^5.1.0",
     "react-native-safe-area-context": "^3.1.9",

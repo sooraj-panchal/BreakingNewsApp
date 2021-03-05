@@ -176,7 +176,7 @@ function ChatDetailScreen({
     function groupedDays(messages) {
         return messages.reduce((acc, el, i) => {
             // console.log("acc",acc)
-            const messageDay = moment(el.created_at).format('YYYY-MM-DD');
+            const messageDay = moment(el.created_at).format('LL');
             if (acc[messageDay]) {
                 return { ...acc, [messageDay]: acc[messageDay].concat([el]) };
             }
@@ -188,7 +188,7 @@ function ChatDetailScreen({
         const days = groupedDays(messages);
         // console.log(days)
         const sortedDays = Object.keys(days).sort(
-            (x, y) => moment(y, 'YYYY-MM-DD').unix() - moment(x, 'YYYY-MM-DD').unix()
+            (x, y) => moment(y, 'LL').unix() - moment(x, 'LL').unix()
         );
 
         const items = sortedDays.reduce((acc, date) => {

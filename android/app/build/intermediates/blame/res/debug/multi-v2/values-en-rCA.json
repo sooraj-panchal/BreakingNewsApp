@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "F:\\React-Native\\OfficeProject\\BreakingNews\\BreakingNewsApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "C:\\Users\\sooraj\\.gradle\\caches\\transforms-3\\b4b341c203e0e551da1329d926b7ea91\\transformed\\appcompat-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "C:\\Users\\sooraj\\.gradle\\caches\\transforms-3\\41d566f02e1d5172e0ab231b51d7e72d\\transformed\\core-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
