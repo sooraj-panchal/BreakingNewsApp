@@ -1,29 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\React-Native\\OfficeProject\\BreakingNews\\BreakingNewsApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sooraj\\.gradle\\caches\\transforms-3\\efb78b8e226dbf8cd93b1f2604fa09b9\\transformed\\material-1.1.0\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,320",
-                        "endLines": "5,9",
-                        "endColumns": "10,10",
-                        "endOffsets": "315,588"
-                    },
-                    "to": {
-                        "startLines": "51,55",
-                        "startColumns": "4,4",
-                        "startOffsets": "3557,3822",
-                        "endLines": "54,58",
-                        "endColumns": "10,10",
-                        "endOffsets": "3817,4090"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\sooraj\\.gradle\\caches\\transforms-3\\b4b341c203e0e551da1329d926b7ea91\\transformed\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/p/.gradle/caches/transforms-3/b4b341c203e0e551da1329d926b7ea91/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -34,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\sooraj\\.gradle\\caches\\transforms-3\\7f29a69d4ce25c5a0a7deab516cbd0b9\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/p/.gradle/caches/transforms-3/7f29a69d4ce25c5a0a7deab516cbd0b9/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -50,6 +31,25 @@
                         "endLines": "50",
                         "endColumns": "12",
                         "endOffsets": "3552"
+                    }
+                },
+                {
+                    "source": "/Users/p/.gradle/caches/transforms-3/efb78b8e226dbf8cd93b1f2604fa09b9/transformed/material-1.1.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,320",
+                        "endLines": "5,9",
+                        "endColumns": "10,10",
+                        "endOffsets": "315,588"
+                    },
+                    "to": {
+                        "startLines": "51,55",
+                        "startColumns": "4,4",
+                        "startOffsets": "3557,3822",
+                        "endLines": "54,58",
+                        "endColumns": "10,10",
+                        "endOffsets": "3817,4090"
                     }
                 }
             ]
