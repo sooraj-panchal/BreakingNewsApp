@@ -79,13 +79,17 @@ function NotificationScreen({
     return (
         <MainContainer style={{ backgroundColor: "white" }} loading={getNotificationLoading} >
             <FlatList
+                        showsVerticalScrollIndicator={false}
+
                 data={getNotificationResponse?.data}
                 renderItem={({ item, index }) => {
                     const time = moment(item.created_at).startOf("hour").fromNow();
                     let newTime;
                     if (time == "an hour ago") {
                         newTime = "1 hour ago"
-                    } else {
+                    } else if(time == "a day ago") {
+                        newTime = "1 day ago"
+                    }else{
                         newTime = time
                     }
                     var text = item.description.replace(/(<([^>]+)>)/g, "");

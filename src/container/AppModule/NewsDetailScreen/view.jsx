@@ -91,12 +91,12 @@ function NewsDetailScreen({
         // };
 
         // Share.open(options);
-         
+
         Share.open({
             title: "World Metal Contact sa App",
             subject: getArticleDetailsResponse?.data[0]?.title,
             message: getArticleDetailsResponse?.data[0]?.title,
-            url:"https://worldmetalcontact.com/",
+            url: "https://worldmetalcontact.com/",
         })
             .then((res) => { console.log(res) })
             .catch((err) => { err && console.log(err); });
@@ -109,6 +109,7 @@ function NewsDetailScreen({
         >
             {/* <StatusBar translucent backgroundColor="red"/> */}
             <ScrollView
+                showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom: 100 }}
             >
                 <View style={{

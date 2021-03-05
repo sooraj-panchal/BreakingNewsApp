@@ -178,7 +178,7 @@ const HomeScreen = ({
         let data = new FormData()
         data.append("sort", "created_at")
         data.append("order", 'desc')
-        data.append("limit", '3')
+        data.append("limit", '5')
         data.append("page", offset)
         getArticleListWatcher(data)
     }
@@ -249,6 +249,7 @@ const HomeScreen = ({
         >
             <StatusBar backgroundColor={"transparent"} barStyle="dark-content" />
             <FlatList
+                showsVerticalScrollIndicator={false}
                 data={getArticleListData}
                 contentContainerStyle={{ paddingBottom: 100 }}
                 renderItem={({ item }) => {
@@ -299,7 +300,7 @@ const HomeScreen = ({
                 }}
                 onEndReachedThreshold={0.2}
                 onEndReached={() => {
-                    if (getArticleListData.length >= 3) {
+                    if (getArticleListData.length >= 5) {
                         setGetArticeListPaginLoading(true)
                         getArticleList()
                     }

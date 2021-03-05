@@ -76,11 +76,13 @@ function ChatDetailScreen({
         var pusherClient = new Pusher('c9951c27017334b0d079', {
             cluster: 'ap2'
         });
-
         var channel = pusherClient.subscribe('my-channel');
-        channel.bind('my-event', function (data) {
+        channel.bind('parth-event', data => {
             alert(JSON.stringify(data));
         });
+        // return () => {
+        //     channel.unsubscribe()
+        // }
     }, [])
 
     const getMessages = () => {
@@ -111,13 +113,6 @@ function ChatDetailScreen({
     }, [sendMessageeResponse])
 
     const onSendMessage = () => {
-        // var date = new Date()
-        // var hours = date.getHours() % 12
-        // var minute = date.getMinutes()
-        // var hourss = date.getHours()
-        // var ampm = hourss >= 12 ? 'PM' : 'AM';
-        // let currentTime = hours + ':' + minute + ' ' + ampm
-        // alert(currentTime)
         setMessageArray(arr => [{
             "msg": message,
             "admin_msg": null,
@@ -146,10 +141,8 @@ function ChatDetailScreen({
                         backgroundColor: "white",
                         borderRadius: 30,
                         fontSize: 15,
-                        // paddingRight: 0,
                         flex: 0.85,
                         height: null,
-                        // elevation: 1,
                         borderWidth: 0.8,
                         borderColor: "lightgrey",
                         maxHeight: 300,
