@@ -236,12 +236,12 @@ const HomeScreen = ({
         return !isWithinAWeek(momentDate);
     }
 
-    console.log("is it today? ..................Should be true: " + isToday(moment("2015-06-05")));
-    console.log("is it yesterday? ..............Should be true: " + isYesterday(moment("2015-06-04")));
-    console.log("is it within a week? ..........Should be true: " + isWithinAWeek(moment("2015-06-03")));
-    console.log("is it within a week? ..........Should be false: " + isWithinAWeek(moment("2015-05-29")));
-    console.log("is it two weeks older or more? Should be false: " + isTwoWeeksOrMore(moment("2015-05-30")));
-    console.log("is it two weeks older or more? Should be true: " + isTwoWeeksOrMore(moment("2015-05-29")));
+    // console.log("is it today? ..................Should be true: " + isToday(moment("2015-06-05")));
+    // console.log("is it yesterday? ..............Should be true: " + isYesterday(moment("2015-06-04")));
+    // console.log("is it within a week? ..........Should be true: " + isWithinAWeek(moment("2015-06-03")));
+    // console.log("is it within a week? ..........Should be false: " + isWithinAWeek(moment("2015-05-29")));
+    // console.log("is it two weeks older or more? Should be false: " + isTwoWeeksOrMore(moment("2015-05-30")));
+    // console.log("is it two weeks older or more? Should be true: " + isTwoWeeksOrMore(moment("2015-05-29")));
 
     return (
         <MainContainer style={{ backgroundColor: 'white' }}
@@ -252,29 +252,18 @@ const HomeScreen = ({
                 data={getArticleListData}
                 contentContainerStyle={{ paddingBottom: 100 }}
                 renderItem={({ item }) => {
-
-                    // const time = moment(item.created_at).startOf('hour').fromNow();
-                    // console.log(time)
-                    // var sampleDaysAgo = moment(item.created_at).subtract(7, 'days'); //28 just for test
-                    // var today = moment();
-
-                    // console.log(today.diff(sampleDaysAgo, 'days')); // 28 
-
                     let newTime;
-                    // const newDate = moment(item.created_at).add(-7, 'days').startOf('hour').fromNow()
                     const result = moment(item.created_at).isSame(moment().subtract(7, 'day'), "day")
                     if (result) {
                         newTime = moment(item.created_at).format('D/M/Y');
                     } else {
-                        newTime = moment(item.created_at).startOf('hour').fromNow();
+                        let Time = moment(item.created_at).startOf('hour').fromNow();
+                        if (Time == "a day ago") {
+                            newTime = "1 day ago"
+                        } else {
+                            newTime = moment(item.created_at).startOf('hour').fromNow();
+                        }
                     }
-                    // console.log(result)
-                    // let newTime;
-                    // if (time >= "7 days ago") {
-                    //     newTime = moment(item.created_at).format('D/M/Y');
-                    // } else {
-                    //     newTime = moment(item.created_at).startOf('hour').fromNow();
-                    // }
                     return <NewsList
                         imgSrc={{ uri: `${globals.imagePath}article/${item.image}` }}
                         title={item.title}

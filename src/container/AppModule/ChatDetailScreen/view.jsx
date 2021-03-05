@@ -12,6 +12,10 @@ import MessagesList from './ChatList'
 import moment from 'moment'
 import Img from '../../../components/Img'
 import { AppImages } from '../../../assets/images/map'
+import Pusher from 'pusher-js/react-native';
+
+// Enable pusher logging - don't include this in production
+// Pusher.logToConsole = true;
 
 const data = [
     {
@@ -66,6 +70,17 @@ function ChatDetailScreen({
         return () => {
             chatDataWatcher(null)
         }
+    }, [])
+
+    useEffect(() => {
+        var pusherClient = new Pusher('c9951c27017334b0d079', {
+            cluster: 'ap2'
+        });
+
+        var channel = pusherClient.subscribe('my-channel');
+        channel.bind('my-event', function (data) {
+            alert(JSON.stringify(data));
+        });
     }, [])
 
     const getMessages = () => {
@@ -193,7 +208,7 @@ function ChatDetailScreen({
 
         const items = sortedDays.reduce((acc, date) => {
             const sortedMessages = days[date].sort(
-                (x, y) => new Date(y.created_at) - new Date(x.created_at)
+                (x, y) => new Date(x.created_at) - new Date(x.created_at)
             );
             return acc.concat([...sortedMessages, { type: 'day', date, id: date }]);
         }, []);
@@ -294,19 +309,43 @@ function ChatDetailScreen({
                 width={50}
                 height={50}
                 onPress={() => {
-                    let url =
-                        "whatsapp://send?text=" +
-                        "" +
-                        "&phone=91" +
-                        9723271763;
-                    Linking.openURL(url)
-                        .then(data => {
-                            console.log("WhatsApp Opened successfully " + data);
-                        })
-                        .catch(() => {
-                            alert("Make sure WhatsApp installed on your device");
-                        });
-                    // navigation.push("ChatDetail")
+                    // pusherClient.trigger('chat_channel', 'message', {
+                    //     name: "parth",
+                    //     message: "hello parth"
+                    // });
+                    var pusher = new Pusher('c9951c27017334b0d079', {
+                        cluster: 'ap2'
+                    })
+                    // var channel = pusher.subscribe('sooraj-channel')
+
+                    var channel = pusher.subscribe('private-channel')
+                    channel.bind('pusher:subscription_succeeded', function (data) {
+                        // var triggered = channel.trigger('client-someeventname', { your: {
+                        //     name: "parth",
+                        //     message: "hello parth"
+                        // } });
+                        // alert(triggered)
+                        alert(JSON.stringify(data))
+                    });
+
+                    // channel.bind('new-Event',
+                    //     function (data) {
+                    //         console.log(data)
+                    //     }
+                    // );
+                    // channel.bind('pusher:subscription_succeeded', function () {
+                    //     var triggered = channel.trigger('client-new-Event', {
+                    //         your: {
+                    //             name: "parth",
+                    //             message: "hello parth"
+                    //         }
+                    //     });
+                    //     console.log(triggered)
+                    // });
+                    // var channel = pusher.subscribe('private-channel');
+                    // channel.bind('pusher:subscription_succeeded', function () {
+                    //     var triggered = channel.trigger('client-someeventname', { your: data });
+                    // });
                 }}
             /> */}
         </MainContainer>
@@ -314,3 +353,90 @@ function ChatDetailScreen({
 }
 
 export default ChatDetailScreen
+
+// import React from 'react';
+// import Pusher from 'pusher-js/react-native';
+// import ChatView from '../ChatView';
+
+// import PusherConfig from './../../../../PusherConfig.json';
+
+// export default class ChatClient extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             messages: []
+//         };
+//         this.pusher = new Pusher(PusherConfig.key, PusherConfig);
+
+//         this.chatChannel = this.pusher.subscribe('my-channel');
+//         this.chatChannel.bind('my-event', (data) => {
+//             alert(JSON.stringify(data))
+//             // this.chatChannel.bind('join', (data) => {
+//             //     this.handleJoin(data.name);
+//             // });
+//             // this.chatChannel.bind('part', (data) => {
+//             //     this.handlePart(data.name);
+//             // });
+//             // this.chatChannel.bind('message', (data) => {
+//             //     this.handleMessage(data.name, data.message);
+//             // });
+//         });
+
+//         this.handleSendMessage = this.onSendMessage.bind(this);
+//     }
+
+//     handleJoin(name) {
+//         const messages = this.state.messages.slice();
+//         messages.push({ action: 'join', name: name });
+//         this.setState({
+//             messages: messages
+//         });
+//     }
+//     handlePart(name) {
+//         const messages = this.state.messages.slice();
+//         messages.push({ action: 'part', name: name });
+//         this.setState({
+//             messages: messages
+//         });
+//     }
+//     handleMessage(name, message) {
+//         const messages = this.state.messages.slice();
+//         messages.push({ action: 'message', name: name, message: message });
+//         this.setState({
+//             messages: messages
+//         });
+//     }
+
+//     // componentDidMount() {
+//     //     fetch(`${PusherConfig.restServer}/users/${this.props.name}`, {
+//     //         method: 'PUT'
+//     //     });
+//     // }
+
+//     // componentWillUnmount() {
+//     //     fetch(`${PusherConfig.restServer}/users/${this.props.name}`, {
+//     //         method: 'DELETE'
+//     //     });
+//     // }
+
+//     onSendMessage(text) {
+//         const payload = {
+//             message: text
+//         };
+//         fetch(`${PusherConfig.restServer}/users/${this.props.name}/messages`, {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(payload)
+//         });
+//     }
+
+//     render() {
+//         const messages = this.state.messages;
+
+//         return (
+//             <ChatView messages={messages} onSendMessage={this.handleSendMessage} />
+//         );
+//     }
+// }

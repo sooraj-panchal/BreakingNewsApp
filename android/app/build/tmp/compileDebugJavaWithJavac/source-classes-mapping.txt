@@ -174,6 +174,21 @@ com/google/firebase/installations/R.java
  com.google.firebase.installations.R$string
  com.google.firebase.installations.R$style
  com.google.firebase.installations.R$styleable
+cl/json/R.java
+ cl.json.R
+ cl.json.R$anim
+ cl.json.R$attr
+ cl.json.R$bool
+ cl.json.R$color
+ cl.json.R$dimen
+ cl.json.R$drawable
+ cl.json.R$id
+ cl.json.R$integer
+ cl.json.R$layout
+ cl.json.R$string
+ cl.json.R$style
+ cl.json.R$styleable
+ cl.json.R$xml
 com/facebook/soloader/R.java
  com.facebook.soloader.R
 androidx/multidex/R.java
@@ -253,6 +268,21 @@ androidx/customview/R.java
  androidx.customview.R$styleable
 com/google/firebase/iid/R.java
  com.google.firebase.iid.R
+com/reactnativecommunity/netinfo/R.java
+ com.reactnativecommunity.netinfo.R
+ com.reactnativecommunity.netinfo.R$anim
+ com.reactnativecommunity.netinfo.R$attr
+ com.reactnativecommunity.netinfo.R$bool
+ com.reactnativecommunity.netinfo.R$color
+ com.reactnativecommunity.netinfo.R$dimen
+ com.reactnativecommunity.netinfo.R$drawable
+ com.reactnativecommunity.netinfo.R$id
+ com.reactnativecommunity.netinfo.R$integer
+ com.reactnativecommunity.netinfo.R$layout
+ com.reactnativecommunity.netinfo.R$string
+ com.reactnativecommunity.netinfo.R$style
+ com.reactnativecommunity.netinfo.R$styleable
+ com.reactnativecommunity.netinfo.R$xml
 com/google/android/gms/stats/R.java
  com.google.android.gms.stats.R
 androidx/legacy/coreutils/R.java

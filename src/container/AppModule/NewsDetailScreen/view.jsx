@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { View, FlatList, Dimensions, StatusBar, ScrollView, Linking } from 'react-native'
+import { View, FlatList, Dimensions, StatusBar, ScrollView, Linking, Platform } from 'react-native'
 import { headerImageArray } from "../../../../dummyArray";
 import Img from "../../../components/Img";
 import Label from "../../../components/Label";
@@ -7,6 +7,8 @@ import MainContainer from "../../../components/MainContainer";
 import { screenHeight, screenWidth } from "../../../utils/styleUtils";
 import HTML from "react-native-render-html";
 import { AppImages } from "../../../assets/images/map";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import Share from 'react-native-share';
 
 const HEADER_HEIGHT = 60;
 const IMAGE_HEIGHT = 240;
@@ -63,6 +65,43 @@ function NewsDetailScreen({
             }
         }
     }, [])
+
+    const onShare = async () => {
+        //     try {
+        //       const result = await Share.share({
+        //         // title: "World Metal Contact sa App",
+        //         // message: "New Product"
+        //         message: 'BAM: we\'re helping your business with awesome React Native apps',
+        // url: 'http://bam.tech',
+        // title: 'Wow, did you see that?'
+        //       } catch (error) {
+        //       alert(error.message);
+        //     }
+        //   };
+
+        // const url = 'https://awesome.contents.com/';
+        // const title = 'World Metal Contact sa App';
+        // const message = 'New Product';
+        // const icon = 'data:<data_type>/<file_extension>;base64,<base64_data>';
+        // const options = {
+        //     title: "World Metal Contact sa App",
+        //     subject: getArticleDetailsResponse?.data[0]?.title,
+        //     message: "New Product",
+        //     image: getArticleDetailsResponse?.data[0]?.image
+        // };
+
+        // Share.open(options);
+         
+        Share.open({
+            title: "World Metal Contact sa App",
+            subject: getArticleDetailsResponse?.data[0]?.title,
+            message: getArticleDetailsResponse?.data[0]?.title,
+            url:"https://worldmetalcontact.com/",
+        })
+            .then((res) => { console.log(res) })
+            .catch((err) => { err && console.log(err); });
+    }
+
     return (
         <MainContainer
             style={{ backgroundColor: "white" }}
@@ -112,66 +151,48 @@ function NewsDetailScreen({
                     }}
                 />
             </ScrollView>
-            {/* <Animated.View style={{
-                height: CONTACT_HEIGHT,
-                // paddingVertical:CONTACT_PADDING,
-                backgroundColor: "white",
-                justifyContent: "center",
+            <View style={{
+                width: 65,
+                height: 100,
                 position: "absolute",
-                right: 0, bottom: 0, left: 0,
-                transform: [{ translateY: ContactY }]
+                right: -5,
+                borderRadius: 0,
+                borderTopLeftRadius: 15,
+                borderBottomLeftRadius: 15,
+                elevation: 4,
+                paddingRight: 5,
+                bottom: 40,
+                justifyContent: "space-between",
+                paddingVertical: 10,
+                alignItems: "center",
+                backgroundColor: "#fff"
             }} >
-                <Btn
-                    label="Contact"
-                    labelSize={20}
-                    btnContainerStyle={{
-                        backgroundColor: PrimaryColor,
-                        borderRadius: 40,
-                        justifyContent: "center",
+                <Img
+                    imgSrc={AppImages.whatsAppImage}
+                    width={40}
+                    height={40}
+                    onPress={() => {
+                        let url =
+                            "whatsapp://send?text=" +
+                            "" +
+                            "&phone=41" +
+                            791248202;
+                        Linking.openURL(url)
+                            .then(data => {
+                                console.log("WhatsApp Opened successfully " + data);
+                            })
+                            .catch(() => {
+                                alert("Make sure WhatsApp installed on your device");
+                            });
                     }}
-                    mpBtnContainer={{ mh: 20 }}
                 />
-            </Animated.View> */}
-            <Img
-                withContainer
-                containerStyle={{
-                    position: "absolute",
-                    right: -5,
-                    borderRadius: 0,
-                    borderTopLeftRadius: 40,
-                    borderBottomLeftRadius: 40,
-                    bottom: 40,
-                    width: 60,
-                    height: 50,
-                    elevation: 5,
-                    paddingRight: 5,
-                    // elevation:0.5,
-                    // borderWidth:1,
-                    // borderColor:"#f8f8f8"
-                    // backgroundColor: "#f2f2f2"
-                    // top:-20,
-                    // zIndex: 100
-                }}
-
-                imgSrc={AppImages.whatsAppImage}
-                width={40}
-                height={40}
-                onPress={() => {
-                    let url =
-                        "whatsapp://send?text=" +
-                        "" +
-                        "&phone=41" +
-                        791248202;
-                    Linking.openURL(url)
-                        .then(data => {
-                            console.log("WhatsApp Opened successfully " + data);
-                        })
-                        .catch(() => {
-                            alert("Make sure WhatsApp installed on your device");
-                        });
-                    // navigation.push("ChatDetail")
-                }}
-            />
+                <Ionicons
+                    name="md-share-social-sharp"
+                    size={30}
+                    color="red"
+                    onPress={onShare}
+                />
+            </View>
         </MainContainer>
     )
 }

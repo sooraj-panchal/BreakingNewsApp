@@ -28,10 +28,10 @@ public final class R {
     public static final class color {
         private color() {}
 
-        public static final int notification_action_color_filter = 0x7f050111;
-        public static final int notification_icon_bg_color = 0x7f050112;
-        public static final int ripple_material_light = 0x7f05012e;
-        public static final int secondary_text_default_material_light = 0x7f050137;
+        public static final int androidx_core_ripple_material_light = 0x7f05001b;
+        public static final int androidx_core_secondary_text_default_material_light = 0x7f05001c;
+        public static final int notification_action_color_filter = 0x7f050113;
+        public static final int notification_icon_bg_color = 0x7f050114;
     }
     public static final class dimen {
         private dimen() {}

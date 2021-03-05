@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-54:12
-INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-54:12
-INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-54:12
-INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-54:12
-MERGED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-54:12
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-55:12
+INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-55:12
+INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-55:12
+INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-55:12
+MERGED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-55:12
 MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/p/.gradle/caches/transforms-3/ccf9a398f252b68de3a2456bd223918e/transformed/flipper-0.54.0/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /Users/p/.gradle/caches/transforms-3/607400f17b75e0d704259627f1b3ae84/transformed/flipper-network-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/p/.gradle/caches/transforms-3/b70f3ae241dbf91d881f1803b9724eb2/transformed/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
@@ -13,11 +13,13 @@ MERGED from [:react-native-firebase_app] /Users/p/react-native/BreakingNewsApp/n
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/p/.gradle/caches/transforms-3/2037afd7f1a998e73c2ed2e87818adb8/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [:react-native-async-storage_async-storage] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-gesture-handler] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-push-notification] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-push-notification/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-vector-icons] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.63.4] /Users/p/.gradle/caches/transforms-3/075e5ff40aa26658e5bca61c5fe8faea/transformed/jetified-react-native-0.63.4/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/p/.gradle/caches/transforms-3/2004826b0b5f0dd91f9a0fdf74dddae1/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -81,10 +83,10 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/p/.gradle/caches/t
 MERGED from [androidx.customview:customview:1.0.0] /Users/p/.gradle/caches/transforms-3/8a1a661c338736171c115ed85424a3c6/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.2.0] /Users/p/.gradle/caches/transforms-3/9c644caee984bfb5266e3fdffe7ef8df/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/p/.gradle/caches/transforms-3/c4c0fd5ec2ccdf7db6ca3bed7c81dbdc/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.core:core:1.3.2] /Users/p/.gradle/caches/transforms-3/62119fd4821213986dc8187cc7a94b38/transformed/core-1.3.2/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/p/.gradle/caches/transforms-3/3d9fcdde446435efd2212b964d9391e6/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/p/.gradle/caches/transforms-3/e8bef63f424b53ad25a9bd362512f831/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/p/.gradle/caches/transforms-3/8320b856940bc7bf90077bf5c945fd63/transformed/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/p/.gradle/caches/transforms-3/e8bef63f424b53ad25a9bd362512f831/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/p/.gradle/caches/transforms-3/87d6ac64a89a252ad2d8cc0e7ad5c148/transformed/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/p/.gradle/caches/transforms-3/80c5fa702fa938e9618869d63c66aaae/transformed/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/p/.gradle/caches/transforms-3/7f29a69d4ce25c5a0a7deab516cbd0b9/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -110,13 +112,13 @@ INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/Androi
 		INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-54:12
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-55:12
 		INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-54:12
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:1-55:12
 		INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -152,12 +154,18 @@ uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:6:5-80
 	android:name
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:6:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:7:1-77
+	android:name
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:7:18-74
 application
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:8:5-52:19
-MERGED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:8:5-52:19
-MERGED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:8:5-52:19
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:5-53:19
+MERGED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:5-53:19
+MERGED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:5-53:19
 MERGED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-43:19
 MERGED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-43:19
+MERGED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [com.facebook.react:react-native:0.63.4] /Users/p/.gradle/caches/transforms-3/075e5ff40aa26658e5bca61c5fe8faea/transformed/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.63.4] /Users/p/.gradle/caches/transforms-3/075e5ff40aa26658e5bca61c5fe8faea/transformed/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
 MERGED from [com.google.firebase:firebase-analytics:18.0.2] /Users/p/.gradle/caches/transforms-3/cecb0c5e3fef4109abaab3f9b1458d8d/transformed/firebase-analytics-18.0.2/AndroidManifest.xml:7:5-20
@@ -206,112 +214,112 @@ MERGED from [com.google.android.gms:play-services-measurement-base:18.0.2] /User
 MERGED from [com.google.android.gms:play-services-measurement-base:18.0.2] /Users/p/.gradle/caches/transforms-3/b629a43e06fdcbbc6b96c4a9235ee978/transformed/play-services-measurement-base-18.0.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.1.1] /Users/p/.gradle/caches/transforms-3/999a46fdd7aa4f5358586a5bed40fac1/transformed/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.1.1] /Users/p/.gradle/caches/transforms-3/999a46fdd7aa4f5358586a5bed40fac1/transformed/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.2] /Users/p/.gradle/caches/transforms-3/62119fd4821213986dc8187cc7a94b38/transformed/core-1.3.2/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.2] /Users/p/.gradle/caches/transforms-3/62119fd4821213986dc8187cc7a94b38/transformed/core-1.3.2/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/p/.gradle/caches/transforms-3/8320b856940bc7bf90077bf5c945fd63/transformed/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/p/.gradle/caches/transforms-3/8320b856940bc7bf90077bf5c945fd63/transformed/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.3.2] /Users/p/.gradle/caches/transforms-3/62119fd4821213986dc8187cc7a94b38/transformed/core-1.3.2/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:10:7-39
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:10:7-39
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:11:7-39
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:11:7-39
 	tools:ignore
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:7:75-114
 	android:roundIcon
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:12:7-39
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:12:7-39
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:13:7-39
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:13:7-39
 	tools:targetApi
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:7:54-74
 	android:icon
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:11:7-34
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:12:7-34
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:12:7-34
 	android:allowBackup
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:13:7-34
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:13:7-34
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:14:7-34
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:14:7-34
 	android:theme
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:14:7-38
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:14:7-38
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:15:7-38
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:15:7-38
 	android:usesCleartextTraffic
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:7:18-53
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:7-38
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:9:7-38
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:10:7-38
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:10:7-38
 activity#com.breakingnews.MainActivity
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:15:7-25:18
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:16:7-26:18
 	android:label
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:17:9-41
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:18:9-41
 	android:launchMode
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:19:9-40
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:20:9-40
 	android:windowSoftInputMode
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:20:9-51
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:21:9-51
 	android:configChanges
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:18:9-86
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:19:9-86
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:16:9-37
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:17:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:21:9-24:25
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:22:9-25:25
 action#android.intent.action.MAIN
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:22:13-65
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:23:13-65
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:22:21-62
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:23:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:23:13-73
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:24:13-73
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:23:23-70
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:24:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:26:7-84
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:27:7-84
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:26:17-81
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:27:17-81
 meta-data#com.dieam.reactnativepushnotification.notification_foreground
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:29:9-30:43
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:30:9-31:43
 	android:value
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:30:21-41
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:31:21-41
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:29:21-97
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:30:21-97
 meta-data#com.dieam.reactnativepushnotification.notification_color
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:32:9-33:54
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:33:9-34:54
 	android:resource
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:33:21-52
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:34:21-52
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:32:21-92
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:33:21-92
 receiver#com.dieam.reactnativepushnotification.modules.RNPushNotificationActions
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:35:9-108
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:36:9-108
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:35:19-105
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:36:19-105
 receiver#com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:36:9-110
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:37:9-110
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:36:19-107
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:37:19-107
 receiver#com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:37:9-43:20
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:38:9-44:20
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:37:19-115
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:38:19-115
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:38:13-42:29
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:39:13-43:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:39:17-79
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:40:17-79
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:39:25-76
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:40:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:40:17-82
-	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:40:25-79
-action#com.htc.intent.action.QUICKBOOT_POWERON
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:41:17-81
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:41:17-82
 	android:name
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:41:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:42:25-79
 service#com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:45:9-51:19
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:46:9-52:19
 	android:exported
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:47:13-37
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:46:13-107
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:47:13-107
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:48:13-50:29
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:49:13-51:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:49:17-78
+ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:50:17-78
 	android:name
-		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:49:25-75
+		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:50:25-75
 uses-sdk
 INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml
@@ -332,6 +340,8 @@ MERGED from [:react-native-async-storage_async-storage] /Users/p/react-native/Br
 MERGED from [:react-native-async-storage_async-storage] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-push-notification] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-push-notification/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
@@ -342,6 +352,8 @@ MERGED from [:react-native-safe-area-context] /Users/p/react-native/BreakingNews
 MERGED from [:react-native-safe-area-context] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.4] /Users/p/.gradle/caches/transforms-3/075e5ff40aa26658e5bca61c5fe8faea/transformed/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
@@ -468,14 +480,14 @@ MERGED from [androidx.transition:transition:1.2.0] /Users/p/.gradle/caches/trans
 MERGED from [androidx.transition:transition:1.2.0] /Users/p/.gradle/caches/transforms-3/9c644caee984bfb5266e3fdffe7ef8df/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/p/.gradle/caches/transforms-3/c4c0fd5ec2ccdf7db6ca3bed7c81dbdc/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/p/.gradle/caches/transforms-3/c4c0fd5ec2ccdf7db6ca3bed7c81dbdc/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.1.0] /Users/p/.gradle/caches/transforms-3/41d566f02e1d5172e0ab231b51d7e72d/transformed/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.2] /Users/p/.gradle/caches/transforms-3/62119fd4821213986dc8187cc7a94b38/transformed/core-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.2] /Users/p/.gradle/caches/transforms-3/62119fd4821213986dc8187cc7a94b38/transformed/core-1.3.2/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/p/.gradle/caches/transforms-3/3d9fcdde446435efd2212b964d9391e6/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/p/.gradle/caches/transforms-3/3d9fcdde446435efd2212b964d9391e6/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/p/.gradle/caches/transforms-3/e8bef63f424b53ad25a9bd362512f831/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/p/.gradle/caches/transforms-3/e8bef63f424b53ad25a9bd362512f831/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/p/.gradle/caches/transforms-3/8320b856940bc7bf90077bf5c945fd63/transformed/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/p/.gradle/caches/transforms-3/8320b856940bc7bf90077bf5c945fd63/transformed/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/p/.gradle/caches/transforms-3/e8bef63f424b53ad25a9bd362512f831/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/p/.gradle/caches/transforms-3/e8bef63f424b53ad25a9bd362512f831/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/p/.gradle/caches/transforms-3/87d6ac64a89a252ad2d8cc0e7ad5c148/transformed/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/p/.gradle/caches/transforms-3/87d6ac64a89a252ad2d8cc0e7ad5c148/transformed/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/p/.gradle/caches/transforms-3/80c5fa702fa938e9618869d63c66aaae/transformed/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
@@ -520,6 +532,8 @@ ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidMa
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:5:22-75
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/p/.gradle/caches/transforms-3/ccf9a398f252b68de3a2456bd223918e/transformed/flipper-0.54.0/AndroidManifest.xml:16:5-76
+MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
+MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/p/.gradle/caches/transforms-3/ccf9a398f252b68de3a2456bd223918e/transformed/flipper-0.54.0/AndroidManifest.xml:16:22-73
 uses-permission#android.permission.WAKE_LOCK
@@ -540,6 +554,8 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] /U
 		ADDED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
+MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
+MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/64fa57e3249f50f344ed5bf338ca6f2b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-iid:21.0.1] /Users/p/.gradle/caches/transforms-3/953591b13e3ba9b0b8978129c77ea143/transformed/firebase-iid-21.0.1/AndroidManifest.xml:22:5-79
@@ -602,6 +618,22 @@ ADDED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNews
 		ADDED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:42:13-44
 	android:name
 		ADDED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:41:13-84
+provider#cl.json.RNShareFileProvider
+ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-72
+	android:exported
+		ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-55
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-17:64
+	android:resource
+		ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-61
+	android:name
+		ADDED from [:react-native-share] /Users/p/react-native/BreakingNewsApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-67
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:21.0.1] /Users/p/.gradle/caches/transforms-3/7ab2473d14514a38405a194866720c8c/transformed/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:28:9-35:19
 	android:exported

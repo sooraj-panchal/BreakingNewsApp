@@ -13,7 +13,11 @@ function createNotificationListeners() {
         onNotification: function (notification) {
             console.log("NOTIFICATION:", notification);
             if (notification.userInteraction) {
-                navigate("ChatDetail")
+                const { message } = notification.data
+                let parsedMessage = JSON.parse(message);
+               navigate("NewsDetail", {
+                    article_Id: parsedMessage.article_id
+                })
             }
         },
         onRegistrationError: function (err) {
