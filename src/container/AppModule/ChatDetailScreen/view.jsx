@@ -73,12 +73,13 @@ function ChatDetailScreen({
     }, [])
 
     useEffect(() => {
+        // alert(`user-id-${user_id}`)
         var pusherClient = new Pusher('c9951c27017334b0d079', {
             cluster: 'ap2'
         });
-        var channel = pusherClient.subscribe('my-channel');
-        channel.bind('parth-event', data => {
-            alert(JSON.stringify(data));
+        var channel = pusherClient.subscribe(`user-id-${user_id}`);
+        channel.bind(`user-id-${user_id}`, data => {
+            setMessageArray(arr => [{ ...data }, ...arr])
         });
         // return () => {
         //     channel.unsubscribe()

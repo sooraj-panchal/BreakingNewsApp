@@ -40,6 +40,7 @@ function LoginScreen({
             if (loginResponse.status == "success") {
                 navigation.dispatch(AppStack)
                 globals.authToken = loginResponse?.data?.token
+                globals.user_id = loginResponse?.data?.user_id
                 AsyncStorage.setItem("userData", JSON.stringify(loginResponse?.data))
             }
         }
@@ -64,11 +65,11 @@ function LoginScreen({
                     validationSchema={yup.object().shape({
                         userName: yup
                             .string()
-                            .min(2,"Name must be at least 2 characetrs")
+                            .min(2, "Name must be at least 2 characetrs")
                             .required('Name is required field'),
                         phoneNumber: yup
                             .string()
-                            .min(8,"Mobile no must be at least 8 numbers")
+                            .min(8, "Mobile no must be at least 8 numbers")
                             .max(12)
                             .required('Mobile no is required field')
                     })}

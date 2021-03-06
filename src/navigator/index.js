@@ -43,6 +43,7 @@ const AppContainer = ({
         if (data) {
             setToken(data.token)
             globals.authToken = data.token
+            globals.user_id = data.user_id
             console.log("data", data)
         }
     }
