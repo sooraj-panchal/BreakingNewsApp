@@ -1,59 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, FlatList, Linking, Text, View } from 'react-native'
+import { ActivityIndicator, FlatList, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { DarkBlueColor, GrayColor } from '../../../assets/colors'
+import { DarkBlueColor } from '../../../assets/colors'
 import Container from '../../../components/Container'
 import Label from '../../../components/Label'
 import MainContainer from '../../../components/MainContainer'
 import TextInputComp from '../../../components/TextInputComp'
-import { chatDataSaga } from '../../../store/sagas/homeSaga'
 import { user_id } from '../../../utils/globals'
 import MessagesList from './ChatList'
 import moment from 'moment'
-import Img from '../../../components/Img'
-import { AppImages } from '../../../assets/images/map'
 import Pusher from 'pusher-js/react-native';
 
-// Enable pusher logging - don't include this in production
-// Pusher.logToConsole = true;
-
-const data = [
-    {
-        id: "1",
-        userId: "0",
-        message: "hello Sooraj, How Are you what are you doing",
-        timeStamp: "08:20 PM"
-    },
-    {
-        id: "2",
-        userId: "1",
-        message: "hello panchal, what are you doing",
-        timeStamp: "08:20 PM"
-    },
-    {
-        id: "3",
-        userId: "0",
-        message: "what are you doing",
-        timeStamp: "08:20 PM"
-    },
-    {
-        id: "4",
-        userId: "1",
-        message: "how are you",
-        timeStamp: "08:20 PM"
-    }
-]
-
-
-
 function ChatDetailScreen({
-    navigation,
-    route,
     chatDataWatcher,
     chatDataResponse,
-    chatDataLoading,
     sendMessageeResponse,
-    sendMessageLoading,
     sendMessageWatcher
 }) {
     const [message, setMessage] = useState("")
@@ -63,9 +24,6 @@ function ChatDetailScreen({
     const [getChatDataLoading, setGetChatDataLoading] = useState(true)
 
     useEffect(() => {
-        // "created_at": "2021-02-23T10:45:33.000000Z",
-
-        // var now = new Date().toLocaleTimeString();
         getMessages()
         return () => {
             chatDataWatcher(null)
@@ -73,7 +31,6 @@ function ChatDetailScreen({
     }, [])
 
     useEffect(() => {
-        // alert(`user-id-${user_id}`)
         var pusherClient = new Pusher('c9951c27017334b0d079', {
             cluster: 'ap2'
         });
@@ -81,13 +38,9 @@ function ChatDetailScreen({
         channel.bind(`user-id-${user_id}`, data => {
             setMessageArray(arr => [{ ...data }, ...arr])
         });
-        // return () => {
-        //     channel.unsubscribe()
-        // }
     }, [])
 
     const getMessages = () => {
-        // setGetChatDataLoading(true)
         let formData = new FormData()
         formData.append("sort", "id")
         formData.append("order", "desc")
@@ -150,9 +103,9 @@ function ChatDetailScreen({
                     }}
                     inputStyle={{
                         fontSize: 15,
-                        flex: 0.95
+                        flex: 0.95,
                     }}
-                    mpInputContainer={{ pl: 10 }}
+                    mpInputContainer={{ pl: 10,pv:15}}
                     placeholder="Type a Message  |"
                     multiline={true}
                     editable={true}
@@ -290,147 +243,8 @@ function ChatDetailScreen({
                 }}
             />
             {MessageContainer()}
-            {/* <Img
-                withContainer
-                containerStyle={{
-                    position: "absolute",
-                    right: 15,
-                    bottom: 100,
-                    // top:-20,
-                    // zIndex: 100
-                }}
-                imgSrc={AppImages.whatsAppImage}
-                width={50}
-                height={50}
-                onPress={() => {
-                    // pusherClient.trigger('chat_channel', 'message', {
-                    //     name: "parth",
-                    //     message: "hello parth"
-                    // });
-                    var pusher = new Pusher('c9951c27017334b0d079', {
-                        cluster: 'ap2'
-                    })
-                    // var channel = pusher.subscribe('sooraj-channel')
-
-                    var channel = pusher.subscribe('private-channel')
-                    channel.bind('pusher:subscription_succeeded', function (data) {
-                        // var triggered = channel.trigger('client-someeventname', { your: {
-                        //     name: "parth",
-                        //     message: "hello parth"
-                        // } });
-                        // alert(triggered)
-                        alert(JSON.stringify(data))
-                    });
-
-                    // channel.bind('new-Event',
-                    //     function (data) {
-                    //         console.log(data)
-                    //     }
-                    // );
-                    // channel.bind('pusher:subscription_succeeded', function () {
-                    //     var triggered = channel.trigger('client-new-Event', {
-                    //         your: {
-                    //             name: "parth",
-                    //             message: "hello parth"
-                    //         }
-                    //     });
-                    //     console.log(triggered)
-                    // });
-                    // var channel = pusher.subscribe('private-channel');
-                    // channel.bind('pusher:subscription_succeeded', function () {
-                    //     var triggered = channel.trigger('client-someeventname', { your: data });
-                    // });
-                }}
-            /> */}
         </MainContainer>
     )
 }
 
 export default ChatDetailScreen
-
-// import React from 'react';
-// import Pusher from 'pusher-js/react-native';
-// import ChatView from '../ChatView';
-
-// import PusherConfig from './../../../../PusherConfig.json';
-
-// export default class ChatClient extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             messages: []
-//         };
-//         this.pusher = new Pusher(PusherConfig.key, PusherConfig);
-
-//         this.chatChannel = this.pusher.subscribe('my-channel');
-//         this.chatChannel.bind('my-event', (data) => {
-//             alert(JSON.stringify(data))
-//             // this.chatChannel.bind('join', (data) => {
-//             //     this.handleJoin(data.name);
-//             // });
-//             // this.chatChannel.bind('part', (data) => {
-//             //     this.handlePart(data.name);
-//             // });
-//             // this.chatChannel.bind('message', (data) => {
-//             //     this.handleMessage(data.name, data.message);
-//             // });
-//         });
-
-//         this.handleSendMessage = this.onSendMessage.bind(this);
-//     }
-
-//     handleJoin(name) {
-//         const messages = this.state.messages.slice();
-//         messages.push({ action: 'join', name: name });
-//         this.setState({
-//             messages: messages
-//         });
-//     }
-//     handlePart(name) {
-//         const messages = this.state.messages.slice();
-//         messages.push({ action: 'part', name: name });
-//         this.setState({
-//             messages: messages
-//         });
-//     }
-//     handleMessage(name, message) {
-//         const messages = this.state.messages.slice();
-//         messages.push({ action: 'message', name: name, message: message });
-//         this.setState({
-//             messages: messages
-//         });
-//     }
-
-//     // componentDidMount() {
-//     //     fetch(`${PusherConfig.restServer}/users/${this.props.name}`, {
-//     //         method: 'PUT'
-//     //     });
-//     // }
-
-//     // componentWillUnmount() {
-//     //     fetch(`${PusherConfig.restServer}/users/${this.props.name}`, {
-//     //         method: 'DELETE'
-//     //     });
-//     // }
-
-//     onSendMessage(text) {
-//         const payload = {
-//             message: text
-//         };
-//         fetch(`${PusherConfig.restServer}/users/${this.props.name}/messages`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(payload)
-//         });
-//     }
-
-//     render() {
-//         const messages = this.state.messages;
-
-//         return (
-//             <ChatView messages={messages} onSendMessage={this.handleSendMessage} />
-//         );
-//     }
-// }

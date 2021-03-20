@@ -4,7 +4,7 @@ import ProfileScreen from '../container/AppModule/ProfileScreen/view';
 import Tabs from './Tabs';
 import NewsDetailScreen from '../container/AppModule/NewsDetailScreen';
 import ChatDetailScreen from '../container/AppModule/ChatDetailScreen';
-import { StatusBar } from 'react-native';
+import { getStatusBarHeight } from '../utils/globals';
 
 const StackScreen = createStackNavigator();
 const AppStackScreen = () => {
@@ -12,10 +12,11 @@ const AppStackScreen = () => {
         <StackScreen.Navigator
             initialRouteName="Tabs"
             screenOptions={{
-                headerStatusBarHeight:StatusBar.currentHeight,
+                headerStatusBarHeight: getStatusBarHeight(),
                 headerStyle: {
                     backgroundColor: "#f2f2f2"
                 },
+                headerBackTitleVisible: false,
                 headerLeftContainerStyle: {
                     paddingLeft: 10
                 },

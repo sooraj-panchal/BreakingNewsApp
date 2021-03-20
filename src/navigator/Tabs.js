@@ -1,23 +1,18 @@
-import React, { useRef } from "react";
-import { Dimensions, Linking, StatusBar, View } from "react-native";
+import React from "react";
+import { Dimensions, Platform, StatusBar, View } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../container/AppModule/HomeScreen';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { PrimaryColor } from "../assets/colors";
-import SavedScreen from "../container/AppModule/SavedScreen";
 import NotificationScreen from "../container/AppModule/NotificationScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import ChatScreen from "../container/AppModule/ChatScreen";
-import ChatDetailScreen from "../container/AppModule/ChatDetailScreen";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
-import Label from "../components/Label";
-import { semiBold } from "../assets/fonts/fonts";
-import { AuthStack } from "./navActions";
-import Img from "../components/Img";
-import { AppImages } from "../assets/images/map";
-const StackScreen = createStackNavigator()
+import { getStatusBarHeight } from "../utils/globals";
+import { vs } from "../utils/styleUtils";
 
+const StackScreen = createStackNavigator()
 const ChatStack = ({ }) => {
+
     return (
         <StackScreen.Navigator
         >
@@ -58,7 +53,7 @@ const AlertStack = ({ }) => {
                 component={NotificationScreen}
                 options={({ navigation, route }) => {
                     return ({
-                        headerStatusBarHeight: StatusBar.currentHeight,
+                        headerStatusBarHeight: getStatusBarHeight(),
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
@@ -90,7 +85,7 @@ const HomeStack = () => {
                 options={({ navigation, route }) => {
                     return ({
                         headerTitle: "Post",
-                        headerStatusBarHeight: StatusBar.currentHeight,
+                        headerStatusBarHeight: getStatusBarHeight(),
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
@@ -116,28 +111,11 @@ const HomeStack = () => {
 const Tab = createBottomTabNavigator()
 
 function Tabs({ navigation, route }) {
-    // const name = getFocusedRouteNameFromRoute({...route.state})
-    // console.log(route.state.index)
-    const { width, height } = Dimensions.get("screen")
-
-    // let borderBottomVisible;
-    // switch (route.state.index) {
-    //     case 0:
-    //         borderBottomVisible = true
-    //         break;
-    //     case 1:
-    //         borderBottomVisible = 
-    //         break;
-    //     case 2:
-    //         borderBottomVisible = true
-    //         break;
-    //     default:
-    //         break;
-    // }
+    const { width } = Dimensions.get("screen")
     const CustomTabIconContainer = ({ focused, children }) => {
         return (
             <View style={{
-                height: 50,
+                height: vs(50),
                 justifyContent: "center",
                 alignItems: "center"
             }} >
@@ -160,28 +138,27 @@ function Tabs({ navigation, route }) {
         <Tab.Navigator
             tabBarOptions={{
                 style: {
-                    // backfaceVisibility:"hidden",
                     backgroundColor: "white",
-                    // height: 60,
                     borderTopWidth: 0,
                     borderRadius: 100,
                     position: "absolute",
                     marginHorizontal: width * 0.20,
                     paddingHorizontal: 10,
                     bottom: 20,
+                    paddingTop: Platform.OS == "ios" ? 20 : 0,
+                    shadowOffset: { width: 2, height: 2 },
+                    shadowOpacity: 0.2,
+                    height: Platform.OS == "ios" && 60
                 },
                 activeTintColor: PrimaryColor,
                 inactiveTintColor: 'gray',
-                labelStyle: {
-                    fontSize: 14
-                },
                 showLabel: false,
             }}
         >
             <Tab.Screen
                 name="Home" component={HomeStack}
 
-                options={({ navigation, route }) => {
+                options={() => {
                     return ({
                         tabBarIcon: ({ color, focused }) => {
                             return (

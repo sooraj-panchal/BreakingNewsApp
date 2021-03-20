@@ -12,12 +12,7 @@ const Container = ({
 }) => {
     const styles = StyleSheet.create({
         containerStyle: {
-            // justifyContent: "center",
-            // alignItems: 'center',
-            // backgroundColor: "white",
-            height: height ? vs(height):null,// 160,
-            // justifyContent: "center",
-            // alignItems: 'center',
+            height: height ? vs(height):null,
             width: width ? hs(width) : null,
             ...mpStyle(mpContainer)
         }

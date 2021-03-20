@@ -12,12 +12,13 @@ import * as globals from "../../../utils/globals";
 import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
 import moment from 'moment'
 import messaging from '@react-native-firebase/messaging';
+import styles from "./styles";
 
 const HeaderImagesList = ({
     item
 }, parallaxProps) => {
     return (
-        <View>
+        <>
             <View style={styles.item}>
                 <ParallaxImage
                     source={{ uri: `${globals.imagePath}article/${item.image}` }}
@@ -39,7 +40,7 @@ const HeaderImagesList = ({
             }} numberOfLines={2} labelSize={15} mpLabelStyle={{ ph: 10, pv: 2 }}>
                 {item.title}
             </Label>
-        </View>
+        </>
     )
 }
 
@@ -75,17 +76,18 @@ const NewsList = ({
                     }}
                 />
                 <View style={{
-                    paddingLeft: 15
+                    paddingLeft: 15,
+                    flex: 1
                 }} >
                     <Label labelSize={16}
-                        labelStyle={{ maxWidth: 200, fontWeight: "900" }}
+                        labelStyle={{ maxWidth: "95%", fontWeight: "900" }}
                     >{title}</Label>
                     <Label labelSize={12}
-                        labelStyle={{ color: "grey", maxWidth: 200 }}
+                        labelStyle={{ color: "grey", maxWidth: "95%", }}
                         mpLabelStyle={{ mt: 5 }}
                         numberOfLines={2} >{text}</Label>
                     <Label labelSize={12}
-                        labelStyle={{ color: "grey", maxWidth: 200 }}
+                        labelStyle={{ color: "grey", maxWidth: "95%", }}
                         mpLabelStyle={{ mt: 5 }}
                         numberOfLines={3} >{time}</Label>
                 </View>
@@ -124,19 +126,6 @@ const HomeScreen = ({
         })
         getTrandingImageListWatcher()
         getArticleList()
-        // messaging().onNotificationOpenedApp(remoteMessage => {
-        //     console.log(
-        //         'Notification caused app to open from background state:',
-        //         remoteMessage.notification,
-        //     );
-        //     if (remoteMessage) {
-        //         const { message } = remoteMessage.data
-        //         let parsedMessage = JSON.parse(message);
-        //         navigation.navigate("NewsDetail", {
-        //             article_Id: parsedMessage.article_id
-        //         })
-        //     }
-        // });
         messaging()
             .getInitialNotification()
             .then(remoteMessage => {
@@ -156,7 +145,7 @@ const HomeScreen = ({
 
     const logoutHandler = () => {
         Alert.alert(
-            "Breaking News",
+            "World Metal Contact",
             "Are you sure to want logout?",
             [
                 {
@@ -200,7 +189,7 @@ const HomeScreen = ({
     const heaederImageListRender = () => {
         console.log("getTrandingImageListResponse", getTrandingImageListResponse)
         return (
-            <>
+            <Container mpContainer={{ mt: 10 }} >
                 <Carousel
                     sliderWidth={screenWidth}
                     sliderHeight={screenWidth}
@@ -215,7 +204,7 @@ const HomeScreen = ({
                     labelStyle={{
                         fontWeight: "bold"
                     }} >Latest Post</Label>
-            </>
+            </Container>
         )
     }
     var REFERENCE = moment("2015-06-05"); // fixed just for testing, use moment();
@@ -312,20 +301,3 @@ const HomeScreen = ({
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({
-    item: {
-        width: screenWidth * 0.92,
-        height: screenWidth * 0.60,
-    },
-    imageContainer: {
-        flex: 1,
-        marginBottom: Platform.select({ ios: 0, android: 1 }),
-        backgroundColor: '#f7f7f7',
-        borderRadius: 8,
-        elevation: 1,
-    },
-    image: {
-        ...StyleSheet.absoluteFillObject,
-        resizeMode: 'contain',
-    },
-});

@@ -1,5 +1,9 @@
 import { Dimensions, Platform } from "react-native";
-
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+export function getStatusBarHeight() {
+  const insets = useSafeAreaInsets()
+  return Platform.OS == "android" ? StatusBar.currentHeight : insets.top
+}
 export const appName = 'BuyABlock'
 export const mainUrl = "https://chessmafia.com/php/BreakingNews/api/"
 export const isInternetConnected = true;
@@ -8,7 +12,7 @@ export const authToken = ""
 export const toastMessage = ""
 export const buyer_id = ""
 export const user_id = ""
-export const imagePath ="https://chessmafia.com/php/BreakingNews/public/uploads/"
+export const imagePath = "https://chessmafia.com/php/BreakingNews/public/uploads/"
 
 
 export const screenWidth = Dimensions.get("window").width;

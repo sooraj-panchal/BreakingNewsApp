@@ -58,7 +58,7 @@ function LoginScreen({
             }}
         >
             {/* <StatusBar backgroundColor={StatusBarColor} /> */}
-            <ScrollView  >
+            <ScrollView bounces={false} >
                 <Formik
                     initialValues={{ userName: "", email: '', phoneNumber: "" }}
                     onSubmit={values => loginHandler(values)}

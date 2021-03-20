@@ -46,13 +46,14 @@ const NotificatinList = ({
                     }}
                 />
                 <View style={{
-                    paddingLeft: 20
+                    paddingLeft: 20,
+                    flex: 1
                 }} >
                     <Label labelSize={16}
-                        labelStyle={{ maxWidth: "90%", fontWeight: "900" }}
+                        labelStyle={{ maxWidth: "95%", fontWeight: "900" }}
                     >{title}</Label>
                     <Label labelSize={12}
-                        labelStyle={{ minWidth: "80%", maxWidth: "85%", color: "grey" }}
+                        labelStyle={{ minWidth: "95%", maxWidth: "85%", color: "grey" }}
                         mpLabelStyle={{ mt: 5 }}
                         numberOfLines={2} >{description}</Label>
                     <Label labelSize={12}
