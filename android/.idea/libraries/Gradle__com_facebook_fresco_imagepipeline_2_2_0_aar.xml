@@ -4,10 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e1afe03ed5769f4224c4f5885c7cb166/transformed/imagepipeline-2.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fe90bfac000734a7d0d9c150b7915ff6/imagepipeline-2.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d6c10a0d16fb3bacc4f1de55d450da8/imagepipeline-2.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e1afe03ed5769f4224c4f5885c7cb166/transformed/imagepipeline-2.2.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e1afe03ed5769f4224c4f5885c7cb166/transformed/imagepipeline-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e1afe03ed5769f4224c4f5885c7cb166/transformed/imagepipeline-2.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e1afe03ed5769f4224c4f5885c7cb166/transformed/imagepipeline-2.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

@@ -123,9 +123,6 @@ androidx/viewpager/widget/ViewPager$DecorView.class
 androidx/viewpager2/widget/ViewPager2$OffscreenPageLimit.class
 androidx/viewpager2/widget/ViewPager2$Orientation.class
 androidx/viewpager2/widget/ViewPager2$ScrollState.class
-com/breakingnews/BuildConfig.class
-com/breakingnews/MainApplication$1.class
-com/breakingnews/MainApplication.class
 com/facebook/cache/disk/DefaultDiskStorage$FileType.class
 com/facebook/common/internal/DoNotStrip.class
 com/facebook/common/internal/Objects.class
@@ -342,6 +339,9 @@ com/google/firebase/platforminfo/LibraryVersion.class
 com/reactnativecommunity/netinfo/ConnectivityReceiver.class
 com/swmansion/reanimated/MapUtils.class
 com/swmansion/rnscreens/ScreenStackHeaderConfigViewManager.class
+com/worldmetalcontactsa/BuildConfig.class
+com/worldmetalcontactsa/MainApplication$1.class
+com/worldmetalcontactsa/MainApplication.class
 io/invertase/firebase/app/ReactNativeFirebaseAppPackage.class
 io/invertase/firebase/common/ReactNativeFirebaseModule.class
 io/invertase/firebase/interfaces/ContextProvider.class

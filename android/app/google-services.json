@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "549316489690",
-    "project_id": "breakingnews-48cdd",
-    "storage_bucket": "breakingnews-48cdd.appspot.com"
+    "project_number": "933572890870",
+    "project_id": "world-metal-cotact-sa",
+    "storage_bucket": "world-metal-cotact-sa.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:549316489690:android:a8007fbd196455c0bc90e3",
+        "mobilesdk_app_id": "1:933572890870:android:1c2126dca4439a91eedcd7",
         "android_client_info": {
-          "package_name": "com.breakingnews"
+          "package_name": "com.worldmetalcontactsa"
         }
       },
       "oauth_client": [
         {
-          "client_id": "549316489690-1up1eihnuipa8u52mhblq2oolt54qiaf.apps.googleusercontent.com",
+          "client_id": "933572890870-huptssbtencrmno450uondd87ka9j3lp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBBDw9c60bM58AYp9YpJ50OYUc3ASSiXfE"
+          "current_key": "AIzaSyBPnaVpb6RM7V7bwbuQAL3SrDT0d2Dnxrw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "549316489690-1up1eihnuipa8u52mhblq2oolt54qiaf.apps.googleusercontent.com",
+              "client_id": "933572890870-huptssbtencrmno450uondd87ka9j3lp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,4 +1,4 @@
-import { Dimensions, Platform } from "react-native";
+import { Dimensions, Platform,StatusBar } from "react-native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 export function getStatusBarHeight() {
   const insets = useSafeAreaInsets()

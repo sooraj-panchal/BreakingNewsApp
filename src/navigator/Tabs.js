@@ -148,7 +148,7 @@ function Tabs({ navigation, route }) {
                     paddingTop: Platform.OS == "ios" ? 20 : 0,
                     shadowOffset: { width: 2, height: 2 },
                     shadowOpacity: 0.2,
-                    height: Platform.OS == "ios" && 60
+                    height: Platform.OS == "ios" ? 60 : 50
                 },
                 activeTintColor: PrimaryColor,
                 inactiveTintColor: 'gray',

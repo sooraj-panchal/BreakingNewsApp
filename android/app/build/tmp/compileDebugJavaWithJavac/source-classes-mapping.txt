@@ -14,25 +14,6 @@ androidx/print/R.java
  androidx.print.R
 androidx/lifecycle/livedata/core/R.java
  androidx.lifecycle.livedata.core.R
-com/breakingnews/R.java
- com.breakingnews.R
- com.breakingnews.R$anim
- com.breakingnews.R$animator
- com.breakingnews.R$attr
- com.breakingnews.R$bool
- com.breakingnews.R$color
- com.breakingnews.R$dimen
- com.breakingnews.R$drawable
- com.breakingnews.R$id
- com.breakingnews.R$integer
- com.breakingnews.R$interpolator
- com.breakingnews.R$layout
- com.breakingnews.R$mipmap
- com.breakingnews.R$plurals
- com.breakingnews.R$string
- com.breakingnews.R$style
- com.breakingnews.R$styleable
- com.breakingnews.R$xml
 com/facebook/imagepipeline/R.java
  com.facebook.imagepipeline.R
  com.facebook.imagepipeline.R$attr
@@ -154,6 +135,8 @@ com/google/android/gms/common/R.java
  com.google.android.gms.common.R
  com.google.android.gms.common.R$integer
  com.google.android.gms.common.R$string
+com/worldmetalcontactsa/BuildConfig.java
+ com.worldmetalcontactsa.BuildConfig
 com/google/android/gms/base/R.java
  com.google.android.gms.base.R
  com.google.android.gms.base.R$attr
@@ -254,6 +237,11 @@ androidx/appcompat/R.java
  androidx.appcompat.R$string
  androidx.appcompat.R$style
  androidx.appcompat.R$styleable
+com/worldmetalcontactsa/ReactNativeFlipper.java
+ com.worldmetalcontactsa.ReactNativeFlipper
+ com.worldmetalcontactsa.ReactNativeFlipper$1
+ com.worldmetalcontactsa.ReactNativeFlipper$2
+ com.worldmetalcontactsa.ReactNativeFlipper$2$1
 androidx/customview/R.java
  androidx.customview.R
  androidx.customview.R$attr
@@ -345,15 +333,15 @@ com/facebook/drawee/R.java
  com.facebook.drawee.R$string
  com.facebook.drawee.R$style
  com.facebook.drawee.R$styleable
+com/worldmetalcontactsa/MainApplication.java
+ com.worldmetalcontactsa.MainApplication
+ com.worldmetalcontactsa.MainApplication$1
 com/google/android/gms/measurement/sdk/R.java
  com.google.android.gms.measurement.sdk.R
 me/leolin/shortcutbadger/R.java
  me.leolin.shortcutbadger.R
 com/google/firebase/iid/internal/R.java
  com.google.firebase.iid.internal.R
-com/breakingnews/MainApplication.java
- com.breakingnews.MainApplication
- com.breakingnews.MainApplication$1
 androidx/localbroadcastmanager/R.java
  androidx.localbroadcastmanager.R
 com/google/firebase/installations/interop/R.java
@@ -368,11 +356,25 @@ com/google/firebase/installations/interop/R.java
  com.google.firebase.installations.interop.R$string
  com.google.firebase.installations.interop.R$style
  com.google.firebase.installations.interop.R$styleable
-com/breakingnews/ReactNativeFlipper.java
- com.breakingnews.ReactNativeFlipper
- com.breakingnews.ReactNativeFlipper$1
- com.breakingnews.ReactNativeFlipper$2
- com.breakingnews.ReactNativeFlipper$2$1
+com/worldmetalcontactsa/R.java
+ com.worldmetalcontactsa.R
+ com.worldmetalcontactsa.R$anim
+ com.worldmetalcontactsa.R$animator
+ com.worldmetalcontactsa.R$attr
+ com.worldmetalcontactsa.R$bool
+ com.worldmetalcontactsa.R$color
+ com.worldmetalcontactsa.R$dimen
+ com.worldmetalcontactsa.R$drawable
+ com.worldmetalcontactsa.R$id
+ com.worldmetalcontactsa.R$integer
+ com.worldmetalcontactsa.R$interpolator
+ com.worldmetalcontactsa.R$layout
+ com.worldmetalcontactsa.R$mipmap
+ com.worldmetalcontactsa.R$plurals
+ com.worldmetalcontactsa.R$string
+ com.worldmetalcontactsa.R$style
+ com.worldmetalcontactsa.R$styleable
+ com.worldmetalcontactsa.R$xml
 androidx/lifecycle/viewmodel/savedstate/R.java
  androidx.lifecycle.viewmodel.savedstate.R
 com/swmansion/gesturehandler/react/R.java
@@ -750,6 +752,8 @@ com/facebook/react/PackageList.java
  com.facebook.react.PackageList
 org/webkit/androidjsc/R.java
  org.webkit.androidjsc.R
+com/worldmetalcontactsa/MainActivity.java
+ com.worldmetalcontactsa.MainActivity
 com/dieam/reactnativepushnotification/R.java
  com.dieam.reactnativepushnotification.R
  com.dieam.reactnativepushnotification.R$anim
@@ -807,7 +811,3 @@ com/google/firebase/datatransport/R.java
  com.google.firebase.datatransport.R$styleable
 com/google/android/gms/tasks/R.java
  com.google.android.gms.tasks.R
-com/breakingnews/BuildConfig.java
- com.breakingnews.BuildConfig
-com/breakingnews/MainActivity.java
- com.breakingnews.MainActivity

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">549316489690-1up1eihnuipa8u52mhblq2oolt54qiaf.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">549316489690</string>
-    <string name="google_api_key" translatable="false">AIzaSyBBDw9c60bM58AYp9YpJ50OYUc3ASSiXfE</string>
-    <string name="google_app_id" translatable="false">1:549316489690:android:a8007fbd196455c0bc90e3</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBBDw9c60bM58AYp9YpJ50OYUc3ASSiXfE</string>
-    <string name="google_storage_bucket" translatable="false">breakingnews-48cdd.appspot.com</string>
-    <string name="project_id" translatable="false">breakingnews-48cdd</string>
+    <string name="default_web_client_id" translatable="false">933572890870-huptssbtencrmno450uondd87ka9j3lp.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">933572890870</string>
+    <string name="google_api_key" translatable="false">AIzaSyBPnaVpb6RM7V7bwbuQAL3SrDT0d2Dnxrw</string>
+    <string name="google_app_id" translatable="false">1:933572890870:android:1c2126dca4439a91eedcd7</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBPnaVpb6RM7V7bwbuQAL3SrDT0d2Dnxrw</string>
+    <string name="google_storage_bucket" translatable="false">world-metal-cotact-sa.appspot.com</string>
+    <string name="project_id" translatable="false">world-metal-cotact-sa</string>
 </resources>

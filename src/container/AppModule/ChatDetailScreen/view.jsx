@@ -100,12 +100,13 @@ function ChatDetailScreen({
                         borderWidth: 0.8,
                         borderColor: "lightgrey",
                         maxHeight: 300,
+                        minHeight:40
                     }}
                     inputStyle={{
                         fontSize: 15,
                         flex: 0.95,
                     }}
-                    mpInputContainer={{ pl: 10,pv:15}}
+                    mpInputContainer={{ pl: 10}}
                     placeholder="Type a Message  |"
                     multiline={true}
                     editable={true}
@@ -201,19 +202,7 @@ function ChatDetailScreen({
                 ItemSeparatorComponent={() => {
                     return (
                         <Container
-                            mpContainer={{ mv: 5 }}
-                        // containerStyle={{
-                        //     backgroundColor: "#f5f5f5",
-                        //     height: 30,
-                        //     width: "40%",
-                        //     borderRadius: 100,
-                        //     alignSelf: "center",
-                        //     justifyContent: "center",
-                        //     alignItems: "center"
-                        // }}
-                        >
-                            {/* <Label labelSize={12} >FEBRUARY 20, 2021</Label> */}
-                        </Container>
+                            mpContainer={{ mv: 5 }}/>
                     )
                 }
                 }
