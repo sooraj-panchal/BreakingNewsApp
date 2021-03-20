@@ -12,26 +12,23 @@ import { vs } from "../utils/styleUtils";
 
 const StackScreen = createStackNavigator()
 const ChatStack = ({ }) => {
-
     return (
         <StackScreen.Navigator
         >
             <StackScreen.Screen
                 name="Chat"
                 component={ChatScreen}
-                options={({ navigation, route }) => {
+                options={() => {
                     return ({
                         headerStyle: {
                             headerStatusBarHeight: StatusBar.currentHeight,
                             backgroundColor: "white",
                             elevation: 0,
-                            // height: 60
+                            shadowOpacity:0
                         },
                         headerLeftContainerStyle: {
-                            // paddingLeft: 10
                         },
                         headerTitleStyle: {
-                            // marginTop: 20,
                             fontSize: 25,
                             fontWeight: "bold"
                         },
@@ -51,19 +48,17 @@ const AlertStack = ({ }) => {
             <StackScreen.Screen
                 name="Notification"
                 component={NotificationScreen}
-                options={({ navigation, route }) => {
+                options={() => {
                     return ({
                         headerStatusBarHeight: getStatusBarHeight(),
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
-                            // height: 60
+                            shadowOpacity:0
                         },
                         headerLeftContainerStyle: {
-                            // paddingLeft: 10
                         },
                         headerTitleStyle: {
-                            // marginTop: 20,
                             fontSize: 25,
                             fontWeight: "bold"
                         },
@@ -82,23 +77,21 @@ const HomeStack = () => {
             <StackScreen.Screen
                 name="Home"
                 component={HomeScreen}
-                options={({ navigation, route }) => {
+                options={() => {
                     return ({
                         headerTitle: "Post",
                         headerStatusBarHeight: getStatusBarHeight(),
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
-                            // height: 80,
+                            shadowOpacity:0
                         },
                         headerRightContainerStyle: {
                             paddingRight: 20,
-                            // paddingTop: 20,
                         },
                         headerTitleStyle: {
                             fontSize: 25,
                             fontWeight: "bold",
-                            // paddingTop: 20
                         },
                         headerTitleAlign: "left",
                         headerTintColor: "black",

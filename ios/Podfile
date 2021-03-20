@@ -13,7 +13,6 @@ target 'BreakingNews' do
   pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
 
   pod 'RNShare', :path => '../node_modules/react-native-share'
-
   target 'BreakingNewsTests' do
     inherit! :complete
     # Pods for testing

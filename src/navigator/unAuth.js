@@ -20,12 +20,8 @@ const AppStackScreen = () => {
                 headerLeftContainerStyle: {
                     paddingLeft: 10
                 },
-                // cardStyle:{
-                //     // backgroundColor:"white"
-                // },
                 headerTintColor: "white",
                 ...TransitionPresets.SlideFromRightIOS,
-                // animationEnabled:false
             }}
         >
             <StackScreen.Screen
@@ -49,16 +45,15 @@ const AppStackScreen = () => {
                 component={NewsDetailScreen}
                 options={({ }) => {
                     return ({
-                        // headerShown: false,
                         headerTitle: "Back",
                         headerStyle: {
                             backgroundColor: "white",
-                            elevation: 0
+                            elevation: 0,
+                            shadowOpacity:0
                         },
                         headerTitleStyle: {
                             fontSize: 18,
                             right: 10
-                            // fontWeight: "bold",
                         },
                         headerBackTitle: false,
                         headerTitleAlign: "left",
@@ -75,12 +70,11 @@ const AppStackScreen = () => {
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
-                            // height: 60+StatusBar.currentHeight,
+                            shadowOpacity:0
                         },
                         headerTitleStyle: {
                             fontSize: 18,
                             right: 10
-                            // fontWeight: "bold",
                         },
                         headerBackTitle: false,
                         headerTitleAlign: "left",

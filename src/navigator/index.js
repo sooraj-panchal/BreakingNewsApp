@@ -10,11 +10,7 @@ import AppStackScreen from './unAuth';
 import { connect } from 'react-redux'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const AppContainer = ({
-    asyncUserDataWatcher,
-    asyncUserDataResponse,
-    asyncUserDataLoading
-}) => {
+const AppContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const StackScreen = createStackNavigator();
@@ -22,7 +18,6 @@ const AppContainer = ({
     const [token, setToken] = useState(null)
     useEffect(() => {
         setLoading(true)
-        // asyncUserDataWatcher()
     }, [])
     useEffect(() => {
         setTimeout(() => {
@@ -30,11 +25,6 @@ const AppContainer = ({
         }, 500);
 
         getUserData()
-        // if (asyncUserDataResponse) {
-        //     console.log("asyncUserDataResponse", asyncUserDataResponse)
-        //     globals.authToken = asyncUserDataResponse?.token
-        //     globals.user_id = asyncUserDataResponse?.user_data?.id
-        // }
     }, [])
 
     const getUserData = async () => {
@@ -60,16 +50,6 @@ const AppContainer = ({
                 <StackScreen.Screen
                     name="Splash"
                     component={SplashScreen}
-                    options={({ navigation, route }) => {
-                        return ({
-                            // headerShown: false,
-                            headerStyle: {
-                                backgroundColor: PrimaryColor,
-                            },
-                            headerTintColor: "white"
-                            // headerTitle: ""
-                        })
-                    }}
                 />
             </StackScreen.Navigator>
         )
