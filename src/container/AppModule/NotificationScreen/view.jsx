@@ -77,7 +77,8 @@ function NotificationScreen({
     }, [])
 
     return (
-        <MainContainer style={{ backgroundColor: "white" }} loading={getNotificationLoading} >
+        <MainContainer style={{ backgroundColor: "white" }}
+         loading={getNotificationLoading} >
             <FlatList
                         showsVerticalScrollIndicator={false}
 
