@@ -1,0 +1,4 @@
+#Mon Mar 22 11:18:01 IST 2021
+base.0=/Users/p/react-native/BreakingNewsApp/android/app/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

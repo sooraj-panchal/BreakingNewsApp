@@ -16,6 +16,7 @@ import Container from '../../../components/Container'
 import { screenHeight, screenWidth } from '../../../utils/styleUtils'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import * as globals from '../../../utils/globals'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 function LoginScreen({
     navigation,
     route,
@@ -58,7 +59,8 @@ function LoginScreen({
             }}
         >
             {/* <StatusBar backgroundColor={StatusBarColor} /> */}
-            <ScrollView bounces={false} >
+            <KeyboardAwareScrollView bounces={false} >
+                {/* <ScrollView bounces={false} > */}
                 <Formik
                     initialValues={{ userName: "", email: '', phoneNumber: "" }}
                     onSubmit={values => loginHandler(values)}
@@ -187,7 +189,8 @@ function LoginScreen({
                         </Fragment>
                     )}
                 </Formik>
-            </ScrollView>
+                {/* </ScrollView> */}
+            </KeyboardAwareScrollView>
         </MainContainer>
     )
 }

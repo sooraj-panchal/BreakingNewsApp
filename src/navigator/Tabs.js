@@ -24,7 +24,7 @@ const ChatStack = ({ }) => {
                             headerStatusBarHeight: StatusBar.currentHeight,
                             backgroundColor: "white",
                             elevation: 0,
-                            shadowOpacity:0
+                            shadowOpacity: 0
                         },
                         headerLeftContainerStyle: {
                         },
@@ -54,7 +54,7 @@ const AlertStack = ({ }) => {
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
-                            shadowOpacity:0
+                            shadowOpacity: 0
                         },
                         headerLeftContainerStyle: {
                         },
@@ -84,7 +84,7 @@ const HomeStack = () => {
                         headerStyle: {
                             backgroundColor: "white",
                             elevation: 0,
-                            shadowOpacity:0
+                            shadowOpacity: 0
                         },
                         headerRightContainerStyle: {
                             paddingRight: 20,
@@ -108,7 +108,8 @@ function Tabs({ navigation, route }) {
     const CustomTabIconContainer = ({ focused, children }) => {
         return (
             <View style={{
-                height: vs(50),
+                // position:"absolute",
+                height: Platform.OS == "ios" ? vs(60) : vs(50),
                 justifyContent: "center",
                 alignItems: "center"
             }} >
@@ -138,10 +139,10 @@ function Tabs({ navigation, route }) {
                     marginHorizontal: width * 0.20,
                     paddingHorizontal: 10,
                     bottom: 20,
-                    paddingTop: Platform.OS == "ios" ? 20 : 0,
+                    // paddingTop: Platform.OS == "ios" ? 20 : 0,
                     shadowOffset: { width: 2, height: 2 },
                     shadowOpacity: 0.2,
-                    height: Platform.OS == "ios" ? 60 : 50
+                    height: Platform.OS == "ios" ? vs(60) : vs(50)
                 },
                 activeTintColor: PrimaryColor,
                 inactiveTintColor: 'gray',
@@ -150,7 +151,6 @@ function Tabs({ navigation, route }) {
         >
             <Tab.Screen
                 name="Home" component={HomeStack}
-
                 options={() => {
                     return ({
                         tabBarIcon: ({ color, focused }) => {

@@ -1,9 +1,9 @@
-import {  NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import {
   View, StatusBar, StyleSheet, Platform, ActivityIndicator, LogBox
 } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider, SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { PrimaryColor } from './src/assets/colors';
 import AppContainer from './src/navigator';
 import { Provider } from 'react-redux';
@@ -38,24 +38,25 @@ const App = () => {
     }
   }
   const { store, persistor } = configureStore();
+  // const insets = useSafeAreaInsets();
 
   return (
     <SafeAreaProvider>
-      {/* <SafeAreaView style={{flex:1,backgroundColor:"red"}} > */}
-      <Provider store={store}>
-        <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
-          <NavigationContainer
-            theme={{ colors: { background: "#3F1314" } }}
-            ref={navigationRef}
-            onReady={() => {
-              isReadyRef.current = true;
-            }}
-          >
-            {_renderStatusBar()}
-          </NavigationContainer>
-        </PersistGate>
-      </Provider>
-      {/* </SafeAreaView> */}
+      <SafeAreaView style={{ flex: 1, backgroundColor: "red", paddingTop: -20 }}  >
+        <Provider store={store}>
+          <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
+            <NavigationContainer
+              theme={{ colors: { background: "#3F1314" } }}
+              ref={navigationRef}
+              onReady={() => {
+                isReadyRef.current = true;
+              }}
+            >
+              {_renderStatusBar()}
+            </NavigationContainer>
+          </PersistGate>
+        </Provider>
+      </SafeAreaView>
     </SafeAreaProvider>
   );
 };
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     backgroundColor: PrimaryColor,
-    marginBottom: getBottomSpace
+    // marginBottom: getBottomSpace
   },
 });
 

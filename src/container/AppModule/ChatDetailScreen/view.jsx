@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, FlatList, View } from 'react-native'
+import { ActivityIndicator, FlatList, KeyboardAvoidingView, Platform, TextInput, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { DarkBlueColor } from '../../../assets/colors'
 import Container from '../../../components/Container'
@@ -10,6 +10,8 @@ import { user_id } from '../../../utils/globals'
 import MessagesList from './ChatList'
 import moment from 'moment'
 import Pusher from 'pusher-js/react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { screenHeight, vs } from '../../../utils/styleUtils'
 
 function ChatDetailScreen({
     chatDataWatcher,
@@ -99,14 +101,14 @@ function ChatDetailScreen({
                         height: null,
                         borderWidth: 0.8,
                         borderColor: "lightgrey",
-                        maxHeight: 300,
-                        minHeight:40
+                        maxHeight: vs(300),
+                        minHeight: vs(40)
                     }}
                     inputStyle={{
                         fontSize: 15,
                         flex: 0.95,
                     }}
-                    mpInputContainer={{ pl: 10}}
+                    mpInputContainer={{ pl: 10 }}
                     placeholder="Type a Message  |"
                     multiline={true}
                     editable={true}
@@ -167,71 +169,79 @@ function ChatDetailScreen({
             style={{ backgroundColor: "white" }}
             loading={getChatDataLoading}
         >
-            <FlatList inverted
-                data={generateItems(messageArray)}
-                extraData={generateItems(messageArray)}
-                renderItem={({ item, index }) => {
-                    if (item.type && item.type === 'day') {
-                        return <Container containerStyle={{
-                            justifyContent: "center",
-                            alignItems: 'center',
-                            backgroundColor: "#f0f0f0",
-                            elevation: 0.3,
-                            width: 120,
-                            alignSelf: "center",
-                            borderRadius: 5,
-                            height: 25
-                        }} mpContainer={{ mv: 10 }} >
-                            <Label
-                                labelSize={12}
-                                labelStyle={{ color: "gray", letterSpacing: 1 }}
-
-                            >{item.date}</Label>
-                        </Container>
-                    }
-                    return <MessagesList
-                        userId={item.id}
-                        adminMsg={item.admin_msg}
-                        userMsg={item.msg}
-                        timeStamp={moment(item.created_at).format('LT')}
-                    />
-                }}
-                style={{ flex: 1 }}
-                keyExtractor={(_, index) => index.toString()}
-                ListHeaderComponent={() => <Container mpContainer={{ mt: 100 }} />}
-                ItemSeparatorComponent={() => {
-                    return (
-                        <Container
-                            mpContainer={{ mv: 5 }}/>
-                    )
-                }
-                }
-                ListFooterComponent={() => {
-                    return (
-                        <View style={{
-                            height: 100,
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }} >
-                            {NewDataLoading &&
-                                <ActivityIndicator
-                                    size="large"
-                                    color="black"
-                                />
-                            }
-                        </View>
-                    )
-                }}
+            <KeyboardAwareScrollView
+                keyboardShouldPersistTaps="handled"
+                scrollEnabled={false}
+                extraScrollHeight={10}
+                bounces={false}
                 showsVerticalScrollIndicator={false}
-                onEndReachedThreshold={0.2}
-                onEndReached={() => {
-                    if (messageArray.length >= 10) {
-                        setNewDataLoading(true)
-                        getMessages()
+            >
+                <FlatList inverted
+                    data={generateItems(messageArray)}
+                    extraData={generateItems(messageArray)}
+                    renderItem={({ item, index }) => {
+                        if (item.type && item.type === 'day') {
+                            return <Container containerStyle={{
+                                justifyContent: "center",
+                                alignItems: 'center',
+                                backgroundColor: "#f0f0f0",
+                                elevation: 0.3,
+                                width: 120,
+                                alignSelf: "center",
+                                borderRadius: 5,
+                                height: 25
+                            }} mpContainer={{ mv: 10 }} >
+                                <Label
+                                    labelSize={12}
+                                    labelStyle={{ color: "gray", letterSpacing: 1 }}
+
+                                >{item.date}</Label>
+                            </Container>
+                        }
+                        return <MessagesList
+                            userId={item.id}
+                            adminMsg={item.admin_msg}
+                            userMsg={item.msg}
+                            timeStamp={moment(item.created_at).format('LT')}
+                        />
+                    }}
+                    style={{ height: screenHeight - vs(65), flex: 1 }}
+                    keyExtractor={(_, index) => index.toString()}
+                    ListHeaderComponent={() => <Container mpContainer={{ mt: 100 }} />}
+                    ItemSeparatorComponent={() => {
+                        return (
+                            <Container
+                                mpContainer={{ mv: 5 }} />
+                        )
                     }
-                }}
-            />
-            {MessageContainer()}
+                    }
+                    ListFooterComponent={() => {
+                        return (
+                            <View style={{
+                                height: 100,
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }} >
+                                {NewDataLoading &&
+                                    <ActivityIndicator
+                                        size="large"
+                                        color="black"
+                                    />
+                                }
+                            </View>
+                        )
+                    }}
+                    showsVerticalScrollIndicator={false}
+                    onEndReachedThreshold={0.5}
+                    onEndReached={() => {
+                        if (messageArray.length >= 10) {
+                            setNewDataLoading(true)
+                            getMessages()
+                        }
+                    }}
+                />
+                {MessageContainer()}
+            </KeyboardAwareScrollView>
         </MainContainer>
     )
 }

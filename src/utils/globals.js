@@ -5,7 +5,9 @@ export function getStatusBarHeight() {
   return Platform.OS == "android" ? StatusBar.currentHeight : insets.top
 }
 export const appName = 'BuyABlock'
-export const mainUrl = "https://chessmafia.com/php/BreakingNews/api/"
+// export const mainUrl = "https://chessmafia.com/php/BreakingNews/api/"
+export const mainUrl = "http://app.worldmetalcontact.com/api/"
+
 export const isInternetConnected = true;
 export const fcmToken = '';
 export const authToken = ""
