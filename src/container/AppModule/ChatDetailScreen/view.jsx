@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, FlatList, KeyboardAvoidingView, Platform, TextInput, View } from 'react-native'
+import { ActivityIndicator, FlatList, Platform, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { DarkBlueColor } from '../../../assets/colors'
 import Container from '../../../components/Container'
@@ -164,6 +164,7 @@ function ChatDetailScreen({
         }, []);
         return items;
     }
+    // alert(screenHeight)
     return (
         <MainContainer
             style={{ backgroundColor: "white" }}
@@ -172,9 +173,12 @@ function ChatDetailScreen({
             <KeyboardAwareScrollView
                 keyboardShouldPersistTaps="handled"
                 scrollEnabled={false}
-                extraScrollHeight={10}
+                extraScrollHeight={Platform.OS == "ios" && screenHeight > 850 ? 40 : 10}
                 bounces={false}
                 showsVerticalScrollIndicator={false}
+                contentContainerStyle={{
+                    flex: 1,
+                }}
             >
                 <FlatList inverted
                     data={generateItems(messageArray)}
@@ -205,7 +209,7 @@ function ChatDetailScreen({
                             timeStamp={moment(item.created_at).format('LT')}
                         />
                     }}
-                    style={{ height: screenHeight - vs(65), flex: 1 }}
+                    style={{ flex: 1 }}
                     keyExtractor={(_, index) => index.toString()}
                     ListHeaderComponent={() => <Container mpContainer={{ mt: 100 }} />}
                     ItemSeparatorComponent={() => {

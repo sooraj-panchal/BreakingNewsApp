@@ -142,11 +142,17 @@ function Tabs({ navigation, route }) {
                     // paddingTop: Platform.OS == "ios" ? 20 : 0,
                     shadowOffset: { width: 2, height: 2 },
                     shadowOpacity: 0.2,
+                    // justifyContent:"center",
+                    // alignSelf:"center",
+                    // flex:1,
                     height: Platform.OS == "ios" ? vs(60) : vs(50)
                 },
                 activeTintColor: PrimaryColor,
                 inactiveTintColor: 'gray',
                 showLabel: false,
+                tabStyle: {
+                    height: Platform.OS == "ios" ? vs(60) : vs(50)
+                }
             }}
         >
             <Tab.Screen

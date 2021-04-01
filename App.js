@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, backgroundColor: "red", paddingTop: -20 }}  >
+      <SafeAreaView style={{ flex: 1,paddingTop:-100}}  >
         <Provider store={store}>
           <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
             <NavigationContainer
