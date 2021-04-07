@@ -11,7 +11,6 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/p/.gradle
 MERGED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-45:12
 MERGED from [:react-native-firebase_app] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/p/.gradle/caches/transforms-3/2037afd7f1a998e73c2ed2e87818adb8/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-async-storage_async-storage] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
@@ -337,8 +336,6 @@ MERGED from [:react-native-firebase_app] /Users/p/react-native/BreakingNewsApp/n
 MERGED from [:react-native-firebase_app] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/p/.gradle/caches/transforms-3/2037afd7f1a998e73c2ed2e87818adb8/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/p/.gradle/caches/transforms-3/2037afd7f1a998e73c2ed2e87818adb8/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
-MERGED from [:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-async-storage_async-storage] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-async-storage_async-storage] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -535,8 +532,6 @@ ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidMa
 		ADDED from /Users/p/react-native/BreakingNewsApp/android/app/src/debug/AndroidManifest.xml:5:22-75
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/p/.gradle/caches/transforms-3/ccf9a398f252b68de3a2456bd223918e/transformed/flipper-0.54.0/AndroidManifest.xml:16:5-76
-MERGED from [:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
-MERGED from [:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
 MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
 MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
 	android:name
@@ -559,8 +554,6 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] /U
 		ADDED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
-MERGED from [:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
-MERGED from [:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/p/.gradle/caches/transforms-3/3071a670084a2b2f9df4accf6284002c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
