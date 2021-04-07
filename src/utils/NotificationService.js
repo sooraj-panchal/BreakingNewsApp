@@ -4,11 +4,12 @@ import PushNotification from 'react-native-push-notification';
 import { navigate } from './../../NavigationHandler';
 import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import { not } from 'react-native-reanimated';
+import { Platform } from 'react-native';
 
 export const NotificationHandler = () => {
   checkPermission()
   createNotificationListeners()
-  iosPushNotification()
+  if (Platform.OS === "ios") iosPushNotification()
 }
 const onRemoteNotification = (notification) => {
   const isClicked = notification.getData().userInteraction === 1;
@@ -32,7 +33,9 @@ function createNotificationListeners() {
       console.log("NOTIFICATION:", notification);
       const { foreground, userInteraction, title, message } = notification;
       if (foreground && (title || message) && !userInteraction) PushNotification.localNotification(notification);
-      notification.finish(PushNotificationIOS.FetchResult.NoData);
+      if (Platform.OS == "ios") {
+        notification.finish(PushNotificationIOS.FetchResult.NoData);
+      }
 
       if (userInteraction) {
         const { message } = notification.data
