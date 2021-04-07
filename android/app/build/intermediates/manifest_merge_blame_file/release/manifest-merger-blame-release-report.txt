@@ -1,7 +1,7 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.worldmetalcontactsa"
-4    android:versionCode="2"
+4    android:versionCode="4194306"
 5    android:versionName="1.1" >
 6
 7    <uses-sdk
@@ -23,11 +23,11 @@
 14-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:6:1-77
 14-->/Users/p/react-native/BreakingNewsApp/android/app/src/main/AndroidManifest.xml:6:18-74
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-79
-15-->[:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:22-76
+15-->[:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-79
+15-->[:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:22-76
 16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-16-->[:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:5-76
-16-->[:@react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:22-73
+16-->[:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:5-76
+16-->[:react-native-community_netinfo] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:22-73
 17    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
 17-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/release/AndroidManifest.xml:12:5-68
 17-->[:react-native-firebase_messaging] /Users/p/react-native/BreakingNewsApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/release/AndroidManifest.xml:12:22-65
