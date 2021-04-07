@@ -13,6 +13,8 @@ function* asyncUserDataActionEffect(action) {
         yield put(asyncUserDataSuccess(action.payload))
     } catch (e) {
         console.log("=====>asyncUserDataError", e)
+        globals.toastMessage = JSON.stringify(e)
+
         yield put(asyncUserDataError(e));
     }
 }

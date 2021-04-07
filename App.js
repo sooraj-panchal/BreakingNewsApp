@@ -11,17 +11,18 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { configureStore } from './src/store';
 import { NotificationHandler } from './src/utils/NotificationService';
 import { isReadyRef, navigationRef } from './NavigationHandler';
+import PushNotificationIOS from '@react-native-community/push-notification-ios';
 
 // import { enableScreens } from 'react-native-screens';
 
 // enableScreens()
+
 LogBox.ignoreAllLogs(true)
-const getBottomSpace = 40
 
 const App = () => {
   useEffect(() => {
     NotificationHandler()
-    // createNotificationListeners()
+    return () => PushNotificationIOS.removeEventListener("notification");
   }, [])
 
   const _renderStatusBar = () => {
@@ -42,7 +43,7 @@ const App = () => {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1,paddingTop:-100}}  >
+      <SafeAreaView style={{ flex: 1, paddingTop: -100 }}  >
         <Provider store={store}>
           <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
             <NavigationContainer

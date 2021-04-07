@@ -12,7 +12,6 @@ import moment from 'moment'
 import Pusher from 'pusher-js/react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { screenHeight, vs } from '../../../utils/styleUtils'
-
 function ChatDetailScreen({
     chatDataWatcher,
     chatDataResponse,

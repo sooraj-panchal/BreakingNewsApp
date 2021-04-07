@@ -14,6 +14,7 @@ function* chatDataActionEffect(action) {
         yield put(chatDataSuccess(response));
     } catch (e) {
         console.log("=====>chatDataApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
         yield put(chatDataError(e));
     }
 }
@@ -33,6 +34,7 @@ function* sendMessageActionEffect(action) {
         yield put(sendMessageSuccess(response));
     } catch (e) {
         console.log("=====>sendMessageApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
         yield put(sendMessageError(e));
     }
 }
@@ -52,6 +54,7 @@ function* getArticleListActionEffect(action) {
         yield put(getArticleListSuccess(response));
     } catch (e) {
         console.log("=====>getArticleListApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
         yield put(getArticleListError(e));
     }
 }
@@ -70,6 +73,8 @@ function* getArticleDetailsActionEffect(action) {
         yield put(getArticleDetailsSuccess(response));
     } catch (e) {
         console.log("=====>getArticleDetailsApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
+
         yield put(getArticleDetailsError(e));
     }
 }
@@ -88,6 +93,8 @@ function* getNotificationActionEffect(action) {
         yield put(getNotificationSuccess(response));
     } catch (e) {
         console.log("=====>getNotificationApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
+
         yield put(getNotificationError(e));
     }
 }
@@ -107,6 +114,8 @@ function* updateNotificationActionEffect(action) {
         // yield put(getNotificationWatcher());
     } catch (e) {
         console.log("=====>updateNotificationApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
+
         yield put(updateNotificationError(e));
     }
 }
@@ -125,6 +134,8 @@ function* getTrandingImageListActionEffect(action) {
         yield put(getTrandingImageListSucces(response));
     } catch (e) {
         console.log("=====>trendingArticleApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
+
         yield put(getTrandingImageListError(e));
     }
 }

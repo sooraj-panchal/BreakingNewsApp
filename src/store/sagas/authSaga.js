@@ -15,6 +15,7 @@ function* registerActionEffect(action) {
         yield put(registerSuccess(response));
     } catch (e) {
         console.log("=====>registerApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
         yield put(registerError(e));
     }
 }
@@ -34,6 +35,8 @@ function* loginActionEffect(action) {
         yield put(loginSuccess(response));
     } catch (e) {
         console.log("=====>loginApi Error", e)
+        globals.toastMessage = JSON.stringify(e)
+
         yield put(loginError(e));
     }
 }

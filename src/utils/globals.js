@@ -1,4 +1,4 @@
-import { Dimensions, Platform,StatusBar } from "react-native";
+import { Dimensions, Platform, StatusBar } from "react-native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 export function getStatusBarHeight() {
   const insets = useSafeAreaInsets()
@@ -14,7 +14,7 @@ export const authToken = ""
 export const toastMessage = ""
 export const buyer_id = ""
 export const user_id = ""
-export const imagePath = "https://chessmafia.com/php/BreakingNews/public/uploads/"
+export const imagePath = "http://app.worldmetalcontact.com/public/uploads/"
 
 
 export const screenWidth = Dimensions.get("window").width;

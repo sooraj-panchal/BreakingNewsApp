@@ -79,9 +79,9 @@ function NotificationScreen({
 
     return (
         <MainContainer style={{ backgroundColor: "white" }}
-         loading={getNotificationLoading} >
+            loading={getNotificationLoading} >
             <FlatList
-                        showsVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
 
                 data={getNotificationResponse?.data}
                 renderItem={({ item, index }) => {
@@ -89,15 +89,15 @@ function NotificationScreen({
                     let newTime;
                     if (time == "an hour ago") {
                         newTime = "1 hour ago"
-                    } else if(time == "a day ago") {
+                    } else if (time == "a day ago") {
                         newTime = "1 day ago"
-                    }else{
+                    } else {
                         newTime = time
                     }
                     var text = item.description.replace(/(<([^>]+)>)/g, "");
                     // console.log(text)
                     return <NotificatinList
-                        imgSrc={{ uri: getNotificationResponse?.path + item.image }}
+                        imgSrc={{ uri: `${getNotificationResponse?.path}/${item.image}` }}
                         title={item.title}
                         description={text}
                         time={newTime}

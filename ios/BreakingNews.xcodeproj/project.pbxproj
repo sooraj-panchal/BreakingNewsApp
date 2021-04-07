@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BreakingNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BreakingNewsTests.m */; };
 		08180B35910A54889FA71515 /* libPods-BreakingNews-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F21C9D6ED4CE3A1C9171078 /* libPods-BreakingNews-tvOSTests.a */; };
-		0F1390852605F82900F95FE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F1390842605F82900F95FE7 /* GoogleService-Info.plist */; };
+		0F9681E1261745D9008048BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F9681E0261745D9008048BD /* GoogleService-Info.plist */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -52,8 +52,8 @@
 		052E1A1C978497039776DFAF /* Pods-BreakingNews-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakingNews-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BreakingNews-tvOSTests/Pods-BreakingNews-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		0CC029C0E20B35A89CC657BD /* libPods-BreakingNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BreakingNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB62D9DC44E46C29CFBCD5F /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		0F1390842605F82900F95FE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F7DCC7C2605AE8000175BD0 /* BreakingNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = BreakingNews.entitlements; path = BreakingNews/BreakingNews.entitlements; sourceTree = "<group>"; };
+		0F9681E0261745D9008048BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BreakingNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BreakingNews/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BreakingNews/AppDelegate.m; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				0F1390842605F82900F95FE7 /* GoogleService-Info.plist */,
+				0F9681E0261745D9008048BD /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* BreakingNews */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BreakingNewsTests */,
@@ -404,7 +404,7 @@
 				CCEE08F3FBA748D684219BCD /* Poppins-Regular.ttf in Resources */,
 				B84C95015AE145DDB6C04467 /* Poppins-SemiBold.ttf in Resources */,
 				2D5CC75FB244429F9E781AAC /* RobotoMono-Regular.ttf in Resources */,
-				0F1390852605F82900F95FE7 /* GoogleService-Info.plist in Resources */,
+				0F9681E1261745D9008048BD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,7 +803,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.WorldMetalContactSa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.worldmetalcontactsa;
 				PRODUCT_NAME = BreakingNews;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -827,7 +827,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.WorldMetalContactSa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.worldmetalcontactsa;
 				PRODUCT_NAME = BreakingNews;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

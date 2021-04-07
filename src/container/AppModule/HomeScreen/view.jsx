@@ -15,13 +15,14 @@ import messaging from '@react-native-firebase/messaging';
 import styles from "./styles";
 
 const HeaderImagesList = ({
-    item
-}, parallaxProps) => {
+    item,
+    index,
+}, parallaxProps, imagePath) => {
     return (
         <>
             <View style={styles.item}>
                 <ParallaxImage
-                    source={{ uri: `${globals.imagePath}article/${item.image}` }}
+                    source={{ uri: `${imagePath}/${item.image}` }}
                     containerStyle={styles.imageContainer}
                     style={styles.image}
                     parallaxFactor={0.4}
@@ -139,6 +140,7 @@ const HomeScreen = ({
                     navigation.navigate("NewsDetail", {
                         article_Id: parsedMessage.article_id
                     })
+                    // parsedMessage.article_id
                 }
             });
     }, [])
@@ -176,6 +178,7 @@ const HomeScreen = ({
         if (getArticeListResponse) {
             setGetArticeListPaginLoading(false)
             if (getArticeListResponse?.status == "success") {
+                globals.imagePath = getArticeListResponse?.path
                 setGetArticeListLoading(false)
                 if (getArticeListResponse?.data?.length) {
                     setOffset(offset + 1);
@@ -195,7 +198,8 @@ const HomeScreen = ({
                     sliderHeight={screenWidth}
                     itemWidth={screenWidth - 30}
                     data={getTrandingImageListResponse?.data}
-                    renderItem={HeaderImagesList}
+                    renderItem={({ item, index }, parallaxProps) =>
+                        HeaderImagesList({ item, index }, parallaxProps, getTrandingImageListResponse?.path)}
                     hasParallaxImages={true}
                 />
                 <Label
@@ -207,30 +211,6 @@ const HomeScreen = ({
             </Container>
         )
     }
-    var REFERENCE = moment("2015-06-05"); // fixed just for testing, use moment();
-    var TODAY = REFERENCE.clone().startOf('day');
-    var YESTERDAY = REFERENCE.clone().subtract(1, 'days').startOf('day');
-    var A_WEEK_OLD = REFERENCE.clone().subtract(7, 'days').startOf('day');
-
-    function isToday(momentDate) {
-        return momentDate.isSame(TODAY, 'd');
-    }
-    function isYesterday(momentDate) {
-        return momentDate.isSame(YESTERDAY, 'd');
-    }
-    function isWithinAWeek(momentDate) {
-        return momentDate.isAfter(A_WEEK_OLD);
-    }
-    function isTwoWeeksOrMore(momentDate) {
-        return !isWithinAWeek(momentDate);
-    }
-
-    // console.log("is it today? ..................Should be true: " + isToday(moment("2015-06-05")));
-    // console.log("is it yesterday? ..............Should be true: " + isYesterday(moment("2015-06-04")));
-    // console.log("is it within a week? ..........Should be true: " + isWithinAWeek(moment("2015-06-03")));
-    // console.log("is it within a week? ..........Should be false: " + isWithinAWeek(moment("2015-05-29")));
-    // console.log("is it two weeks older or more? Should be false: " + isTwoWeeksOrMore(moment("2015-05-30")));
-    // console.log("is it two weeks older or more? Should be true: " + isTwoWeeksOrMore(moment("2015-05-29")));
 
     return (
         <MainContainer style={{ backgroundColor: 'white' }}
@@ -255,7 +235,7 @@ const HomeScreen = ({
                         }
                     }
                     return <NewsList
-                        imgSrc={{ uri: `${globals.imagePath}article/${item.image}` }}
+                        imgSrc={{ uri: `${globals.imagePath}/${item.image}` }}
                         title={item.title}
                         description={item.description}
                         time={newTime}

@@ -18,7 +18,6 @@ const HeaderImagesList = ({
     imagePath,
     image
 }) => {
-    console.log(imagePath + image)
     return (
         <>
             <Img
